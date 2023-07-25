@@ -10,16 +10,16 @@ const Header = () => {
             <Image
               src="https://ik.imagekit.io/v66nb6oaq/whitedoghorizontalblack_RvONxJlmc.png?updatedAt=1661297614806"
               w={{
-                base: '200px',
-                sm: '300px',
+                base: '150px',
+                sm: '250px',
                 md: '400',
               }}
             />
           </Box>
           <Spacer />
-          <Box pr={10}>
-            <Button bg="none">Gallery</Button>
+          <Box pr={10} my={10}>
             <Button bg="none">About</Button>
+            <Button bg="none">Gallery</Button>
             <Button bg="none">Contact</Button>
           </Box>
         </HStack>
