@@ -45,11 +45,13 @@ const Parallax = () => {
           <div className="parallax-layer" data-speed="0.5">
             <Flex h="100vh" alignItems="center" justifyContent="center">
               <ChakraBox
+                initial={{ x: -1000 }} // Initial position (off-screen to the left)
                 animate={{
+                  x: 0,
                   rotate: [0, 360], // Rotate from 0 degrees to 360 degrees
                   transition: {
                     duration: 1.5, // Duration of the animation in seconds
-                    ease: 'linear', // Type of easing function (optional)
+                    ease: 'easeInOut', // Type of easing function (optional)
                   },
                 }}
                 transition={{
