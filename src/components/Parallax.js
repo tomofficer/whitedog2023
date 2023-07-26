@@ -36,10 +36,16 @@ const Parallax = () => {
       <Box px={20}>
         <div className="parallax-container">
           <div className="parallax-layer" data-speed="0.1">
-            <Image
-              src="https://ik.imagekit.io/v66nb6oaq/heroplaceholder_soWY5gYGs.jpg?updatedAt=1690260703745"
-              alt="bck"
-            />
+            <ChakraBox
+              initial={{ opacity: 0 }} // Initial opacity (fully transparent)
+              animate={{ opacity: 1 }} // Final opacity (fully opaque)
+              transition={{ duration: 2 }} // Duration of the animation in seconds
+            >
+              <Image
+                src="https://ik.imagekit.io/v66nb6oaq/heroplaceholder_soWY5gYGs.jpg?updatedAt=1690260703745"
+                alt="bck"
+              />
+            </ChakraBox>
           </div>
 
           <div className="parallax-layer" data-speed="0.5">
