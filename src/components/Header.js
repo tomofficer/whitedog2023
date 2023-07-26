@@ -17,7 +17,7 @@ const Header = () => {
             />
           </Box>
           <Spacer />
-          <Box pr={10} my={10}>
+          <Box pt={20}>
             <Button bg="none">About</Button>
             <Button bg="none">Gallery</Button>
             <Button bg="none">Contact</Button>
