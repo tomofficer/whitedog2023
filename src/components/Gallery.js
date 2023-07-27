@@ -2,6 +2,26 @@ import { useState } from 'react';
 import { Box, Heading, Grid, Image } from '@chakra-ui/react';
 
 const Gallery = () => {
+  //gallery thumbnails
+  const images = [
+    {
+      img: 'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedogyellow_FjuzcgAFm.png?updatedAt=1690484221106',
+      title: 'image1',
+    },
+    {
+      img: 'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedogyellow_FjuzcgAFm.png?updatedAt=1690484221106',
+      title: 'image2',
+    },
+    {
+      img: 'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedogyellow_FjuzcgAFm.png?updatedAt=1690484221106',
+      title: 'image3',
+    },
+    {
+      img: 'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedogyellow_FjuzcgAFm.png?updatedAt=1690484221106',
+      title: 'image4',
+    },
+  ];
+
   //state
   const [carouselOpen, setCarouselOpen] = useState('closed');
 
