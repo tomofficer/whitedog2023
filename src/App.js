@@ -6,6 +6,7 @@ import About from './components/About';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Testing from './components/Testing';
+import Testing2 from './components/Testing2';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Parallax />
         <About />
         <Gallery />
-        <Testing />
+        {/* <Testing /> */}
+        <Testing2 />
         <Contact />
       </Box>
     </ChakraProvider>
