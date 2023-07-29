@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import { Box, Grid, Heading } from '@chakra-ui/react';
+import { Box, Grid, Heading, CloseButton } from '@chakra-ui/react';
 
 const ImageGallery = () => {
   //state
@@ -70,32 +70,36 @@ const ImageGallery = () => {
             <img
               key={index}
               src={data.image}
-              alt={`Image ${index + 1}`}
+              alt={`1 ${index + 1}`}
               onClick={() => openModal(index)}
             />
           ))}
         </Grid>
       </Box>
 
-      <Modal isOpen={isOpen} onRequestClose={closeModal} className="modal">
+      <Modal isOpen={isOpen} onRequestClose={closeModal} maxW={'xl'} border>
         {selectedImageIndex !== null && (
-          <div>
-            <img
-              src={galleryData[selectedImageIndex].image}
-              alt="Selected Image"
+          <Box
+            my={{ base: 4, sm: 0, md: 20 }}
+            mt={{ base: 2, sm: 6, md: 28 }}
+            px={{ base: 10, sm: 20, md: 36 }}
+          >
+            <CloseButton
+              onClick={closeModal}
+              pos="absolute"
+              top="0"
+              right="0"
+              p="6"
             />
+            <img src={galleryData[selectedImageIndex].image} alt="og img" />
             <div className="related-images">
               {galleryData[selectedImageIndex].relatedImages.map(
                 (image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`Related Image ${index + 1}`}
-                  />
+                  <img key={index} src={image} alt={`2 ${index + 1}`} />
                 )
               )}
             </div>
-          </div>
+          </Box>
         )}
       </Modal>
     </>
