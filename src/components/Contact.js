@@ -16,8 +16,8 @@ import { FaFacebook, FaInstagram } from 'react-icons/fa6';
 const Contact = () => {
   return (
     <>
-      <Box py={{ base: 4, sm: 0, md: 4 }} my={{ base: 2, sm: 6, md: 6 }}>
-        <Box bg="teal">
+      <Box py={{ base: 4, sm: 0, md: 0 }} mt={{ base: 2, sm: 6, md: 20 }}>
+        <Box bg="teal" py={{ base: 4, sm: 0, md: 10 }}>
           <Grid
             templateColumns="repeat(3, 1fr)"
             gap={20}
@@ -25,18 +25,22 @@ const Contact = () => {
           >
             <Flex direction="column">
               <Heading>Contact</Heading>
+
               <VStack>
-                <Text>
-                  500 Main Street,
-                  <br />
-                  Torringonton, CT 06750
-                </Text>
-                <Text>
-                  Tel: 860-459-9876
-                  <br />
-                  Fax: 860-987-4530
-                </Text>
-                <Text>andy@whitedogwoodworking.com</Text>
+                <Box textAlign={'left'}>
+                  <Text>
+                    500 Main Street,
+                    <br />
+                    Torringonton, CT 06750
+                  </Text>
+                  <Text>
+                    Tel: 860-459-9876
+                    <br />
+                    Fax: 860-987-4530
+                  </Text>
+                  <Text>andy@whitedogwoodworking.com</Text>
+                </Box>
+
                 <HStack>
                   <Icon as={FaFacebook} />
                   <Icon as={FaInstagram} />
