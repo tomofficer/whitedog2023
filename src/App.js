@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { ChakraProvider, Box, theme } from '@chakra-ui/react';
 import Header from './components/Header';
 import Parallax from './components/Parallax';
@@ -25,6 +25,9 @@ function App() {
     scrollToContact.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  //header state
+  const [showNav, setShowNav] = useState(true);
+
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
@@ -32,10 +35,16 @@ function App() {
           scrollToAbout={scrollToAboutHandle}
           scrollToGallery={scrollToGalleryHandle}
           scrollToContact={scrollToContactHandle}
+          showNav={showNav}
+          setShowNav={setShowNav}
         />
         <Parallax />
         <About aboutRef={scrollToAbout} />
-        <Gallery2 galleryRef={scrollToGallery} />
+        <Gallery2
+          galleryRef={scrollToGallery}
+          setShowNav={setShowNav}
+          showNav={showNav}
+        />
         <Contact contactRef={scrollToContact} />
       </Box>
     </ChakraProvider>

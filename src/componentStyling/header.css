@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   background-color: #fff;
-  z-index: 100;
+  z-index: 90;
   /* transition: transform 0.3s ease; */
 transition: opacity 0.5s ease-in-out;
 }
@@ -14,5 +14,6 @@ transition: opacity 0.5s ease-in-out;
 
 .hidden {
 opacity: 0;
+display: 'none'
   /* Hide the header by moving it off the screen */
 }

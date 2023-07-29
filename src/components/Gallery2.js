@@ -10,7 +10,7 @@ import {
   Image,
 } from '@chakra-ui/react';
 
-const ImageGallery = ({ galleryRef }) => {
+const ImageGallery = ({ galleryRef, setShowNav, showNav }) => {
   //image data
   const galleryData = [
     {
@@ -57,10 +57,13 @@ const ImageGallery = ({ galleryRef }) => {
     console.log(data);
     setSelectedImageIndex(index);
     setIsOpen(true);
+    setShowNav(true);
+    console.log('the nav is showing:', showNav);
   };
 
   const closeModal = () => {
     setIsOpen(false);
+    setShowNav(false);
   };
 
   //carousel styling
@@ -126,13 +129,13 @@ const ImageGallery = ({ galleryRef }) => {
           ))}
         </Grid>
       </Box>
-
       <Modal isOpen={isOpen} onRequestClose={closeModal} maxW={'xl'}>
         {selectedImageIndex !== null && (
           <Box
             my={{ base: 4, sm: 0, md: 10 }}
             mt={{ base: 2, sm: 6, md: 10 }}
             px={{ base: 10, sm: 20, md: 10 }}
+            zIndex={100}
           >
             <CloseButton
               onClick={closeModal}
