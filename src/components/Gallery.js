@@ -24,10 +24,12 @@ const Gallery = () => {
 
   //state
   const [carouselOpen, setCarouselOpen] = useState('closed');
+  const [currentImage, setCurrentImage] = useState('');
 
-  //click handle
+  //click handlers
   const imgClick = () => {
     setCarouselOpen('open');
+    setCurrentImage(img.title);
     console.log('carousel is now open');
   };
 
@@ -40,6 +42,7 @@ const Gallery = () => {
           </Box>
         </>
       )}
+
       <Box
         py={{ base: 4, sm: 0, md: 4 }}
         mt={{ base: 2, sm: 6, md: 28 }}
