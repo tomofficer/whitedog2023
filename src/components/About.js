@@ -1,11 +1,12 @@
 import React from 'react';
 import { Box, Heading, Text, Center } from '@chakra-ui/react';
 
-const About = () => {
+const About = ({ aboutRef }) => {
   return (
     <>
       <Box py={{ base: 4, sm: 0, md: 4 }} mt={{ base: 2, sm: 6, md: 28 }}>
-        <Heading>About</Heading>
+        <div ref={aboutRef}></div>
+        <Heading mt={20}>About</Heading>
         <Center>
           <Box maxW={'2xl'}>
             <Text textAlign={'center'} mt={{ base: 2, sm: 6, md: 6 }}>

@@ -10,7 +10,7 @@ import {
   Image,
 } from '@chakra-ui/react';
 
-const ImageGallery = () => {
+const ImageGallery = ({ galleryRef }) => {
   //image data
   const galleryData = [
     {
@@ -109,7 +109,8 @@ const ImageGallery = () => {
         mt={{ base: 2, sm: 6, md: 28 }}
         px={{ base: 10, sm: 20, md: 36 }}
       >
-        <Heading>Gallery</Heading>
+        <div ref={galleryRef}></div>
+        <Heading mt={20}>Gallery</Heading>
         <Grid
           templateColumns="repeat(2, 1fr)"
           gap={20}

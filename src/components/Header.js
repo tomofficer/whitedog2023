@@ -1,7 +1,12 @@
 import React from 'react';
 import { Box, Image, HStack, Button, Spacer } from '@chakra-ui/react';
 
-const Header = () => {
+const Header = ({
+  scrollToHome,
+  scrollToAbout,
+  scrollToGallery,
+  scrollToContact,
+}) => {
   return (
     <>
       <Box pos="relative" w="full">
@@ -18,9 +23,18 @@ const Header = () => {
           </Box>
           <Spacer />
           <Box pt={20}>
-            <Button bg="none">About</Button>
-            <Button bg="none">Gallery</Button>
-            <Button bg="none">Contact</Button>
+            <Button bg="none" onClick={() => scrollToHome()}>
+              Home
+            </Button>
+            <Button bg="none" onClick={() => scrollToAbout()}>
+              About
+            </Button>
+            <Button bg="none" onClick={() => scrollToGallery()}>
+              Gallery
+            </Button>
+            <Button bg="none" onClick={() => scrollToContact()}>
+              Contact
+            </Button>
           </Box>
         </HStack>
       </Box>

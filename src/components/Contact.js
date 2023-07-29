@@ -13,7 +13,7 @@ import {
 import ContactForm from './ContactForm';
 import { FaFacebook, FaInstagram } from 'react-icons/fa6';
 
-const Contact = () => {
+const Contact = ({ contactRef }) => {
   return (
     <>
       <Box py={{ base: 4, sm: 0, md: 0 }} mt={{ base: 2, sm: 6, md: 20 }}>
@@ -24,6 +24,7 @@ const Contact = () => {
             my={{ base: 6, sm: 10, md: 24 }}
           >
             <Flex direction="column">
+              <div ref={contactRef}></div>
               <Heading>Contact</Heading>
 
               <VStack>
