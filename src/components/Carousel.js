@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Flex, Box, Text, Image } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 
 const Carousel = () => {
   const arrowStyles = {
@@ -52,6 +52,7 @@ const Carousel = () => {
     transition: 'all .5s',
     ml: `-${currentSlide * 100}%`,
   };
+
   return (
     <Flex
       w={{ base: 'xl', sm: '4xl', md: '6xl' }}
