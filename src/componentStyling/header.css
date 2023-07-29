@@ -1,0 +1,14 @@
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}

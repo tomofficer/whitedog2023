@@ -1,5 +1,6 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import { Box, Image, HStack, Button, Spacer } from '@chakra-ui/react';
+import '../componentStyling/header.css';
 
 const Header = ({
   scrollToHome,
@@ -7,9 +8,41 @@ const Header = ({
   scrollToGallery,
   scrollToContact,
 }) => {
+  //state
+  const [showNav, setShowNav] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  //scroll handler
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.body.scrollHeight;
+      const bottomThreshold = documentHeight - windowHeight;
+
+      setShowNav(
+        (currentScrollPos > prevScrollPos &&
+          currentScrollPos >= bottomThreshold) ||
+          currentScrollPos <= 0
+      );
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
+
   return (
     <>
-      <Box pos="relative" w="full">
+      <Box
+        className={`sticky ${showNav ? 'visible' : 'hidden'}`}
+        // pos="sticky"
+        // top={0}
+        // zIndex={100}
+        // bg="white"
+        w="full"
+      >
         <HStack px={{ base: 4, sm: 10, md: 20 }} py={{ base: 4, sm: 0, md: 4 }}>
           <Box>
             <Image
