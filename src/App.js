@@ -8,16 +8,11 @@ import Contact from './components/Contact';
 
 function App() {
   //useRef
-  const scrollToHome = useRef();
   const scrollToAbout = useRef();
   const scrollToGallery = useRef();
   const scrollToContact = useRef();
 
   //scroll handlers
-  const scrollToHomeHandle = () => {
-    scrollToHome.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
   const scrollToAboutHandle = () => {
     scrollToAbout.current.scrollIntoView({ behavior: 'smooth' });
   };
@@ -34,7 +29,6 @@ function App() {
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
         <Header
-          scrollToHome={scrollToHomeHandle}
           scrollToAbout={scrollToAboutHandle}
           scrollToGallery={scrollToGalleryHandle}
           scrollToContact={scrollToContactHandle}

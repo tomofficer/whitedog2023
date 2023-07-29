@@ -2,17 +2,16 @@ import { useState, useEffect } from 'react';
 import { Box, Image, HStack, Button, Spacer } from '@chakra-ui/react';
 import '../componentStyling/header.css';
 
-const Header = ({
-  scrollToHome,
-  scrollToAbout,
-  scrollToGallery,
-  scrollToContact,
-}) => {
+const Header = ({ scrollToAbout, scrollToGallery, scrollToContact }) => {
   //state
   const [showNav, setShowNav] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
-  //scroll handler
+  //scroll handlers
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
@@ -35,14 +34,7 @@ const Header = ({
 
   return (
     <>
-      <Box
-        className={`sticky ${showNav ? 'visible' : 'hidden'}`}
-        // pos="sticky"
-        // top={0}
-        // zIndex={100}
-        // bg="white"
-        w="full"
-      >
+      <Box className={`sticky ${showNav ? 'visible' : 'hidden'}`} w="full">
         <HStack px={{ base: 4, sm: 10, md: 20 }} py={{ base: 4, sm: 0, md: 4 }}>
           <Box>
             <Image
@@ -56,7 +48,7 @@ const Header = ({
           </Box>
           <Spacer />
           <Box pt={20}>
-            <Button bg="none" onClick={() => scrollToHome()}>
+            <Button bg="none" onClick={() => scrollToTop()}>
               Home
             </Button>
             <Button bg="none" onClick={() => scrollToAbout()}>
