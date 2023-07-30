@@ -53,7 +53,7 @@ const ImageGallery = ({ galleryRef }) => {
   ];
 
   const companyLogo =
-    'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedogblack_Je04hqCmN.png?updatedAt=1690484225404';
+    'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitelogo_A1KeRKfjy.png?updatedAt=1690484186754';
 
   //state
   const [isOpen, setIsOpen] = useState(false);
@@ -134,7 +134,11 @@ const ImageGallery = ({ galleryRef }) => {
                   onClick={() => openModal(data, index)}
                 />
                 <div className="overlay">
-                  <img src={companyLogo} alt="White Dog Woodworking Logo" />
+                  <img
+                    src={companyLogo}
+                    alt="White Dog Woodworking Logo"
+                    // maxW={{ base: '100px', sm: '200px', md: '250px' }}
+                  />
                   <p className="image-title">{data.title}</p>
                 </div>
               </div>
