@@ -15,6 +15,7 @@ const ImageGallery = ({ galleryRef }) => {
   //image data
   const galleryData = [
     {
+      title: 'Job Number One',
       image:
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedog1_-DJZlIxPp.jpg?updatedAt=1690484185418',
       relatedImages: [
@@ -23,6 +24,7 @@ const ImageGallery = ({ galleryRef }) => {
       ],
     },
     {
+      title: 'Job Number Two',
       image:
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/frames-for-your-heart-MyeOnGcibCQ-unsplash_lTu8kwUQw.jpg?updatedAt=1690600604766',
       relatedImages: [
@@ -31,6 +33,7 @@ const ImageGallery = ({ galleryRef }) => {
       ],
     },
     {
+      title: 'Job Number Three',
       image:
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/hutomo-abrianto-9ZvuWg8deho-unsplash_xlgzVzHF0.jpg?updatedAt=1690600580601',
       relatedImages: [
@@ -39,6 +42,7 @@ const ImageGallery = ({ galleryRef }) => {
       ],
     },
     {
+      title: 'Job Number Four',
       image:
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedog1_-DJZlIxPp.jpg?updatedAt=1690484185418',
       relatedImages: [
@@ -47,6 +51,9 @@ const ImageGallery = ({ galleryRef }) => {
       ],
     },
   ];
+
+  const companyLogo =
+    'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedogblack_Je04hqCmN.png?updatedAt=1690484225404';
 
   //state
   const [isOpen, setIsOpen] = useState(false);
@@ -118,12 +125,20 @@ const ImageGallery = ({ galleryRef }) => {
           my={{ base: 6, sm: 10, md: 24 }}
         >
           {galleryData.map((data, index) => (
-            <img
-              key={index}
-              src={data.image}
-              alt={`1 ${index + 1}`}
-              onClick={() => openModal(data, index)}
-            />
+            <>
+              <div className="image-container">
+                <img
+                  key={index}
+                  src={data.image}
+                  alt={`1 ${index + 1}`}
+                  onClick={() => openModal(data, index)}
+                />
+                <div className="overlay">
+                  <img src={companyLogo} alt="White Dog Woodworking Logo" />
+                  <p className="image-title">{data.title}</p>
+                </div>
+              </div>
+            </>
           ))}
         </Grid>
       </Box>

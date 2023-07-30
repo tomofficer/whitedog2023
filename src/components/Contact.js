@@ -17,7 +17,7 @@ const Contact = ({ contactRef }) => {
   return (
     <>
       <Box py={{ base: 4, sm: 0, md: 0 }} mt={{ base: 2, sm: 6, md: 20 }}>
-        <Box bg="teal" py={{ base: 4, sm: 0, md: 10 }}>
+        <Box bg="teal.400" py={{ base: 4, sm: 0, md: 10 }}>
           <Grid
             templateColumns="repeat(3, 1fr)"
             gap={20}
