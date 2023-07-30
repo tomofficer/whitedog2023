@@ -60,34 +60,36 @@ const Contact = ({ contactRef }) => {
             >
               <Flex
                 direction="column"
-                justifyContent={'center'}
                 className={`slide-in-left ${slideInLeft ? 'visible' : ''}`}
               >
                 <div ref={contactRef}></div>
-                <Heading fontFamily={primaryFont}>CONTACT</Heading>
-
-                <VStack>
-                  <Box
-                    textAlign={'left'}
-                    fontFamily={secondaryFont}
-                    fontWeight={900}
+                <VStack textAlign={'left'}>
+                  <Heading
+                    pr={32}
+                    fontFamily={primaryFont}
+                    mb={{ base: 0, sm: 0, md: 10 }}
                   >
-                    <Text>
-                      500 Main Street,
+                    CONTACT
+                  </Heading>
+                  <Box fontFamily={secondaryFont} fontWeight={900}>
+                    <Text mb={{ base: 0, sm: 0, md: 8 }}>
+                      59 Field Street,
                       <br />
-                      Torringonton, CT 06750
+                      Torringonton, CT 06790
                     </Text>
-                    <Text>
-                      Tel: 860-459-9876
+                    <Text mb={{ base: 0, sm: 0, md: 8 }}>
+                      Tel: 860-482-3776
                       <br />
-                      Fax: 860-987-4530
+                      Cell: 860-201-3345
                     </Text>
-                    <Text>andy@whitedogwoodworking.com</Text>
+                    <Text mb={{ base: 0, sm: 0, md: 8 }}>
+                      andy@whitedogwoodworking.com
+                    </Text>
                   </Box>
 
-                  <HStack>
-                    <Icon as={FaFacebook} />
-                    <Icon as={FaInstagram} />
+                  <HStack pr={'60%'} spacing="20px">
+                    <Icon as={FaFacebook} boxSize={7} />
+                    <Icon as={FaInstagram} boxSize={7} />
                   </HStack>
                 </VStack>
               </Flex>

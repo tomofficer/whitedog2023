@@ -1,5 +1,7 @@
 import { useForm, ValidationError } from '@formspree/react';
-import { VStack } from '@chakra-ui/react';
+import { VStack, Button, Text } from '@chakra-ui/react';
+import { secondaryFont } from '../Fonts';
+import '../componentStyling/global.css';
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm('xqkveaqa');
@@ -9,12 +11,21 @@ const ContactForm = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <VStack>
+        <VStack fontFamily={secondaryFont} fontWeight={900}>
           <label htmlFor="name">Name</label>
-          <input id="name" type="name" name="name" placeholder="Your Name" />
-          <ValidationError prefix="Name" field="name" errors={state.errors} />
-          <label htmlFor="email">Email Address</label>
           <input
+            className="input-box"
+            id="name"
+            type="name"
+            name="name"
+            placeholder="Your Name"
+          />
+          <ValidationError prefix="Name" field="name" errors={state.errors} />
+          <label style={{ textAlign: 'left' }} htmlFor="email">
+            Email Address
+          </label>
+          <input
+            className="input-box"
             id="email"
             type="email"
             name="email"
@@ -23,6 +34,7 @@ const ContactForm = () => {
           <ValidationError prefix="Email" field="email" errors={state.errors} />
           <label htmlFor="email">Message</label>
           <textarea
+            className="text-area"
             id="message"
             name="message"
             placeholder="Enter your message"
@@ -32,9 +44,20 @@ const ContactForm = () => {
             field="message"
             errors={state.errors}
           />
-          <button type="submit" disabled={state.submitting}>
+
+          <Button
+            type="submit"
+            disabled={state.submitting}
+            bg="black"
+            color="white"
+            px={16}
+            mt={6}
+            _hover={{
+              bg: 'green.400',
+            }}
+          >
             Submit
-          </button>
+          </Button>
         </VStack>
       </form>
     </>
