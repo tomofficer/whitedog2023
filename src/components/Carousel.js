@@ -20,6 +20,7 @@ const Carousel = () => {
       bg: 'black',
     },
   };
+  //
   const slides = [
     {
       img: 'https://images.pexels.com/photos/2599537/pexels-photo-2599537.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
