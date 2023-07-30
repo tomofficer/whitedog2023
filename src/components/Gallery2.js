@@ -11,6 +11,7 @@ import {
   Image,
 } from '@chakra-ui/react';
 import { primaryFont } from '../Fonts';
+import '../componentStyling/global.css';
 
 const ImageGallery = ({ galleryRef }) => {
   //image data
@@ -116,19 +117,23 @@ const ImageGallery = ({ galleryRef }) => {
 
   return (
     <>
+      <div ref={galleryRef}></div>
+
+      <div className="vertical-line-container">
+        <div className="vertical-line"></div>
+      </div>
       <Box
         py={{ base: 4, sm: 0, md: 4 }}
         mt={{ base: 2, sm: 6, md: 28 }}
         px={{ base: 10, sm: 20, md: 36 }}
       >
-        <div ref={galleryRef}></div>
         <Heading mt={20} fontFamily={primaryFont}>
           GALLERY
         </Heading>
         <Grid
           templateColumns="repeat(2, 1fr)"
           gap={20}
-          my={{ base: 6, sm: 10, md: 24 }}
+          my={{ base: 6, sm: 10, md: 16 }}
         >
           {galleryData.map((data, index) => (
             <>

@@ -1,0 +1,26 @@
+/* vertical line styling for body text */
+.vertical-line-container {
+  position: relative;
+  /* Make the container a positioning context for the absolute line */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.vertical-line {
+
+  position: absolute;
+  /* Position the line absolutely */
+  top: 0;
+  /* Place it at the top of the container */
+  left: 50%;
+  /* Position it in the center horizontally */
+  width: 3px;
+  height: 180px;
+  background-color: #000;
+  transform: translateX(-50%);
+  /* Center it perfectly */
+  z-index: 1;
+  /* Set a higher z-index to ensure it's above other elements */
+}

@@ -1,12 +1,16 @@
 import React from 'react';
 import { Box, Heading, Text, Center } from '@chakra-ui/react';
 import { primaryFont, secondaryFont } from '../Fonts';
+import '../componentStyling/global.css';
 
 const About = ({ aboutRef }) => {
   return (
     <>
+      <div ref={aboutRef}></div>
+      <div className="vertical-line-container">
+        <div className="vertical-line"></div>
+      </div>
       <Box py={{ base: 4, sm: 0, md: 4 }} mt={{ base: 2, sm: 6, md: 28 }}>
-        <div ref={aboutRef}></div>
         <Heading mt={20} fontFamily={primaryFont}>
           ABOUT
         </Heading>
