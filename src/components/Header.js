@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Box, Image, HStack, Button, Spacer } from '@chakra-ui/react';
 import '../componentStyling/header.css';
+import { primaryFont } from '../Fonts';
 
 const Header = ({ scrollToAbout, scrollToGallery, scrollToContact }) => {
   //state
@@ -34,7 +35,11 @@ const Header = ({ scrollToAbout, scrollToGallery, scrollToContact }) => {
 
   return (
     <>
-      <Box className={`sticky ${showNav ? 'visible' : 'hidden'}`} w="full">
+      <Box
+        className={`sticky ${showNav ? 'visible' : 'hidden'}`}
+        w="full"
+        fontFamily={primaryFont}
+      >
         <HStack px={{ base: 4, sm: 10, md: 20 }} py={{ base: 4, sm: 0, md: 4 }}>
           <Box>
             <Image
@@ -49,16 +54,16 @@ const Header = ({ scrollToAbout, scrollToGallery, scrollToContact }) => {
           <Spacer />
           <Box pt={20}>
             <Button bg="none" onClick={() => scrollToTop()}>
-              Home
+              HOME
             </Button>
             <Button bg="none" onClick={() => scrollToAbout()}>
-              About
+              ABOUT
             </Button>
             <Button bg="none" onClick={() => scrollToGallery()}>
-              Gallery
+              GALLERY
             </Button>
             <Button bg="none" onClick={() => scrollToContact()}>
-              Contact
+              CONTACT
             </Button>
           </Box>
         </HStack>

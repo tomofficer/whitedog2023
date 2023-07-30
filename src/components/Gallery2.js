@@ -27,7 +27,7 @@ const ImageGallery = ({ galleryRef }) => {
     {
       title: 'Job Number Two',
       image:
-        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/frames-for-your-heart-MyeOnGcibCQ-unsplash_lTu8kwUQw.jpg?updatedAt=1690600604766',
+        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedog1_-DJZlIxPp.jpg?updatedAt=1690484185418',
       relatedImages: [
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/inaki-del-olmo-NIJuEQw0RKg-unsplash_-6ZbpxdoU.jpg?updatedAt=1690600636071',
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/aaron-huber-G7sE2S4Lab4-unsplash_pYXqHhePm.jpg?updatedAt=1690600592957',
@@ -36,7 +36,7 @@ const ImageGallery = ({ galleryRef }) => {
     {
       title: 'Job Number Three',
       image:
-        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/hutomo-abrianto-9ZvuWg8deho-unsplash_xlgzVzHF0.jpg?updatedAt=1690600580601',
+        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedog1_-DJZlIxPp.jpg?updatedAt=1690484185418',
       relatedImages: [
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/lauren-mancke-rm5DbquteoY-unsplash_IqgME0dtk.jpg?updatedAt=1690600557169ated_image_url_5',
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/zac-gudakov-5QLCohwVndQ-unsplash_e_Z9iX5bz.jpg?updatedAt=1690600750853',
