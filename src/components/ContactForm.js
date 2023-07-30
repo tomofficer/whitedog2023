@@ -18,7 +18,7 @@ const ContactForm = () => {
             id="name"
             type="name"
             name="name"
-            placeholder="Your Name"
+            placeholder="Enter your name"
           />
           <ValidationError prefix="Name" field="name" errors={state.errors} />
           <label style={{ textAlign: 'left' }} htmlFor="email">
@@ -29,7 +29,7 @@ const ContactForm = () => {
             id="email"
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder="Enter your email"
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
           <label htmlFor="email">Message</label>
