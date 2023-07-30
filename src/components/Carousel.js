@@ -17,7 +17,7 @@ const Carousel = () => {
     userSelect: 'none',
     _hover: {
       opacity: 0.8,
-      bg: 'black',
+      bg: 'blue',
     },
   };
   //

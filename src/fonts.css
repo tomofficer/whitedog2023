@@ -1,0 +1,21 @@
+/* fonts.css */
+
+:root {
+  --primary-font: 'Lato', sans-serif;
+  --secondary-font: 'Kanit', sans-serif;
+  --tertiary-font: 'Alata', sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--secondary-font);
+}
+
+p {
+  font-family: var(--tertiary-font);
+}

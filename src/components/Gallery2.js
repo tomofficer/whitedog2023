@@ -10,6 +10,7 @@ import {
   Text,
   Image,
 } from '@chakra-ui/react';
+import { primaryFont } from '../Fonts';
 
 const ImageGallery = ({ galleryRef }) => {
   //image data
@@ -78,16 +79,19 @@ const ImageGallery = ({ galleryRef }) => {
     top: '50%',
     w: 'auto',
     mt: '-22px',
+    mx: '10px',
     p: '16px',
-    color: 'white',
+    color: 'black',
+    bg: 'white',
     fontWeight: 'bold',
     fontSize: '18px',
     transition: '0.6s ease',
-    borderRadius: '0 3px 3px 0',
+    borderRadius: '10px 10px 10px 10px',
     userSelect: 'none',
     _hover: {
       opacity: 0.8,
       bg: 'black',
+      color: 'white',
     },
   };
 
@@ -118,7 +122,9 @@ const ImageGallery = ({ galleryRef }) => {
         px={{ base: 10, sm: 20, md: 36 }}
       >
         <div ref={galleryRef}></div>
-        <Heading mt={20}>Gallery</Heading>
+        <Heading mt={20} fontFamily={primaryFont}>
+          GALLERY
+        </Heading>
         <Grid
           templateColumns="repeat(2, 1fr)"
           gap={20}
