@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import '../componentStyling/gallery.css';
 import {
   Box,
   Grid,
@@ -10,7 +11,7 @@ import {
   Image,
 } from '@chakra-ui/react';
 
-const ImageGallery = ({ galleryRef, setShowNav, showNav }) => {
+const ImageGallery = ({ galleryRef }) => {
   //image data
   const galleryData = [
     {
@@ -57,13 +58,10 @@ const ImageGallery = ({ galleryRef, setShowNav, showNav }) => {
     console.log(data);
     setSelectedImageIndex(index);
     setIsOpen(true);
-    setShowNav(true);
-    console.log('the nav is showing:', showNav);
   };
 
   const closeModal = () => {
     setIsOpen(false);
-    setShowNav(false);
   };
 
   //carousel styling
@@ -129,7 +127,21 @@ const ImageGallery = ({ galleryRef, setShowNav, showNav }) => {
           ))}
         </Grid>
       </Box>
-      <Modal isOpen={isOpen} onRequestClose={closeModal} maxW={'xl'}>
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={closeModal}
+        style={{
+          overlay: {
+            zIndex: 9999,
+          },
+          content: {
+            zIndex: 10000,
+          },
+        }}
+        //disables scrolling while modal is open
+        // bodyOpenClassName={'modal-open'}
+        // htmlOpenClassName={'modal-open'}
+      >
         {selectedImageIndex !== null && (
           <Box
             my={{ base: 4, sm: 0, md: 10 }}
