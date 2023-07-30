@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import {
   Box,
   Heading,
@@ -14,8 +14,35 @@ import {
 import ContactForm from './ContactForm';
 import { FaFacebook, FaInstagram } from 'react-icons/fa6';
 import { primaryFont, secondaryFont } from '../Fonts';
+import '../componentStyling/contact.css';
 
 const Contact = ({ contactRef }) => {
+  //slide handlers
+  const [slideInLeft, setSlideInLeft] = useState(false);
+  const [slideInRight, setSlideInRight] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const bodyHeight = document.body.scrollHeight;
+
+      // Calculate the scroll position where you want the animations to trigger
+      // In this example, we are triggering the animations when the user scrolls to the bottom 20% of the page
+      const triggerPoint = bodyHeight - windowHeight * 1.5;
+
+      // Update the state based on the scroll position
+      setSlideInLeft(scrollY > triggerPoint);
+      setSlideInRight(scrollY > triggerPoint);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Center>
@@ -31,7 +58,11 @@ const Contact = ({ contactRef }) => {
               gap={20}
               mt={{ base: 6, sm: 10, md: 24 }}
             >
-              <Flex direction="column" justifyContent={'center'}>
+              <Flex
+                direction="column"
+                justifyContent={'center'}
+                className={`slide-in-left ${slideInLeft ? 'visible' : ''}`}
+              >
                 <div ref={contactRef}></div>
                 <Heading fontFamily={primaryFont}>CONTACT</Heading>
 
@@ -65,7 +96,11 @@ const Contact = ({ contactRef }) => {
                 maxW="350px"
                 src="https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedogblack_Je04hqCmN.png?updatedAt=1690484225404"
               />
-              <ContactForm />
+              <Box
+                className={`slide-in-right ${slideInRight ? 'visible' : ''}`}
+              >
+                <ContactForm />
+              </Box>
             </Grid>
           </Box>
         </Box>

@@ -1,0 +1,17 @@
+.slide-in-left {
+  transform: translateX(-100%);
+  /* Move the element off-screen to the left */
+}
+
+.slide-in-right {
+  transform: translateX(100%);
+  /* Move the element off-screen to the right */
+}
+
+.visible.slide-in-left,
+.visible.slide-in-right {
+  transform: translateX(0);
+  /* Slide the element back to its original position */
+  transition: transform 1s ease;
+  /* Use CSS transition for smooth sliding */
+}
