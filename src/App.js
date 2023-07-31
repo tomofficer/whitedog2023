@@ -46,13 +46,14 @@ function App() {
 
 export default App;
 
+//todo : IMPORTANT
 //todo : update / resize font on logo in header to make it bigger
-//todo : add about me section content
-//todo : animate gallery thumbnails to slide in from left/right
+//todo : add about me section content text
 //todo : convert image files to jpg
-//todo : animate gallery overlays to fade or slide in
 //todo : add indicator on bottom of carousel
 //todo : add tile grid to open carousel of all images
 //todo : add title and description/location to open carousel
-//todo : add custom footer with tom officer web dev branding
-//todo : add white dog text logo to animate in once contact section appears
+
+//todo : OPTIONAL
+//todo : animate gallery thumbnails to slide in from left/right -> optional
+//todo : animate gallery overlays to fade or slide in -> optional
