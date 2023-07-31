@@ -145,11 +145,15 @@ const ImageGallery = ({ galleryRef }) => {
                   onClick={() => openModal(data, index)}
                 />
                 <div className="overlay">
-                  <img
-                    src={companyLogo}
-                    alt="White Dog Woodworking Logo"
-                    // maxW={{ base: '100px', sm: '200px', md: '250px' }}
-                  />
+                  <div className="logo-container">
+                    <img
+                      className="logo-container"
+                      src={companyLogo}
+                      alt="White Dog Woodworking Logo"
+                      // maxW={{ base: '100px', sm: '200px', md: '250px' }}
+                    />
+                  </div>
+
                   <p className="image-title">{data.title}</p>
                 </div>
               </div>

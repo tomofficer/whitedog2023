@@ -68,7 +68,7 @@ const Parallax = () => {
                 }}
               >
                 <Image
-                  maxW={'xl'}
+                  maxW={'lg'}
                   opacity={'70%'}
                   src="https://ik.imagekit.io/v66nb6oaq/whitedogblack_Je04hqCmN.png?updatedAt=1661297820983"
                   alt="logo"

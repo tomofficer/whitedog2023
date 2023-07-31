@@ -52,3 +52,17 @@ body.modal-open, html.modal-open {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
 }
+
+/* overlay slide animations */
+.overlay-slide-left {
+  position: relative;
+  left: -100%;
+  /* Start with the element off-screen to the left */
+  transition: left 0.5s ease;
+  /* Add a transition for smooth sliding */
+}
+
+.overlay-slide-left:hover {
+  left: 0;
+  /* Slide the element in to the left position on hover */
+}

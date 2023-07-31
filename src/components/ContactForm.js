@@ -1,5 +1,5 @@
 import { useForm, ValidationError } from '@formspree/react';
-import { VStack, Button, Text } from '@chakra-ui/react';
+import { VStack, Button } from '@chakra-ui/react';
 import { secondaryFont } from '../Fonts';
 import '../componentStyling/global.css';
 
@@ -12,33 +12,40 @@ const ContactForm = () => {
     <>
       <form onSubmit={handleSubmit}>
         <VStack fontFamily={secondaryFont} fontWeight={900}>
-          <label htmlFor="name">Name</label>
-          <input
-            className="input-box"
-            id="name"
-            type="name"
-            name="name"
-            placeholder="Enter your name"
-          />
+          <div className="input-container">
+            <label htmlFor="name">Name</label>
+            <input
+              className="input-box"
+              id="name"
+              type="name"
+              name="name"
+              placeholder="Enter your name"
+            />
+          </div>
+
           <ValidationError prefix="Name" field="name" errors={state.errors} />
-          <label style={{ textAlign: 'left' }} htmlFor="email">
-            Email Address
-          </label>
-          <input
-            className="input-box"
-            id="email"
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-          />
+          <div className="input-container">
+            <label htmlFor="email">Email Address</label>
+            <input
+              className="input-box"
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+          </div>
+
           <ValidationError prefix="Email" field="email" errors={state.errors} />
-          <label htmlFor="email">Message</label>
-          <textarea
-            className="text-area"
-            id="message"
-            name="message"
-            placeholder="Enter your message"
-          />
+          <div className="input-container">
+            <label htmlFor="email">Message</label>
+            <textarea
+              className="input-box text-area"
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+            />
+          </div>
+
           <ValidationError
             prefix="Message"
             field="message"
