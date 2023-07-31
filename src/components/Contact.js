@@ -85,14 +85,14 @@ const Contact = ({ contactRef }) => {
                     <Text mb={{ base: 0, sm: 0, md: 8 }}>
                       andy@whitedogwoodworking.com
                     </Text>
+                    <HStack spacing="20px">
+                      <Icon as={FaFacebook} boxSize={7} />
+                      <Icon as={FaInstagram} boxSize={7} />
+                    </HStack>
                   </Box>
-
-                  <HStack pr={'60%'} spacing="20px">
-                    <Icon as={FaFacebook} boxSize={7} />
-                    <Icon as={FaInstagram} boxSize={7} />
-                  </HStack>
                 </VStack>
               </Flex>
+
               <Image
                 mx={10}
                 maxW="350px"
