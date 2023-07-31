@@ -5,6 +5,7 @@ import Parallax from './components/Parallax';
 import About from './components/About';
 import Gallery2 from './components/Gallery2';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   //useRef
@@ -37,6 +38,7 @@ function App() {
         <About aboutRef={scrollToAbout} />
         <Gallery2 galleryRef={scrollToGallery} />
         <Contact contactRef={scrollToContact} />
+        <Footer />
       </Box>
     </ChakraProvider>
   );
@@ -46,7 +48,6 @@ export default App;
 
 //todo : update / resize font on logo in header to make it bigger
 //todo : add about me section content
-//todo : animate in about me section, maybe fade or opposite slide ins
 //todo : animate gallery thumbnails to slide in from left/right
 //todo : convert image files to jpg
 //todo : animate gallery overlays to fade or slide in
