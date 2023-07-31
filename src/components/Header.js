@@ -18,7 +18,7 @@ const Header = ({ scrollToAbout, scrollToGallery, scrollToContact }) => {
       const currentScrollPos = window.scrollY;
       const windowHeight = window.innerHeight;
       const documentHeight = document.body.scrollHeight;
-      const bottomThreshold = documentHeight - windowHeight;
+      const bottomThreshold = documentHeight - windowHeight - 10;
 
       setShowNav(
         (currentScrollPos > prevScrollPos &&

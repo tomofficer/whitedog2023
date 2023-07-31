@@ -8,7 +8,6 @@ import {
   VStack,
   Text,
   Icon,
-  HStack,
   Center,
 } from '@chakra-ui/react';
 import ContactForm from './ContactForm';
@@ -80,7 +79,7 @@ const Contact = ({ contactRef }) => {
                       <br />
                       Torrington, CT 06790
                     </Text>
-                    <Text mb={{ base: 0, sm: 0, md: 6 }}>
+                    <Text mb={{ base: 0, sm: 0, md: 8 }}>
                       Tel: 860-482-3776
                       <br />
                       Cell: 860-201-3345
@@ -88,22 +87,13 @@ const Contact = ({ contactRef }) => {
                     <Text mb={{ base: 0, sm: 0, md: 8 }}>
                       andy@whitedogwoodworking.com
                     </Text>
-                    <HStack spacing="20px">
-                      <a
-                        href="https://www.instagram.com/white_dog_woodworking/?hl=en"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Icon as={FaInstagram} boxSize={8} />
-                      </a>
-                      {/* <a
-                        href="https://www.instagram.com/white_dog_woodworking/?hl=en"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Icon as={FaFacebook} boxSize={7} />
-                      </a> */}
-                    </HStack>
+                    <a
+                      href="https://www.instagram.com/white_dog_woodworking/?hl=en"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Icon as={FaInstagram} boxSize={8} />
+                    </a>
                   </Box>
                 </VStack>
               </Flex>
