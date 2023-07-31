@@ -12,7 +12,10 @@ import {
   Center,
 } from '@chakra-ui/react';
 import ContactForm from './ContactForm';
-import { FaFacebook, FaInstagram } from 'react-icons/fa6';
+import {
+  // FaFacebook,
+  FaInstagram,
+} from 'react-icons/fa6';
 import { primaryFont, secondaryFont } from '../Fonts';
 import '../componentStyling/contact.css';
 
@@ -72,12 +75,12 @@ const Contact = ({ contactRef }) => {
                     CONTACT
                   </Heading>
                   <Box fontFamily={secondaryFont} fontWeight={900}>
-                    <Text mb={{ base: 0, sm: 0, md: 8 }}>
-                      59 Field Street,
+                    <Text mb={{ base: 0, sm: 0, md: 6 }}>
+                      59 Field Street, Suite 140
                       <br />
-                      Torringonton, CT 06790
+                      Torrington, CT 06790
                     </Text>
-                    <Text mb={{ base: 0, sm: 0, md: 8 }}>
+                    <Text mb={{ base: 0, sm: 0, md: 6 }}>
                       Tel: 860-482-3776
                       <br />
                       Cell: 860-201-3345
@@ -86,8 +89,20 @@ const Contact = ({ contactRef }) => {
                       andy@whitedogwoodworking.com
                     </Text>
                     <HStack spacing="20px">
-                      <Icon as={FaFacebook} boxSize={7} />
-                      <Icon as={FaInstagram} boxSize={7} />
+                      <a
+                        href="https://www.instagram.com/white_dog_woodworking/?hl=en"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Icon as={FaInstagram} boxSize={8} />
+                      </a>
+                      {/* <a
+                        href="https://www.instagram.com/white_dog_woodworking/?hl=en"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Icon as={FaFacebook} boxSize={7} />
+                      </a> */}
                     </HStack>
                   </Box>
                 </VStack>
