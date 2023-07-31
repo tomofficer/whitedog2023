@@ -16,7 +16,7 @@ import {
   FaInstagram,
 } from 'react-icons/fa6';
 import { primaryFont, secondaryFont } from '../Fonts';
-import '../componentStyling/contact.css';
+import '../componentStyling/global.css';
 
 const Contact = ({ contactRef }) => {
   //slide handlers

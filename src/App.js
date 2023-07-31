@@ -44,7 +44,6 @@ function App() {
 
 export default App;
 
-//todo : add ig icon to header
 //todo : update / resize font on logo in header to make it bigger
 //todo : add about me section content
 //todo : animate in about me section, maybe fade or opposite slide ins
@@ -54,7 +53,5 @@ export default App;
 //todo : add indicator on bottom of carousel
 //todo : add tile grid to open carousel of all images
 //todo : add title and description/location to open carousel
-//todo : troubleshoot <label> tag alignment on contact form
-//todo : add navigation to social icons
 //todo : add custom footer with tom officer web dev branding
 //todo : add white dog text logo to animate in once contact section appears
