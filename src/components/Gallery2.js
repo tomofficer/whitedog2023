@@ -17,7 +17,8 @@ const ImageGallery = ({ galleryRef }) => {
   //image data
   const galleryData = [
     {
-      title: 'Job Number One',
+      title: 'Hartford Hospital',
+      location: 'Hartford, CT',
       image:
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedog1_-DJZlIxPp.jpg?updatedAt=1690484185418',
       relatedImages: [
@@ -26,16 +27,18 @@ const ImageGallery = ({ galleryRef }) => {
       ],
     },
     {
-      title: 'Job Number Two',
+      title: 'Palmer Building',
+      location: 'Palmer, MA',
       image:
-        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedog1_-DJZlIxPp.jpg?updatedAt=1690484185418',
+        'https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/Jobsite%20Pictures/Palmer%20Building/IMG_3250_3RGZ1OPnw.png?updatedAt=1690869993852',
       relatedImages: [
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/inaki-del-olmo-NIJuEQw0RKg-unsplash_-6ZbpxdoU.jpg?updatedAt=1690600636071',
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/aaron-huber-G7sE2S4Lab4-unsplash_pYXqHhePm.jpg?updatedAt=1690600592957',
       ],
     },
     {
-      title: 'Job Number Three',
+      title: 'Warner Theatre',
+      location: 'Torrington, CT',
       image:
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedog1_-DJZlIxPp.jpg?updatedAt=1690484185418',
       relatedImages: [
@@ -44,9 +47,10 @@ const ImageGallery = ({ galleryRef }) => {
       ],
     },
     {
-      title: 'Job Number Four',
+      title: 'Halford House',
+      location: 'Long Island, NY',
       image:
-        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedog1_-DJZlIxPp.jpg?updatedAt=1690484185418',
+        'https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/Jobsite%20Pictures/Halford%20House/IMG_3254_Qa_gi2yvxP.png?updatedAt=1690869564735',
       relatedImages: [
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/patrick-robert-doyle-OvXht_wi5Ew-unsplash_dEhch8ueo.jpg?updatedAt=1690600655926',
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/davide-cantelli-e3Uy4k7ooYk-unsplash_qaQTgUjXW.jpg?updatedAt=1690600645524',
@@ -138,7 +142,8 @@ const ImageGallery = ({ galleryRef }) => {
           {galleryData.map((data, index) => (
             <>
               <div className="image-container">
-                <img
+                <Image
+                  maxH={'400px'}
                   key={index}
                   src={data.image}
                   alt={`1 ${index + 1}`}
@@ -148,7 +153,7 @@ const ImageGallery = ({ galleryRef }) => {
                   <img
                     src={companyLogo}
                     alt="White Dog Woodworking Logo"
-                    // maxW={{ base: '100px', sm: '200px', md: '250px' }}
+                    // maxW={{ base: '100px', sm: '200px', md: '4xl' }}
                   />
 
                   <p className="image-title">{data.title}</p>
@@ -247,3 +252,5 @@ const ImageGallery = ({ galleryRef }) => {
 };
 
 export default ImageGallery;
+
+//todo : troubleshoot gallery thumbnail sizing issues, not all pics are the same size and need to have height/width rules!
