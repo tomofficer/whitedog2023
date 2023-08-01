@@ -60,7 +60,9 @@ const ContactForm = () => {
             px={16}
             mt={6}
             _hover={{
-              bg: 'green.400',
+              bg: 'green.500',
+
+              transform: 'scale(1.05)',
             }}
           >
             Submit
