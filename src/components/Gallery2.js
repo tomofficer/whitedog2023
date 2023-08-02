@@ -27,15 +27,16 @@ const ImageGallery = ({ galleryRef }) => {
       ],
     },
     {
-      title: 'Palmer Building',
-      location: 'Palmer, MA',
+      title: 'Halford House',
+      location: 'Long Island, NY',
       image:
-        'https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/Jobsite%20Pictures/Palmer%20Building/IMG_3250_3RGZ1OPnw.png?updatedAt=1690869993852',
+        'https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/Jobsite%20Pictures/Halford%20House/IMG_3254_Qa_gi2yvxP.png?updatedAt=1690869564735',
       relatedImages: [
-        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/inaki-del-olmo-NIJuEQw0RKg-unsplash_-6ZbpxdoU.jpg?updatedAt=1690600636071',
-        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/aaron-huber-G7sE2S4Lab4-unsplash_pYXqHhePm.jpg?updatedAt=1690600592957',
+        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/patrick-robert-doyle-OvXht_wi5Ew-unsplash_dEhch8ueo.jpg?updatedAt=1690600655926',
+        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/davide-cantelli-e3Uy4k7ooYk-unsplash_qaQTgUjXW.jpg?updatedAt=1690600645524',
       ],
     },
+
     {
       title: 'Warner Theatre',
       location: 'Torrington, CT',
@@ -47,13 +48,13 @@ const ImageGallery = ({ galleryRef }) => {
       ],
     },
     {
-      title: 'Halford House',
-      location: 'Long Island, NY',
+      title: 'Palmer Building',
+      location: 'Palmer, MA',
       image:
-        'https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/Jobsite%20Pictures/Halford%20House/IMG_3254_Qa_gi2yvxP.png?updatedAt=1690869564735',
+        'https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/Jobsite%20Pictures/Palmer%20Building/IMG_3250_3RGZ1OPnw.png?updatedAt=1690869993852',
       relatedImages: [
-        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/patrick-robert-doyle-OvXht_wi5Ew-unsplash_dEhch8ueo.jpg?updatedAt=1690600655926',
-        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/davide-cantelli-e3Uy4k7ooYk-unsplash_qaQTgUjXW.jpg?updatedAt=1690600645524',
+        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/inaki-del-olmo-NIJuEQw0RKg-unsplash_-6ZbpxdoU.jpg?updatedAt=1690600636071',
+        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/aaron-huber-G7sE2S4Lab4-unsplash_pYXqHhePm.jpg?updatedAt=1690600592957',
       ],
     },
   ];
@@ -142,8 +143,7 @@ const ImageGallery = ({ galleryRef }) => {
           {galleryData.map((data, index) => (
             <>
               <div className="image-container">
-                <Image
-                  maxH={'400px'}
+                <img
                   key={index}
                   src={data.image}
                   alt={`1 ${index + 1}`}

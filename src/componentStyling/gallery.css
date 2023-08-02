@@ -7,12 +7,15 @@ body.modal-open, html.modal-open {
 .image-container {
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .image-container img {
   width: 100%;
-  height: auto;
+  max-height: 400px;
   display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .overlay {
@@ -65,4 +68,31 @@ body.modal-open, html.modal-open {
 .overlay-slide-left:hover {
   left: 0;
   /* Slide the element in to the left position on hover */
+}
+
+/* gallery animations */
+.slide-left {
+  animation: slideInFromLeft 0.5s;
+}
+
+.slide-right {
+  animation: slideInFromRight 0.5s;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
