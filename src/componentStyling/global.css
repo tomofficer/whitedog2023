@@ -59,7 +59,7 @@
 }
 
 .slide-in-right {
-  transform: translateX(100%);
+  transform: translateX(200%);
   /* Move the element off-screen to the right */
 }
 
@@ -67,6 +67,6 @@
 .visible.slide-in-right {
   transform: translateX(0);
   /* Slide the element back to its original position */
-  transition: transform 1s ease-in;
+  transition: transform .5s ease-in;
   /* Use CSS transition for smooth sliding */
 }
