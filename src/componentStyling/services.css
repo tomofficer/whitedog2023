@@ -1,0 +1,28 @@
+/* App.css */
+
+.services-icon-container {
+  display: inline-block;
+  position: relative;
+}
+
+.services-icon {
+  font-size: 50px;
+  /* Adjust the font size as needed */
+}
+
+.services-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  /* Adjust the width of the circle */
+  height: 36px;
+  /* Adjust the height of the circle */
+  border: 10px solid #ff9900;
+  /* Adjust the border color and thickness */
+  border-radius: 50%;
+  z-index: -1;
+  /* Place the circle behind the icon */
+}

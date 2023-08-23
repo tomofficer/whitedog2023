@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Modal from 'react-modal';
 import '../componentStyling/gallery.css';
 import {
@@ -58,6 +58,12 @@ const ImageGallery = ({ galleryRef }) => {
       ],
     },
   ];
+
+  const getLength = (index, data) => {
+    data.map(() => {
+      
+    })
+  }
 
   const companyLogo =
     'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitelogo_A1KeRKfjy.png?updatedAt=1690484186754';
@@ -142,7 +148,12 @@ const ImageGallery = ({ galleryRef }) => {
         >
           {galleryData.map((data, index) => (
             <>
-              <div className="image-container">
+              <div
+                key={index}
+                className={`image-container ${
+                  index % 2 === 0 ? 'slide-left' : 'slide-right'
+                }`}
+              >
                 <img
                   key={index}
                   src={data.image}
