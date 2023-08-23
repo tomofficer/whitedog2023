@@ -1,0 +1,22 @@
+/* Parallax2.css */
+
+.parallax-container {
+  height: 100vh;
+  /* Set a fixed height for the container */
+  overflow: hidden;
+  /* Hide overflow to prevent scrolling beyond the container */
+  position: relative;
+}
+
+.parallax-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Replace background-color with background-image */
+  background-image: url('https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/philip-swinburn-vS7LVkPyXJU-unsplash.jpg?updatedAt=1692760829278'); 
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease-in-out;
+}

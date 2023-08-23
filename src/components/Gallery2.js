@@ -60,10 +60,8 @@ const ImageGallery = ({ galleryRef }) => {
   ];
 
   const getLength = (index, data) => {
-    data.map(() => {
-      
-    })
-  }
+    data.map(() => {});
+  };
 
   const companyLogo =
     'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitelogo_A1KeRKfjy.png?updatedAt=1690484186754';
@@ -128,8 +126,6 @@ const ImageGallery = ({ galleryRef }) => {
 
   return (
     <>
-      <div ref={galleryRef}></div>
-
       <div className="vertical-line-container">
         <div className="vertical-line"></div>
       </div>
@@ -138,6 +134,8 @@ const ImageGallery = ({ galleryRef }) => {
         mt={{ base: 2, sm: 6, md: 28 }}
         px={{ base: 10, sm: 20, md: 36 }}
       >
+        <Box ref={galleryRef} mt={14}></Box>
+
         <Heading mt={20} fontFamily={primaryFont}>
           GALLERY
         </Heading>

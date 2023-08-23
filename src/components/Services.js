@@ -41,7 +41,8 @@ const Services = ({ servicesRef }) => {
   }, []);
   return (
     <>
-      <div ref={servicesRef}></div>
+      <Box ref={servicesRef} mt={0}></Box>
+
       <div className="vertical-line-container">
         <div className="vertical-line"></div>
       </div>

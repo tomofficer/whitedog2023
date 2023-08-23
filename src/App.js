@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Services from './components/Services';
 import Clients from './components/Clients';
+import Parallax2 from './components/Parallax2';
 
 function App() {
   //useRef
