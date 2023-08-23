@@ -67,6 +67,6 @@
 .visible.slide-in-right {
   transform: translateX(0);
   /* Slide the element back to its original position */
-  transition: transform .5s ease-in;
+  transition: transform .8s ease-in;
   /* Use CSS transition for smooth sliding */
 }

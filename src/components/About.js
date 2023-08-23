@@ -16,7 +16,7 @@ const About = ({ aboutRef }) => {
 
       // Calculate the scroll position where you want the animations to trigger
       // In this example, we are triggering the animations when the user scrolls to the bottom 20% of the page
-      const triggerPoint = bodyHeight - windowHeight * 4.2;
+      const triggerPoint = bodyHeight - windowHeight * 5;
 
       // Update the state based on the scroll position
       setSlideInLeft(scrollY > triggerPoint);
