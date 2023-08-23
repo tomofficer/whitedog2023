@@ -7,6 +7,7 @@ import Gallery2 from './components/Gallery2';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Services from './components/Services';
+import Clients from './components/Clients';
 
 function App() {
   //useRef
@@ -14,6 +15,7 @@ function App() {
   const scrollToGallery = useRef();
   const scrollToContact = useRef();
   const scrollToServices = useRef();
+  const scrollToClients = useRef();
 
   //scroll handlers
   const scrollToAboutHandle = () => {
@@ -32,6 +34,10 @@ function App() {
     scrollToContact.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToClientsHandle = () => {
+    scrollToContact.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
@@ -40,11 +46,13 @@ function App() {
           scrollToGallery={scrollToGalleryHandle}
           scrollToContact={scrollToContactHandle}
           scrollToServices={scrollToServicesHandle}
+          scrollToClients={scrollToClientsHandle}
         />
         <Parallax />
         <About aboutRef={scrollToAbout} />
         <Gallery2 galleryRef={scrollToGallery} />
         <Services servicesRef={scrollToServices} />
+        {/* <Clients servicesRef={scrollToClients} /> */}
         <Contact contactRef={scrollToContact} />
         <Footer />
       </Box>

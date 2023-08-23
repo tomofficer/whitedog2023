@@ -8,6 +8,7 @@ const Header = ({
   scrollToGallery,
   scrollToContact,
   scrollToServices,
+  scrollToClients,
 }) => {
   //state
   const [showNav, setShowNav] = useState(true);
@@ -70,6 +71,9 @@ const Header = ({
             <Button bg="none" onClick={() => scrollToServices()}>
               SERVICES
             </Button>
+            {/* <Button bg="none" onClick={() => scrollToClients()}>
+              CLIENTS
+            </Button> */}
             <Button bg="none" onClick={() => scrollToContact()}>
               CONTACT
             </Button>

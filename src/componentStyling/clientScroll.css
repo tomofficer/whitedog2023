@@ -1,0 +1,24 @@
+/* ClientsSection.css */
+
+.clients-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.client-logo {
+  flex-shrink: 0;
+animation: slideLoop 5s linear infinite;
+  max-width: 200px;
+}
+
+@keyframes slideLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
