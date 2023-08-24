@@ -9,6 +9,7 @@ import {
   Text,
   Icon,
   Center,
+  HStack,
 } from '@chakra-ui/react';
 import ContactForm from './ContactForm';
 import {
@@ -87,13 +88,18 @@ const Contact = ({ contactRef }) => {
                     <Text mb={{ base: 0, sm: 0, md: 8 }}>
                       andy@whitedogwoodworking.com
                     </Text>
-                    <a
-                      href="https://www.instagram.com/white_dog_woodworking/?hl=en"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Icon as={FaInstagram} boxSize={8} />
-                    </a>
+                    <HStack>
+                      <a
+                        href="https://www.instagram.com/white_dog_woodworking/?hl=en"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Icon as={FaInstagram} boxSize={8} />
+                      </a>
+                      <Text mb={0} fontSize={'md'}>
+                        : Follow us on Instagram!
+                      </Text>
+                    </HStack>
                   </Box>
                 </VStack>
               </Flex>

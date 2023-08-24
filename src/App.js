@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Services from './components/Services';
 import Clients from './components/Clients';
 import Parallax2 from './components/Parallax2';
+import Careers from './components/Careers';
 
 function App() {
   //useRef
@@ -53,7 +54,8 @@ function App() {
         <About aboutRef={scrollToAbout} />
         <Gallery2 galleryRef={scrollToGallery} />
         <Services servicesRef={scrollToServices} />
-        <Clients servicesRef={scrollToClients} />
+        {/* <Clients servicesRef={scrollToClients} /> */}
+        {/* <Careers /> */}
         <Contact contactRef={scrollToContact} />
         <Footer />
       </Box>
