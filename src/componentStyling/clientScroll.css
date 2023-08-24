@@ -10,7 +10,7 @@
 
 .client-logo {
   flex-shrink: 0;
-animation: slideLoop 5s linear infinite;
+animation: slideLoop 0s linear infinite;
   max-width: 200px;
 }
 

@@ -53,7 +53,7 @@ function App() {
         <About aboutRef={scrollToAbout} />
         <Gallery2 galleryRef={scrollToGallery} />
         <Services servicesRef={scrollToServices} />
-        {/* <Clients servicesRef={scrollToClients} /> */}
+        <Clients servicesRef={scrollToClients} />
         <Contact contactRef={scrollToContact} />
         <Footer />
       </Box>
@@ -64,17 +64,17 @@ function App() {
 export default App;
 
 //todo : IMPORTANT
+//todo : add careers section
+//todo : update footer with all navigation points
 //todo : update / resize font on logo in header to make it bigger
 //todo : add about me section content text
+//todo : add services section content text
 //todo : add indicator on bottom of carousel
 //todo : add tile grid to open carousel of all images
 //todo : add title and description/location to open carousel
-//todo : add cursor pointer on images
-//todo : fix padding on contact section
 //todo : test on different browsers
-//todo : change submit btn color,
-//todo : url rewrite
+//todo : animate gallery thumbnails to slide in from left/right as you scroll down the page
 
 //todo : OPTIONAL
-//todo : animate gallery thumbnails to slide in from left/right -> optional
-//todo : animate gallery overlays to fade or slide in -> optional
+//todo : possible url rewrite when clicking to different sections?
+//todo : let the header appear whenever you scroll back up (when its not showing)

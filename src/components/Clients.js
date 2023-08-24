@@ -44,7 +44,7 @@ const Clients = ({ clientsRef }) => {
           </Heading>
         </div>
       </Box>
-      <Box px={20}>
+      <Box px={32}>
         <Center>
           <ClientScroll />
         </Center>

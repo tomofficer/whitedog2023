@@ -11,7 +11,7 @@ const Footer = () => {
         // left={0}
         // bottom={0}
         // width={'100%'}
-        // bg="white"
+        bg="black"
         // zIndex={99999}
       >
         <Center>
@@ -21,6 +21,7 @@ const Footer = () => {
             fontWeight={'700'}
             fontSize={'md'}
             letterSpacing={'1px'}
+            color="white"
           >
             &copy; Tom Officer Web Dev 2023 • Tomofficerwebdev@gmail.com
           </Text>
