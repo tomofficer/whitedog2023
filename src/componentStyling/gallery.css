@@ -30,7 +30,7 @@ body.modal-open, html.modal-open {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
@@ -46,7 +46,11 @@ body.modal-open, html.modal-open {
 }
 
 .image-container:hover .overlay {
-  opacity: 1;
+  opacity: 0;
+}
+
+.image-container:hover {
+transform: scale(1.01);
 }
 
 /* alternate gallery grid styling, alternative to chakra inline */
