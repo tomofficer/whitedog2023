@@ -38,7 +38,7 @@ const About = ({ aboutRef }) => {
       <Box py={{ base: 4, sm: 0, md: 4 }} mt={{ base: 2, sm: 6, md: 28 }}>
         <div className={`slide-in-left ${slideInLeft ? 'visible' : ''}`}>
           <Heading mt={20} fontFamily={primaryFont}>
-            ABOUT
+            ABOUT US
           </Heading>
         </div>
 
@@ -54,7 +54,7 @@ const About = ({ aboutRef }) => {
               fontSize={'2xl'}
               fontWeight={900}
             >
-              Architectural millworkers manufacturing fine wood products,
+              We are architectural millworkers manufacturing fine wood products,
               plastic laminate and corian for both residential and business jobs
               with general contractors. White Dog Woodworking is well-settled in
               its home at 59 Field St., and recently added new digital equipment

@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Box, Heading, Center } from '@chakra-ui/react';
-import { primaryFont, secondaryFont } from '../Fonts';
+import { Box, Heading, Center, Grid, GridItem, Image } from '@chakra-ui/react';
+import { primaryFont } from '../Fonts';
 import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import ClientScroll from './ClientScroll';
+import ImageGrid from './ImageGrid';
 
 const Clients = ({ clientsRef }) => {
   //slide handlers
@@ -44,9 +45,10 @@ const Clients = ({ clientsRef }) => {
           </Heading>
         </div>
       </Box>
-      <Box px={32}>
+      <Box px={48}>
         <Center>
-          <ClientScroll />
+          {/* <ClientScroll /> */}
+          <ImageGrid />
         </Center>
       </Box>
     </>
