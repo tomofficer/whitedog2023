@@ -1,12 +1,13 @@
 import React from 'react';
-import { Center, Text, Box, HStack } from '@chakra-ui/react';
-import { secondaryFont, primaryFont } from '../Fonts';
+import { Center, Text, Box, HStack, Spacer, Image } from '@chakra-ui/react';
+import { secondaryFont } from '../Fonts';
 
 const Footer = () => {
   return (
     <>
       <Box
-        pt={10}
+        pt={6}
+        pb={4}
         // pos="fixed"
         // left={0}
         // bottom={0}
@@ -14,28 +15,48 @@ const Footer = () => {
         bg="black"
         // zIndex={99999}
       >
-        <Box pl={'5%'} mb={10}>
+        <Box mb={10} px={0}>
           <HStack
             color="white"
             fontFamily={secondaryFont}
             fontSize={'md'}
             letterSpacing={'1px'}
             fontWeight={'700'}
-            spacing={'20px'}
+            spacing={'10px'}
           >
+            <Spacer />
+
             <a href="/careers" style={{ cursor: 'pointer' }}>
               <Text>Our Work</Text>
             </a>
+            <Spacer />
+
             <a href="/careers" style={{ cursor: 'pointer' }}>
               <Text>About Us</Text>
             </a>
+            <Spacer />
+
+            <Image
+              mx={10}
+              src="https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/invertedlogoonly_f5KXcM0TX.png?updatedAt=1693109543765"
+              w={{
+                base: '150px',
+                sm: '250px',
+                md: '400',
+              }}
+            />
+
+            <Spacer />
 
             <a href="/careers" style={{ cursor: 'pointer' }}>
               <Text>Services</Text>
             </a>
+            <Spacer />
+
             <a href="/careers" style={{ cursor: 'pointer' }}>
               <Text>Careers</Text>
             </a>
+            <Spacer />
           </HStack>
         </Box>
 
