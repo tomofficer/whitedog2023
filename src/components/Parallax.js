@@ -1,6 +1,14 @@
 import React, { useEffect } from 'react';
 import '../componentStyling/parallax.css';
-import { Image, Box, Flex, chakra, shouldForwardProp } from '@chakra-ui/react';
+import {
+  Image,
+  Box,
+  Flex,
+  chakra,
+  shouldForwardProp,
+  Heading,
+  VStack,
+} from '@chakra-ui/react';
 import { motion, isValidMotionProp } from 'framer-motion';
 
 const Parallax = () => {
@@ -50,31 +58,33 @@ const Parallax = () => {
 
           <div className="parallax-layer" data-speed="0.5">
             <Flex h="100vh" alignItems="center" justifyContent="center">
-              <ChakraBox
-                initial={{ x: -1000 }} // Initial position (off-screen to the left)
-                animate={{
-                  x: 0,
-                  rotate: [0, 360], // Rotate from 0 degrees to 360 degrees
-                  transition: {
-                    duration: 1.5, // Duration of the animation in seconds
-                    ease: 'easeInOut', // Type of easing function (optional)
-                  },
-                }}
-                transition={{
-                  duration: 3,
-                  ease: 'easeInOut',
-                  repeat: Infinity,
-                  repeatType: 'loop',
-                }}
-              >
-                <Image
-                  pb={20}
-                  maxW={'md'}
-                  opacity={'70%'}
-                  src="https://ik.imagekit.io/v66nb6oaq/whitedogblack_Je04hqCmN.png?updatedAt=1661297820983"
-                  alt="logo"
-                />
-              </ChakraBox>
+              <VStack>
+                <ChakraBox
+                  initial={{ x: -1000 }} // Initial position (off-screen to the left)
+                  animate={{
+                    x: 0,
+                    rotate: [0, 360], // Rotate from 0 degrees to 360 degrees
+                    transition: {
+                      duration: 1.5, // Duration of the animation in seconds
+                      ease: 'easeInOut', // Type of easing function (optional)
+                    },
+                  }}
+                  transition={{
+                    duration: 3,
+                    ease: 'easeInOut',
+                    repeat: Infinity,
+                    repeatType: 'loop',
+                  }}
+                >
+                  <Image
+                    pb={0}
+                    maxW={'md'}
+                    opacity={'70%'}
+                    src="https://ik.imagekit.io/v66nb6oaq/whitedogblack_Je04hqCmN.png?updatedAt=1661297820983"
+                    alt="logo"
+                  />
+                </ChakraBox>
+              </VStack>
             </Flex>
           </div>
         </div>

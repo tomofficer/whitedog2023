@@ -38,6 +38,8 @@ const Careers = () => {
               adipisicing elit. Iusto, eos!
             </Text>
             <Image
+              mt={4}
+              maxH="500px"
               src="https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/whiteDogTeamPhoto.jpeg?updatedAt=1692852084867"
               alt="Team Photo"
             />

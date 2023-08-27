@@ -54,12 +54,16 @@ const About = ({ aboutRef }) => {
               fontSize={'2xl'}
               fontWeight={900}
             >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-              iure sit voluptatibus adipisci illum, deleniti quibusdam saepe
-              laudantium corrupti neque, blanditiis veniam reiciendis tempore
-              fuga? Porro repudiandae natus maiores nulla eligendi sed
-              consectetur assumenda magni, impedit totam sunt praesentium animi?
-              Lorem ipsum dolor sit amet. Lorem, ipsum.
+              Architectural millworkers manufacturing fine wood products,
+              plastic laminate and corian for both residential and business jobs
+              with general contractors. White Dog Woodworking is well-settled in
+              its home at 59 Field St., and recently added new digital equipment
+              that helps complete its large-scale projects with ease. The
+              company has been on Field Street for about five years, but Officer
+              started his own business much earlier. He lives in Litchfield,
+              while his son resides in Morris. The company name is a tribute to
+              the family’s love for Samoyeds, the white, fluffy, good-natured
+              dogs that always appear to be smiling.
             </Text>
           </Box>
           {/* <Box maxW={'2xl'} mt={10}>

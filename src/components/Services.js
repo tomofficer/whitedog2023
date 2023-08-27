@@ -119,14 +119,17 @@ const Services = ({ servicesRef }) => {
         >
           <Text
             textAlign={'center'}
-            mt={{ base: 2, sm: 6, md: 6 }}
+            mt={{ base: 2, sm: 6, md: 14 }}
             fontFamily={secondaryFont}
             fontSize={'2xl'}
             fontWeight={900}
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-            iure sit voluptatibus adipisci illum, deleniti quibusdam saepe
-            laudantium corrupti neque.
+            Custom architectural millwork for both commercial and residential.{' '}
+            <br />
+            Custom cabinetry designed both for home and office. <br />
+            Custom designed corian countertops for kitchen, bath and office.
+            <br />
+            Architectural manufacturing both small and large scale.
           </Text>
         </Box>
       </Center>

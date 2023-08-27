@@ -54,7 +54,7 @@ function App() {
         <About aboutRef={scrollToAbout} />
         <Gallery2 galleryRef={scrollToGallery} />
         <Services servicesRef={scrollToServices} />
-        {/* <Clients servicesRef={scrollToClients} /> */}
+        <Clients servicesRef={scrollToClients} />
         {/* <Careers /> */}
         <Contact contactRef={scrollToContact} />
         <Footer />
@@ -66,7 +66,7 @@ function App() {
 export default App;
 
 //todo : IMPORTANT
-//todo : add careers section
+//todo : add careers section to a new page?
 //todo : update footer with all navigation points
 //todo : update / resize font on logo in header to make it bigger
 //todo : add about me section content text
