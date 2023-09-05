@@ -36,15 +36,17 @@ const Footer = () => {
             </a>
             <Spacer />
 
-            <Image
-              mx={10}
-              src="https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/invertedlogoonly_f5KXcM0TX.png?updatedAt=1693109543765"
-              w={{
-                base: '150px',
-                sm: '250px',
-                md: '400',
-              }}
-            />
+            <a href="/">
+              <Image
+                mx={10}
+                src="https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/invertedlogoonly_f5KXcM0TX.png?updatedAt=1693109543765"
+                w={{
+                  base: '150px',
+                  sm: '250px',
+                  md: '400',
+                }}
+              />
+            </a>
 
             <Spacer />
             <a href="/careers" style={{ cursor: 'pointer' }}>
@@ -52,7 +54,7 @@ const Footer = () => {
             </a>
             <Spacer />
 
-            <a href="/" style={{ cursor: 'pointer' }}>
+            <a href="/contact-us" style={{ cursor: 'pointer' }}>
               <Text>Contact Us</Text>
             </a>
             <Spacer />
