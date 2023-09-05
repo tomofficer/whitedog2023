@@ -1,0 +1,56 @@
+.container {
+  position: relative;
+  /* Relative to this, the background and overlay will be positioned */
+  height: 100vh;
+  /* 100% of the viewport height */
+  width: 100%;
+  /* 100% of the container width */
+  overflow: hidden;
+  /* Hide any overflowing content */
+}
+
+.background-image {
+  position: absolute;
+  /* Absolute positioning */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background-image: url('your-image-url-here.jpg'); */
+  /* Replace with your image URL */
+  background-size: cover;
+  /* Cover the entire area */
+  background-position: center;
+  /* Center the image */
+  z-index: 1;
+  /* Behind the overlay */
+}
+
+.overlay {
+  position: absolute;
+  /* Absolute positioning */
+  top: 50%;
+  left: 0;
+  width: 100%;
+  /* Span the entire width */
+  height: 2in;
+  /* Span the entire height */
+  background-color: rgba(128, 128, 128, 0.5);
+  /* Grey with 50% opacity */
+  z-index: 2;
+  /* In front of the background image */
+
+  display: flex;
+  /* Using Flexbox for */
+  justify-content: center;
+  /* Horizontally centering the text */
+  align-items: center;
+  /* Vertically centering the text */
+}
+
+.overlay p {
+  font-size: 2em;
+  /* Large text */
+  color: white;
+  /* White text */
+}
