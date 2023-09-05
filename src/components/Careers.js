@@ -1,16 +1,23 @@
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { primaryFont, secondaryFont } from '../Fonts';
-import { Center, VStack, Text, Image } from '@chakra-ui/react';
+import {
+  HStack,
+  Text,
+  Image,
+  Box,
+  Spacer,
+  Icon,
+  Button,
+} from '@chakra-ui/react';
 import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
-
-import { Box, Heading } from '@chakra-ui/react';
+import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 
 const Careers = () => {
-  //slide handlers
-  const [slideInLeft, setSlideInLeft] = useState(false);
-  const [slideInRight, setSlideInRight] = useState(false);
+  //back btn logic
+  const navigate = useNavigate();
 
   return (
     <>
@@ -21,8 +28,39 @@ const Careers = () => {
             alt="careers"
           />
         </Box>
-        <Box className="overlay">
-          <Text>Careers Section Here</Text>
+        <Box>
+          <Box className="back-button" p={4}>
+            <a href="/">
+              <Icon
+                as={BsFillArrowLeftCircleFill}
+                boxSize={12}
+                color="white"
+                // onClick={() => {
+                //   navigate(-1);
+                // }}
+              />
+            </a>
+          </Box>
+        </Box>
+        <Box className="overlay" px={24}>
+          <HStack>
+            <Text
+              fontFamily={primaryFont}
+              fontSize={'6xl'}
+              fontWeight={600}
+              pr={20}
+            >
+              Careers
+            </Text>
+            <Spacer />
+            <Box px={40}>
+              <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={700}>
+                Are you interested in joining our team? <br />
+                Please check below for available job oepnings and contact us
+                directly to apply.
+              </Text>
+            </Box>
+          </HStack>
         </Box>
       </Box>
     </>

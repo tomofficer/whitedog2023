@@ -47,14 +47,13 @@ const Footer = () => {
             />
 
             <Spacer />
-
-            <a href="/" style={{ cursor: 'pointer' }}>
-              <Text>Services</Text>
+            <a href="/careers" style={{ cursor: 'pointer' }}>
+              <Text>Careers</Text>
             </a>
             <Spacer />
 
-            <a href="/careers" style={{ cursor: 'pointer' }}>
-              <Text>Careers</Text>
+            <a href="/" style={{ cursor: 'pointer' }}>
+              <Text>Contact Us</Text>
             </a>
             <Spacer />
           </HStack>

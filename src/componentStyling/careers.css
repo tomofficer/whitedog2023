@@ -40,17 +40,35 @@
   z-index: 2;
   /* In front of the background image */
 
-  display: flex;
+  /* display: flex;
+  flex-direction: row; */
   /* Using Flexbox for */
-  justify-content: center;
+  /* justify-content: center; */
   /* Horizontally centering the text */
-  align-items: center;
+  /* align-items: center; */
   /* Vertically centering the text */
 }
 
 .overlay p {
-  font-size: 2em;
+  /* font-size: 2em; */
   /* Large text */
   color: white;
   /* White text */
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  /* Adjust as needed */
+  left: 10px;
+  /* Adjust as needed */
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  /* Adjust as needed */
+  color: white;
+  /* You can choose any color */
+  cursor: pointer;
+  z-index: 3;
+  /* Above the overlay */
 }
