@@ -26,7 +26,7 @@
   /* Behind the overlay */
 }
 
-.overlay {
+.overlaycareers {
   position: absolute;
   /* Absolute positioning */
   top: 50%;
@@ -40,16 +40,16 @@
   z-index: 2;
   /* In front of the background image */
 
-  /* display: flex;
-  flex-direction: row; */
+  display: flex;
+  flex-direction: row;
   /* Using Flexbox for */
-  /* justify-content: center; */
+  justify-content: center;
   /* Horizontally centering the text */
-  /* align-items: center; */
+  align-items: center;
   /* Vertically centering the text */
 }
 
-.overlay p {
+.overlaycareers p {
   /* font-size: 2em; */
   /* Large text */
   color: white;

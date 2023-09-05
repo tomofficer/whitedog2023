@@ -42,7 +42,7 @@ const Careers = () => {
             </a>
           </Box>
         </Box>
-        <Box className="overlay" px={24}>
+        <Box className="overlaycareers" px={24}>
           <HStack>
             <Text
               fontFamily={primaryFont}
@@ -54,7 +54,7 @@ const Careers = () => {
             </Text>
             <Spacer />
             <Box px={40}>
-              <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={700}>
+              <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={900}>
                 Are you interested in joining our team? <br />
                 Please check below for available job oepnings and contact us
                 directly to apply.
