@@ -1,5 +1,7 @@
 import { useRef } from 'react';
 import { ChakraProvider, Box, theme } from '@chakra-ui/react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
 import Header from './components/Header';
 import Parallax from './components/Parallax';
 import About from './components/About';
@@ -10,6 +12,7 @@ import Services from './components/Services';
 import Clients from './components/Clients';
 import Parallax2 from './components/Parallax2';
 import Careers from './components/Careers';
+import Home from './components/Home';
 
 function App() {
   //useRef
@@ -42,23 +45,38 @@ function App() {
 
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Header
-          scrollToAbout={scrollToAboutHandle}
-          scrollToGallery={scrollToGalleryHandle}
-          scrollToContact={scrollToContactHandle}
-          scrollToServices={scrollToServicesHandle}
-          scrollToClients={scrollToClientsHandle}
-        />
-        <Parallax />
-        <About aboutRef={scrollToAbout} />
-        <Gallery2 galleryRef={scrollToGallery} />
-        <Services servicesRef={scrollToServices} />
-        <Clients servicesRef={scrollToClients} />
-        {/* <Careers /> */}
-        <Contact contactRef={scrollToContact} />
-        <Footer />
-      </Box>
+      <Router>
+        <Box textAlign="center" fontSize="xl">
+          <Header
+            scrollToAbout={scrollToAboutHandle}
+            scrollToGallery={scrollToGalleryHandle}
+            scrollToContact={scrollToContactHandle}
+            scrollToServices={scrollToServicesHandle}
+            scrollToClients={scrollToClientsHandle}
+          />
+          <Routes>
+            <Route path="/careers" element={<Careers />} />
+            <Route
+              path="/"
+              element={
+                <Home
+                  aboutRef={scrollToAbout}
+                  galleryRef={scrollToGallery}
+                  servicesRef={scrollToServices}
+                  contactRef={scrollToContact}
+                />
+              }
+            />
+          </Routes>
+          {/* <Parallax />
+          <About aboutRef={scrollToAbout} />
+          <Gallery2 galleryRef={scrollToGallery} />
+          <Services servicesRef={scrollToServices} />
+          <Clients servicesRef={scrollToClients} />
+          <Contact contactRef={scrollToContact} /> */}
+          <Footer />
+        </Box>
+      </Router>
     </ChakraProvider>
   );
 }
