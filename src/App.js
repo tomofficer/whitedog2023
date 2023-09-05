@@ -47,19 +47,23 @@ function App() {
     <ChakraProvider theme={theme}>
       <Router>
         <Box textAlign="center" fontSize="xl">
-          <Header
+          {/* <Header
             scrollToAbout={scrollToAboutHandle}
             scrollToGallery={scrollToGalleryHandle}
             scrollToContact={scrollToContactHandle}
             scrollToServices={scrollToServicesHandle}
             scrollToClients={scrollToClientsHandle}
-          />
+          /> */}
           <Routes>
             <Route path="/careers" element={<Careers />} />
             <Route
               path="/"
               element={
                 <Home
+                  scrollToAbout={scrollToAboutHandle}
+                  scrollToGallery={scrollToGalleryHandle}
+                  scrollToContact={scrollToContactHandle}
+                  scrollToServices={scrollToServicesHandle}
                   aboutRef={scrollToAbout}
                   galleryRef={scrollToGallery}
                   servicesRef={scrollToServices}
