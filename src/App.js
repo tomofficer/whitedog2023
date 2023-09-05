@@ -13,6 +13,7 @@ import Clients from './components/Clients';
 import Parallax2 from './components/Parallax2';
 import Careers from './components/Careers';
 import Home from './components/Home';
+import AboutUsFullPage from './components/AboutUsFullPage';
 
 function App() {
   //useRef
@@ -55,7 +56,6 @@ function App() {
             scrollToClients={scrollToClientsHandle}
           /> */}
           <Routes>
-            <Route path="/careers" element={<Careers />} />
             <Route
               path="/"
               element={
@@ -71,6 +71,8 @@ function App() {
                 />
               }
             />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/about-us" element={<AboutUsFullPage />} />
           </Routes>
           {/* <Parallax />
           <About aboutRef={scrollToAbout} />

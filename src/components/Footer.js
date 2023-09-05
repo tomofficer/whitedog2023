@@ -31,7 +31,7 @@ const Footer = () => {
             </a>
             <Spacer />
 
-            <a href="/careers" style={{ cursor: 'pointer' }}>
+            <a href="/about-us" style={{ cursor: 'pointer' }}>
               <Text>About Us</Text>
             </a>
             <Spacer />
