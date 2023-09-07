@@ -57,6 +57,21 @@ const Careers = () => {
                 Please check below for available job oepnings and contact us
                 directly to apply.
               </Text>
+              <Button
+                fontStyle={secondaryFont}
+                bg="none"
+                border="2px"
+                color="white"
+                fontSize={'md'}
+                fontWeight={0}
+                px={10}
+                mt={6}
+                _hover={{
+                  color: 'teal.300',
+                }}
+              >
+                Browse Openings
+              </Button>
             </Box>
           </HStack>
         </Box>

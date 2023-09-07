@@ -58,6 +58,21 @@ const AboutUsFullPage = () => {
                 Architectural Millwork. <br />
                 We are located at 23 Field St in Torrington, Connecticut.
               </Text>
+              <Button
+                fontStyle={secondaryFont}
+                bg="none"
+                border="2px"
+                color="white"
+                fontSize={'md'}
+                fontWeight={0}
+                px={10}
+                mt={6}
+                _hover={{
+                  color: 'teal.300',
+                }}
+              >
+                Learn More
+              </Button>
             </Box>
           </HStack>
         </Box>
