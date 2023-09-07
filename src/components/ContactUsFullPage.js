@@ -30,16 +30,14 @@ const ContactUsFullPage = () => {
         </Box>
         <Box>
           <Box className="back-button" p={4}>
-            <a href="/">
-              <Icon
-                as={BsFillArrowLeftCircleFill}
-                boxSize={12}
-                color="white"
-                // onClick={() => {
-                //   navigate(-1);
-                // }}
-              />
-            </a>
+            <Icon
+              as={BsFillArrowLeftCircleFill}
+              boxSize={12}
+              color="white"
+              onClick={() => {
+                navigate(-1);
+              }}
+            />
           </Box>
         </Box>
         <Box className="overlaycareers" px={24}>

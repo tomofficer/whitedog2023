@@ -30,16 +30,14 @@ const AboutUsFullPage = () => {
         </Box>
         <Box>
           <Box className="back-button" p={4}>
-            <a href="/">
-              <Icon
-                as={BsFillArrowLeftCircleFill}
-                boxSize={12}
-                color="white"
-                // onClick={() => {
-                //   navigate(-1);
-                // }}
-              />
-            </a>
+            <Icon
+              as={BsFillArrowLeftCircleFill}
+              boxSize={12}
+              color="white"
+              onClick={() => {
+                navigate(-1);
+              }}
+            />
           </Box>
         </Box>
         <Box className="overlaycareers" px={24}>
@@ -48,7 +46,7 @@ const AboutUsFullPage = () => {
               fontFamily={primaryFont}
               fontSize={'6xl'}
               fontWeight={600}
-              pr={20}
+              pr={{ base: 0, sm: 0, md: 0 }}
             >
               About Us
             </Text>
