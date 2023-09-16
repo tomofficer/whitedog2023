@@ -169,10 +169,12 @@ const ImageGallery = ({ galleryRef }) => {
     console.log(data);
     setSelectedImageIndex(index);
     setIsOpen(true);
+    document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setIsOpen(false);
+    document.body.style.overflow = '';
   };
 
   //carousel styling
@@ -271,9 +273,13 @@ const ImageGallery = ({ galleryRef }) => {
         style={{
           overlay: {
             zIndex: 9999,
+            position: 'fixed',
           },
           content: {
+            position: 'absolute',
             zIndex: 10000,
+            backgroundColor: '',
+            border: 'none',
           },
         }}
         //disables scrolling while modal is open
