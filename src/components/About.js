@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Box, Heading, Text, Center } from '@chakra-ui/react';
 import { primaryFont, secondaryFont } from '../Fonts';
 import '../componentStyling/global.css';
+import AboutUsFullPage from './AboutUsFullPage';
+import About2 from './About2';
 
 const About = ({ aboutRef }) => {
   //slide handlers
@@ -35,7 +37,7 @@ const About = ({ aboutRef }) => {
       <div className="vertical-line-container">
         <div className="vertical-line"></div>
       </div>
-      <Box py={{ base: 4, sm: 0, md: 4 }} mt={{ base: 2, sm: 6, md: 28 }}>
+      {/* <Box py={{ base: 4, sm: 0, md: 4 }} mt={{ base: 2, sm: 6, md: 28 }}>
         <div className={`slide-in-left ${slideInLeft ? 'visible' : ''}`}>
           <Heading mt={20} fontFamily={primaryFont}>
             ABOUT US
@@ -67,11 +69,9 @@ const About = ({ aboutRef }) => {
               to be smiling.
             </Text>
           </Box>
-          {/* <Box maxW={'2xl'} mt={10}>
-              <Image src="https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedogcompanyphoto_5RsTEak0n.jpeg?updatedAt=1690680419076" />
-            </Box> */}
         </Center>
-      </Box>
+      </Box> */}
+      <About2 />
     </>
   );
 };

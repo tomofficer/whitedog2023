@@ -5,6 +5,7 @@
   overflow: hidden;
   height: 880px;
   /* Adjust the height as needed */
+  top: 0;
 }
 
 .parallax-layer {

@@ -129,7 +129,6 @@ const Services = ({ servicesRef }) => {
             Custom cabinetry designed both for home and office. <br />
             Custom designed corian countertops for kitchen, bath and office.
             <br />
-            Architectural manufacturing both small and large scale.
           </Text>
         </Box>
       </Center>

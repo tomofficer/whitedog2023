@@ -6,6 +6,8 @@ import Parallax from './Parallax';
 import Gallery2 from './Gallery2';
 import Services from './Services';
 import Contact from './Contact';
+import Hero from './Hero';
+import Parallax3 from './Parallax3';
 
 const Home = ({
   aboutRef,
@@ -26,10 +28,10 @@ const Home = ({
         scrollToServices={scrollToServices}
       />
       <Parallax />
-      <About aboutRef={aboutRef} />
       <Gallery2 galleryRef={galleryRef} />
+      <About aboutRef={aboutRef} />
       <Services servicesRef={servicesRef} />
-      {/* <Clients servicesRef={scrollToClients} /> */}
+      <Parallax3 />
       <Contact contactRef={contactRef} />
     </>
   );

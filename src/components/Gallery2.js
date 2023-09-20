@@ -205,7 +205,8 @@ const ImageGallery = ({ galleryRef }) => {
         <div className="vertical-line"></div>
       </div>
       <Box
-        py={{ base: 4, sm: 0, md: 4 }}
+        pt={{ base: 4, sm: 0, md: 4 }}
+        pb={{ base: 4, sm: 0, md: 2 }}
         mt={{ base: 2, sm: 6, md: 28 }}
         px={{ base: 10, sm: 20, md: 36 }}
       >

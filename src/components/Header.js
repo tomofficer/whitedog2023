@@ -45,8 +45,13 @@ const Header = ({
         className={`sticky ${showNav ? 'visible' : 'hidden'}`}
         w="full"
         fontFamily={primaryFont}
+        bg="white"
       >
-        <HStack px={{ base: 4, sm: 10, md: 20 }} py={{ base: 4, sm: 0, md: 4 }}>
+        <HStack
+          pl={{ base: 4, sm: 10, md: 20 }}
+          pr={{ base: 4, sm: 10, md: 16 }}
+          py={{ base: 4, sm: 0, md: 4 }}
+        >
           <Box>
             <Image
               src="https://ik.imagekit.io/v66nb6oaq/whitedoghorizontalblack_RvONxJlmc.png?updatedAt=1661297614806"
@@ -58,16 +63,17 @@ const Header = ({
             />
           </Box>
           <Spacer />
-          <Box pt={20}>
+          <Box pt={10}>
             <Button bg="none" onClick={() => scrollToTop()}>
               HOME
-            </Button>
-            <Button bg="none" onClick={() => scrollToAbout()}>
-              ABOUT
             </Button>
             <Button bg="none" onClick={() => scrollToGallery()}>
               GALLERY
             </Button>
+            <Button bg="none" onClick={() => scrollToAbout()}>
+              ABOUT
+            </Button>
+
             <Button bg="none" onClick={() => scrollToServices()}>
               SERVICES
             </Button>
