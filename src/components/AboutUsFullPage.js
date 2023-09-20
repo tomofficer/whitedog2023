@@ -24,7 +24,7 @@ const AboutUsFullPage = () => {
       <Box mt={0} className="container">
         <Box className="background-image">
           <Image
-            src="https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/matt-antonioli-uvMSarsRHzo-unsplash.jpg?updatedAt=1693887693054"
+            src="https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/will-suddreth-o54RjF-C7xo-unsplash.jpg?updatedAt=1695181477791"
             alt="about"
           />
         </Box>

@@ -94,17 +94,16 @@ function App() {
 export default App;
 
 //todo : IMPORTANT
-//todo : add careers section to a new page?
-//todo : update footer with all navigation points
-//todo : update / resize font on logo in header to make it bigger
-//todo : add about me section content text
-//todo : add services section content text
-//todo : add indicator on bottom of carousel
-//todo : add tile grid to open carousel of all images
-//todo : add title and description/location to open carousel
+//todo : fix about scrolling
+//todo : fix parallax at bottom of home page
+//todo : upload actual images to gallery
+//todo : finish 'our work' pg, onClick browse full gallery -> scroll down to a new section w full gallery, separated into folders on google drive
+//todo : add 'browse full gallery' btn to gallery section on home pg
+//todo : update / adjust logo in header - space font out further from logo
 //todo : test on different browsers
 //todo : animate gallery thumbnails to slide in from left/right as you scroll down the page
-
+//todo : make mobile responsive
 //todo : OPTIONAL
 //todo : possible url rewrite when clicking to different sections?
 //todo : let the header appear whenever you scroll back up (when its not showing)
+//todo : add tile grid to open carousel of all images
