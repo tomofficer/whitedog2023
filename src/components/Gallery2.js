@@ -130,26 +130,6 @@ const ImageGallery = ({ galleryRef }) => {
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/zac-gudakov-5QLCohwVndQ-unsplash_e_Z9iX5bz.jpg?updatedAt=1690600750853',
       ],
     },
-    // {
-    //   title: 'Placeholder Building',
-    //   location: 'Brooklyn, NY',
-    //   image:
-    //     'https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/thomas-drouault-Y1UtWeiRmhE-unsplash.jpg?updatedAt=1692849642683',
-    //   relatedImages: [
-    //     'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/lauren-mancke-rm5DbquteoY-unsplash_IqgME0dtk.jpg?updatedAt=1690600557169ated_image_url_5',
-    //     'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/zac-gudakov-5QLCohwVndQ-unsplash_e_Z9iX5bz.jpg?updatedAt=1690600750853',
-    //   ],
-    // },
-    // {
-    //   title: 'Placeholder Hospital',
-    //   location: 'Springfield, MA',
-    //   image:
-    //     'https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/cvzzn-uEzrfZKvVwA-unsplash.jpg?updatedAt=1692849781506',
-    //   relatedImages: [
-    //     'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/inaki-del-olmo-NIJuEQw0RKg-unsplash_-6ZbpxdoU.jpg?updatedAt=1690600636071',
-    //     'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/aaron-huber-G7sE2S4Lab4-unsplash_pYXqHhePm.jpg?updatedAt=1690600592957',
-    //   ],
-    // },
   ];
 
   const getLength = (index, data) => {
@@ -298,7 +278,7 @@ const ImageGallery = ({ galleryRef }) => {
               pos="absolute"
               top="0"
               right="0"
-              p="6"
+              // p="6"
             />
             {/* 
             original code -> clicked image, can remove or use if looks good
@@ -310,8 +290,8 @@ const ImageGallery = ({ galleryRef }) => {
             )} */}
 
             <Flex
-              w={{ base: 'xl', sm: '4xl', md: '6xl' }}
-              p={10}
+              // w={{ base: 'xl', sm: '4xl', md: '6xl' }
+              // p={10}
               alignItems="center"
               justifyContent="center"
             >
@@ -321,6 +301,8 @@ const ImageGallery = ({ galleryRef }) => {
                     (image, index) => (
                       <Box
                         key={`slide-${index}`}
+                        maxH="80vh"
+                        width="auto"
                         boxSize="full"
                         shadow="md"
                         flex="none"
