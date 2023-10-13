@@ -18,6 +18,7 @@ import {
 } from 'react-icons/fa6';
 import { primaryFont, secondaryFont } from '../Fonts';
 import '../componentStyling/global.css';
+import Header from './Header';
 
 const Contact = ({ contactRef }) => {
   //slide handlers
@@ -48,6 +49,7 @@ const Contact = ({ contactRef }) => {
 
   return (
     <>
+      <Header />
       <Center>
         <Box
           py={{ base: 4, sm: 0, md: 0 }}

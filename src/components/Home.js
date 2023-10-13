@@ -8,6 +8,8 @@ import Services from './Services';
 import Contact from './Contact';
 import Hero from './Hero';
 import Parallax3 from './Parallax3';
+import Landing from './Landing';
+import Header2 from './Header2';
 
 const Home = ({
   aboutRef,
@@ -21,13 +23,15 @@ const Home = ({
 }) => {
   return (
     <>
-      <Header
+      {/* <Header
         scrollToAbout={scrollToAbout}
         scrollToGallery={scrollToGallery}
         scrollToContact={scrollToContact}
         scrollToServices={scrollToServices}
       />
-      <Parallax />
+      <Parallax /> */}
+      <Header2 />
+      <Landing />
       <Gallery2 galleryRef={galleryRef} />
       <About aboutRef={aboutRef} />
       <Services servicesRef={servicesRef} />
