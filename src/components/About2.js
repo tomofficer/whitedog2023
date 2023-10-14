@@ -13,7 +13,7 @@ import {
 import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
-import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
+import aboutUsBg from '../assets/aboutUsSectionBg.jpg';
 
 const About2 = ({ aboutRef }) => {
   //back btn logic
@@ -25,10 +25,7 @@ const About2 = ({ aboutRef }) => {
 
       <Box mt={0} className="container">
         <Box className="background-image">
-          <Image
-            src="https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/matt-antonioli-uvMSarsRHzo-unsplash.jpg?updatedAt=1693887693054"
-            alt="about"
-          />
+          <Image src={aboutUsBg} alt="about" />
         </Box>
 
         <Box className="overlaycareers" px={24}>

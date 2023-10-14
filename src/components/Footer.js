@@ -1,6 +1,7 @@
 import React from 'react';
 import { Center, Text, Box, HStack, Spacer, Image } from '@chakra-ui/react';
 import { secondaryFont } from '../Fonts';
+import logoTextOnlyInverted from '../assets/logoTextOnlyInverted.png';
 
 const Footer = () => {
   return (
@@ -40,7 +41,7 @@ const Footer = () => {
               <Image
                 _hover={{ transform: 'scale(0.97)', transition: '0.3s' }}
                 mx={10}
-                src="https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/invertedlogoonly_f5KXcM0TX.png?updatedAt=1693109543765"
+                src={logoTextOnlyInverted}
                 w={{
                   base: '150px',
                   sm: '250px',

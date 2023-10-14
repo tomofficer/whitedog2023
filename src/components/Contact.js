@@ -19,6 +19,7 @@ import {
 import { primaryFont, secondaryFont } from '../Fonts';
 import '../componentStyling/global.css';
 import Header from './Header';
+import sawLogo from '../assets/sawLogo.png';
 
 const Contact = ({
   scrollToAbout,
@@ -117,11 +118,7 @@ const Contact = ({
                 </VStack>
               </Flex>
 
-              <Image
-                mx={10}
-                maxW="350px"
-                src="https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedogblack_Je04hqCmN.png?updatedAt=1690484225404"
-              />
+              <Image mx={10} maxW="350px" src={sawLogo} />
               <Box
                 className={`slide-in-right ${slideInRight ? 'visible' : ''}`}
               >

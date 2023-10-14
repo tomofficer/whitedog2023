@@ -14,8 +14,8 @@ import {
 import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
-import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 import { GiHammerNails, GiCircularSawblade, GiScrew } from 'react-icons/gi';
+import servicesSectionBg from '../assets/servicesSectionBg.jpg';
 
 const Services2 = ({ servicesRef }) => {
   //back btn logic
@@ -27,10 +27,7 @@ const Services2 = ({ servicesRef }) => {
         <Box className="background-image">
           <Box ref={servicesRef}></Box>
 
-          <Image
-            src="https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/benjamin-thomas-idEEZ-wQkfA-unsplash.jpg?updatedAt=1693888762658"
-            alt="about"
-          />
+          <Image src={servicesSectionBg} alt="about" />
         </Box>
 
         <Box className="overlaycareers" px={24} pb="40px" pt="20px">

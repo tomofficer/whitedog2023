@@ -202,9 +202,6 @@ const ImageGallery = ({ galleryRef }) => {
     ml: `-${currentSlide * 100}%`,
   };
 
-  const bg =
-    'https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/benjamin-thomas-idEEZ-wQkfA-unsplash.jpg?updatedAt=1693888762658';
-
   return (
     <>
       {/* <div className="vertical-line-container">
