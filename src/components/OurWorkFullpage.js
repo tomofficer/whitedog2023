@@ -55,7 +55,7 @@ const OurWorkFullPage = () => {
             <Spacer />
             <Box px={40}>
               <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={900}>
-                Custom Architectural Millwork. <br />
+                Custom Architectural Millwork Since 2003. <br />
                 Commerical, Residential, Industrial.
               </Text>
               <Button

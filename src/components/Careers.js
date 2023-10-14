@@ -54,8 +54,7 @@ const Careers = () => {
             <Box px={40}>
               <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={900}>
                 Are you interested in joining our team? <br />
-                Please check below for available job oepnings and contact us
-                directly to apply.
+                Please reach out to us with your resume and contact info.
               </Text>
               <Button
                 fontStyle={secondaryFont}
@@ -70,7 +69,7 @@ const Careers = () => {
                   color: 'teal.300',
                 }}
               >
-                Browse Openings
+                Contact Us
               </Button>
             </Box>
           </HStack>

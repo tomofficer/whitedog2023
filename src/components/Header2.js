@@ -35,16 +35,16 @@ const Header2 = () => {
           </Box>
           <Spacer />
           <Box>
-            <Button bg="none" _hover={{ backdropFilter: 'blur(10px)' }}>
+            <Button bg="none" _hover={{ transform: 'scale(1.05)' }}>
               GALLERY
             </Button>
-            <Button bg="none" _hover={{ backdropFilter: 'blur(10px)' }}>
+            <Button bg="none" _hover={{ transform: 'scale(1.05)' }}>
               ABOUT
             </Button>
-            <Button bg="none" _hover={{ backdropFilter: 'blur(10px)' }}>
+            <Button bg="none" _hover={{ transform: 'scale(1.05)' }}>
               SERVICES
             </Button>
-            <Button bg="none" _hover={{ backdropFilter: 'blur(10px)' }}>
+            <Button bg="none" _hover={{ transform: 'scale(1.05)' }}>
               CONTACT
             </Button>
           </Box>

@@ -23,7 +23,7 @@ const Services2 = () => {
 
   return (
     <>
-      <Box mt={'250px'} mb="120px" className="container">
+      <Box mt={'250px'} mb="250px" className="container">
         <Box className="background-image">
           <Image
             src="https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/benjamin-thomas-idEEZ-wQkfA-unsplash.jpg?updatedAt=1693888762658"

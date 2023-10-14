@@ -1,17 +1,20 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import Modal from 'react-modal';
 import '../componentStyling/gallery.css';
 import {
   Box,
   Grid,
-  Heading,
+  Button,
   CloseButton,
   Flex,
   Text,
   Image,
+  Icon,
 } from '@chakra-ui/react';
-import { primaryFont } from '../Fonts';
+import { primaryFont, secondaryFont } from '../Fonts';
 import '../componentStyling/global.css';
+import { AiFillRightCircle } from 'react-icons/ai';
+import { FaCircleChevronDown } from 'react-icons/fa6';
 
 const ImageGallery = ({ galleryRef }) => {
   //image data
@@ -198,24 +201,33 @@ const ImageGallery = ({ galleryRef }) => {
     ml: `-${currentSlide * 100}%`,
   };
 
+  const bg =
+    'https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/benjamin-thomas-idEEZ-wQkfA-unsplash.jpg?updatedAt=1693888762658';
+
   return (
     <>
       {/* <div className="vertical-line-container">
         <div className="vertical-line"></div>
       </div> */}
+
       <Box
         pt={{ base: 4, sm: 0, md: 4 }}
-        pb={{ base: 4, sm: 0, md: 2 }}
-        mt={{ base: 2, sm: 6, md: 10 }}
+        pb={{ base: 4, sm: 0, md: 20 }}
+        mt={{ base: 2, sm: 6, md: 20 }}
         px={{ base: 10, sm: 20, md: 36 }}
         bg="white"
-        mb="250px"
+        mb="120px"
       >
         <Box ref={galleryRef} mt={14}></Box>
 
-        <Heading mt={'25px'} fontFamily={primaryFont}>
-          GALLERY
-        </Heading>
+        <Text
+          fontFamily={primaryFont}
+          fontSize={'50px'}
+          fontWeight={900}
+          pr={{ base: 0, sm: 0, md: 0 }}
+        >
+          OUR WORK
+        </Text>
         <Grid
           templateColumns="repeat(2, 1fr)"
           gap={20}
@@ -230,12 +242,13 @@ const ImageGallery = ({ galleryRef }) => {
                 }`}
               >
                 <img
+                  style={{ borderRadius: '15px' }}
                   key={index}
                   src={data.image}
                   alt={`1 ${index + 1}`}
                   onClick={() => openModal(data, index)}
                 />
-                <div className="overlay">
+                <div className="overlay" style={{ borderRadius: '15px' }}>
                   <img
                     src={companyLogo}
                     alt="White Dog Woodworking Logo"
@@ -248,6 +261,36 @@ const ImageGallery = ({ galleryRef }) => {
             </>
           ))}
         </Grid>
+        {/* <a href="/our-work">
+          <Button
+            fontStyle={secondaryFont}
+            bg="none"
+            border="2px"
+            color="black"
+            boxShadow="xl"
+            fontSize={'md'}
+            fontWeight={'500'}
+            px={10}
+            mt={6}
+            _hover={{
+              transform: 'scale(1.05)',
+            }}
+          >
+            View More
+          </Button>
+        </a> */}
+        <Icon
+          as={FaCircleChevronDown}
+          boxSize="70px"
+          // color="#4DB6AC"
+          color="black"
+          _hover={{
+            transform: 'scale(0.9)',
+            transition: '0.3s',
+            color: 'teal.400',
+          }}
+          mt="10px"
+        />
       </Box>
       <Modal
         isOpen={isOpen}

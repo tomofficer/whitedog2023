@@ -53,12 +53,15 @@ const AboutUsFullPage = () => {
             <Spacer />
             <Box px={40}>
               <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={900}>
-                Family owned and operated since 2008. <br />
                 We specialize in Fine Woodworking, Custom Cabinetry and
                 Architectural Millwork. <br />
-                We are located at 23 Field St in Torrington, Connecticut.
+                Located at 23 Field St in Torrington, Connecticut. <br />
+                Family owned and operated since 2008.
               </Text>
               <Button
+                as="a"
+                href="https://www.registercitizen.com/news/article/White-Dog-Woodworking-mixes-old-fashioned-skill-16073669.php"
+                target="_blank"
                 fontStyle={secondaryFont}
                 bg="none"
                 border="2px"
