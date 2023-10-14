@@ -39,7 +39,7 @@ function App() {
   };
 
   const scrollToServicesHandle = () => {
-    scrollToContact.current.scrollIntoView({ behavior: 'smooth' });
+    scrollToServices.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToClientsHandle = () => {

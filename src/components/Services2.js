@@ -23,10 +23,10 @@ const Services2 = ({ servicesRef }) => {
 
   return (
     <>
-      <Box mt={'-51px'} ref={servicesRef}></Box>
-
       <Box mt={'250px'} mb="250px" className="container">
         <Box className="background-image">
+          <Box ref={servicesRef}></Box>
+
           <Image
             src="https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/benjamin-thomas-idEEZ-wQkfA-unsplash.jpg?updatedAt=1693888762658"
             alt="about"

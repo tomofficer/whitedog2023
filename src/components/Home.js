@@ -40,10 +40,8 @@ const Home = ({
       />
       <Landing />
       <About aboutRef={aboutRef} />
-
       <Services2 servicesRef={servicesRef} />
       <Gallery2 galleryRef={galleryRef} />
-
       <Contact contactRef={contactRef} />
     </>
   );

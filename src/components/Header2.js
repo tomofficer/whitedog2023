@@ -4,9 +4,8 @@ import logoTextOnly from '../assets/logoTextOnly.png';
 const Header2 = ({
   scrollToAbout,
   scrollToGallery,
-  scrollToContact,
   scrollToServices,
-  scrollToClients,
+  scrollToContact,
 }) => {
   return (
     <>
@@ -66,7 +65,7 @@ const Header2 = ({
             <Button
               bg="none"
               _hover={{ transform: 'scale(1.05)' }}
-              onClick={() => scrollToServices()}
+              onClick={() => scrollToContact()}
             >
               CONTACT
             </Button>

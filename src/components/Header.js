@@ -74,9 +74,7 @@ const Header = ({
               ABOUT
             </Button>
 
-            <Button bg="none" onClick={() => scrollToServices()}>
-              SERVICES
-            </Button>
+            <Button bg="none">SERVICES</Button>
             {/* <Button bg="none" onClick={() => scrollToContact()}>
               CONTACT
             </Button> */}
