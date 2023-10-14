@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Box, Image, HStack, Button, Spacer } from '@chakra-ui/react';
 import '../componentStyling/header.css';
 import { primaryFont } from '../Fonts';
+import sawAndTextLogoBig from '../assets/sawAndTextLogoBig.png';
 
 const Header = ({ scrollToAbout, scrollToGallery, scrollToServices }) => {
   //state
@@ -48,7 +49,7 @@ const Header = ({ scrollToAbout, scrollToGallery, scrollToServices }) => {
         >
           <Box>
             <Image
-              src="https://ik.imagekit.io/v66nb6oaq/whitedoghorizontalblack_RvONxJlmc.png?updatedAt=1661297614806"
+              src={sawAndTextLogoBig}
               w={{
                 base: '150px',
                 sm: '250px',

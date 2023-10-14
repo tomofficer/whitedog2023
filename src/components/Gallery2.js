@@ -4,7 +4,7 @@ import '../componentStyling/gallery.css';
 import {
   Box,
   Grid,
-  Button,
+  HStack,
   CloseButton,
   Flex,
   Text,
@@ -13,8 +13,9 @@ import {
 } from '@chakra-ui/react';
 import { primaryFont, secondaryFont } from '../Fonts';
 import '../componentStyling/global.css';
-import { AiFillRightCircle } from 'react-icons/ai';
 import { FaCircleChevronDown } from 'react-icons/fa6';
+import sawLogo from '../assets/sawLogo.png';
+import textLogo from '../assets/logoTextOnly.png';
 
 const ImageGallery = ({ galleryRef }) => {
   //image data
@@ -212,20 +213,18 @@ const ImageGallery = ({ galleryRef }) => {
       <Box ref={galleryRef}></Box>
 
       <Box
-        pt={{ base: 4, sm: 0, md: '100px' }}
+        pt={{ base: 4, sm: 0, md: '20px' }}
         pb={{ base: 4, sm: 0, md: 20 }}
         mt={{ base: 2, sm: 6, md: 20 }}
         px={{ base: 10, sm: 20, md: 36 }}
         bg="white"
         mb="120px"
       >
-        <Text
-          fontFamily={primaryFont}
-          fontSize={'50px'}
-          fontWeight={900}
-          pr={{ base: 0, sm: 0, md: 0 }}
-        >
-          GALLERY
+        <HStack justifyContent="center">
+          <Image src={textLogo} w="auto" px="150px" />
+        </HStack>
+        <Text fontFamily={primaryFont} fontSize={'30px'}>
+          A GALLERY OF OUR WORK
         </Text>
         <Grid
           templateColumns="repeat(2, 1fr)"
@@ -260,24 +259,7 @@ const ImageGallery = ({ galleryRef }) => {
             </>
           ))}
         </Grid>
-        {/* <a href="/our-work">
-          <Button
-            fontStyle={secondaryFont}
-            bg="none"
-            border="2px"
-            color="black"
-            boxShadow="xl"
-            fontSize={'md'}
-            fontWeight={'500'}
-            px={10}
-            mt={6}
-            _hover={{
-              transform: 'scale(1.05)',
-            }}
-          >
-            View More
-          </Button>
-        </a> */}
+
         <Icon
           as={FaCircleChevronDown}
           boxSize="70px"

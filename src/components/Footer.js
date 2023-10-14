@@ -19,9 +19,9 @@ const Footer = () => {
           <HStack
             color="white"
             fontFamily={secondaryFont}
-            fontSize={'md'}
+            fontSize={'18px'}
             letterSpacing={'1px'}
-            fontWeight={'700'}
+            fontWeight={'800'}
             spacing={'10px'}
           >
             <Spacer />
