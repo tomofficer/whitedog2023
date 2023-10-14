@@ -66,7 +66,7 @@ const Services2 = ({ servicesRef, scrollToGallery }) => {
                         >
                           <Icon
                             as={GiHammerNails}
-                            boxSize={28}
+                            boxSize={20}
                             className="services-icon"
                             color="currentColor" // Inherit the color from the parent VStack
                           />
@@ -96,7 +96,7 @@ const Services2 = ({ servicesRef, scrollToGallery }) => {
                         >
                           <Icon
                             as={GiScrew}
-                            boxSize={28}
+                            boxSize={20}
                             className="services-icon"
                             color="currentColor" // Inherit the color from the parent VStack
                           />
@@ -126,7 +126,7 @@ const Services2 = ({ servicesRef, scrollToGallery }) => {
                         >
                           <Icon
                             as={GiCircularSawblade}
-                            boxSize={28}
+                            boxSize={20}
                             className="services-icon"
                             color="currentColor" // Inherit the color from the parent VStack
                           />

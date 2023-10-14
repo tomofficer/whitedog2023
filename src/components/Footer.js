@@ -7,6 +7,7 @@ const Footer = () => {
   return (
     <>
       <Box
+        className="fade-in2"
         pt={6}
         pb={4}
         // pos="fixed"
