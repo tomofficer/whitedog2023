@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { primaryFont, secondaryFont, tertiaryFont } from '../Fonts';
 import { HStack, Image, Box, Icon, Center } from '@chakra-ui/react';
 // import { FaCircleChevronDown } from 'react-icons/bs';
@@ -12,10 +13,18 @@ import Header2 from './Header2';
 const Landing = () => {
   //back btn logic
   const navigate = useNavigate();
+  const [loaded, setLoaded] = useState(false);
+
+  //fade in hook
+  useEffect(() => {
+    // After the component is added to the DOM, set the loaded state to true
+    setLoaded(true);
+  }, []);
 
   return (
     <>
       <Box
+        className={loaded ? 'fade-in' : ''}
         mt={0}
         position="relative"
         height="100vh"

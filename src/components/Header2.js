@@ -1,5 +1,6 @@
 import { HStack, Box, Image, Spacer, Button, Text } from '@chakra-ui/react';
 import logoTextOnly from '../assets/logoTextOnly.png';
+import { useState, useEffect } from 'react';
 
 const Header2 = ({
   scrollToAbout,
@@ -7,9 +8,18 @@ const Header2 = ({
   scrollToServices,
   scrollToContact,
 }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  //fade in hook
+  useEffect(() => {
+    // After the component is added to the DOM, set the loaded state to true
+    setLoaded(true);
+  }, []);
+
   return (
     <>
       <Box
+        className={loaded ? 'fade-in' : ''}
         mt="40px"
         mx="50px"
         position="absolute"
