@@ -24,7 +24,7 @@ const OurWorkFullPage = () => {
 
   return (
     <>
-      <Box mt={0} className="container">
+      <Box mt={0} className="container fade-in2">
         <Box className="background-image">
           <Image src={bg} alt="about" />
         </Box>

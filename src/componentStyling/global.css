@@ -77,6 +77,11 @@
   animation: fadeIn 2s ease-in-out forwards;
 }
 
+.fade-in2 {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
