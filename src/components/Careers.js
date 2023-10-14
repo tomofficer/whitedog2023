@@ -14,6 +14,7 @@ import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
+import bg from '../assets/careersBg.jpg';
 
 const Careers = () => {
   //back btn logic
@@ -23,10 +24,7 @@ const Careers = () => {
     <>
       <Box mt={0} className="container">
         <Box className="background-image">
-          <Image
-            src="https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/elmer-canas-7LR3-dhrrdo-unsplash.jpg?updatedAt=1693880907218"
-            alt="careers"
-          />
+          <Image src={bg} alt="careers" />
         </Box>
         <Box>
           <Box className="back-button" p={4}>

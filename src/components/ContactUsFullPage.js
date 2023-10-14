@@ -14,6 +14,7 @@ import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
+import bg from '../assets/contactUsBg.jpg';
 
 const ContactUsFullPage = () => {
   //back btn logic
@@ -23,10 +24,7 @@ const ContactUsFullPage = () => {
     <>
       <Box mt={0} className="container">
         <Box className="background-image">
-          <Image
-            src="https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/eric-parks-InbWYO6Bvw4-unsplash.jpg?updatedAt=1693888922728"
-            alt="about"
-          />
+          <Image src={bg} alt="about" />
         </Box>
         <Box>
           <Box className="back-button" p={4}>
