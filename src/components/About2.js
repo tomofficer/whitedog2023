@@ -14,8 +14,9 @@ import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
 import aboutUsBg from '../assets/aboutUsSectionBg.jpg';
+import { FaCircleChevronDown } from 'react-icons/fa6';
 
-const About2 = ({ aboutRef }) => {
+const About2 = ({ aboutRef, scrollToServices }) => {
   //back btn logic
   const navigate = useNavigate();
 
@@ -64,6 +65,21 @@ const About2 = ({ aboutRef }) => {
             </Box>
           </HStack>
         </Box>
+        <Icon
+          as={FaCircleChevronDown}
+          boxSize="70px"
+          // color="#4DB6AC"
+          color="black"
+          _hover={{
+            transform: 'scale(0.9)',
+            transition: '0.3s',
+            color: 'teal.400',
+          }}
+          position="relative"
+          top="88%"
+          zIndex={10}
+          onClick={() => scrollToServices()}
+        />
       </Box>
     </>
   );

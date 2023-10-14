@@ -11,6 +11,7 @@ import Parallax3 from './Parallax3';
 import Landing from './Landing';
 import Header2 from './Header2';
 import Services2 from './Services2';
+import About2 from './About2';
 
 const Home = ({
   aboutRef,
@@ -39,8 +40,8 @@ const Home = ({
         scrollToServices={scrollToServices}
       />
       <Landing />
-      <About aboutRef={aboutRef} />
-      <Services2 servicesRef={servicesRef} />
+      <About2 aboutRef={aboutRef} scrollToServices={scrollToServices} />
+      <Services2 servicesRef={servicesRef} scrollToGallery={scrollToGallery} />
       <Gallery2 galleryRef={galleryRef} />
       <Contact
         contactRef={contactRef}

@@ -16,8 +16,9 @@ import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
 import { GiHammerNails, GiCircularSawblade, GiScrew } from 'react-icons/gi';
 import servicesSectionBg from '../assets/servicesSectionBg.jpg';
+import { FaCircleChevronDown } from 'react-icons/fa6';
 
-const Services2 = ({ servicesRef }) => {
+const Services2 = ({ servicesRef, scrollToGallery }) => {
   //back btn logic
   const navigate = useNavigate();
 
@@ -158,6 +159,21 @@ const Services2 = ({ servicesRef }) => {
             </Box>
           </HStack>
         </Box>
+        <Icon
+          as={FaCircleChevronDown}
+          boxSize="70px"
+          // color="#4DB6AC"
+          color="black"
+          _hover={{
+            transform: 'scale(0.9)',
+            transition: '0.3s',
+            color: 'teal.400',
+          }}
+          position="relative"
+          top="88%"
+          zIndex={10}
+          onClick={() => scrollToGallery()}
+        />
       </Box>
     </>
   );
