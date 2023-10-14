@@ -216,6 +216,7 @@ const ImageGallery = ({ galleryRef }) => {
         px={{ base: 10, sm: 20, md: 36 }}
         bg="white"
         mb="120px"
+        zIndex={1}
       >
         <HStack justifyContent="center">
           <Image src={textLogo} w="auto" px="150px" />

@@ -24,12 +24,13 @@ const Landing = () => {
   return (
     <>
       <Box
-        className={loaded ? 'fade-in' : ''}
         mt={0}
         position="relative"
         height="100vh"
         width="100%"
         overflow="hidden"
+        className="fade-in"
+        zIndex={-1}
       >
         {/* Background Image */}
         <Box
