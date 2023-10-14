@@ -22,9 +22,9 @@ const About2 = ({ aboutRef, scrollToServices }) => {
 
   return (
     <>
-      <Box mt={'-51px'} ref={aboutRef}></Box>
+      <Box mt={'80px'} className="container">
+        <Box ref={aboutRef}></Box>
 
-      <Box mt={0} className="container">
         <Box className="background-image">
           <Image src={aboutUsBg} alt="about" />
         </Box>
