@@ -27,17 +27,18 @@ const Footer = () => {
             <Spacer />
 
             <a href="/our-work" style={{ cursor: 'pointer' }}>
-              <Text>Our Work</Text>
+              <Text _hover={{ color: 'teal.300' }}>Our Work</Text>
             </a>
             <Spacer />
 
             <a href="/about-us" style={{ cursor: 'pointer' }}>
-              <Text>About Us</Text>
+              <Text _hover={{ color: 'teal.300' }}>About Us</Text>
             </a>
             <Spacer />
 
             <a href="/">
               <Image
+                _hover={{ transform: 'scale(0.97)', transition: '0.3s' }}
                 mx={10}
                 src="https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/invertedlogoonly_f5KXcM0TX.png?updatedAt=1693109543765"
                 w={{
@@ -50,12 +51,12 @@ const Footer = () => {
 
             <Spacer />
             <a href="/careers" style={{ cursor: 'pointer' }}>
-              <Text>Careers</Text>
+              <Text _hover={{ color: 'teal.300' }}>Careers</Text>
             </a>
             <Spacer />
 
             <a href="/contact-us" style={{ cursor: 'pointer' }}>
-              <Text>Contact Us</Text>
+              <Text _hover={{ color: 'teal.300' }}>Contact Us</Text>
             </a>
             <Spacer />
           </HStack>

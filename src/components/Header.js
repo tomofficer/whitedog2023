@@ -67,14 +67,15 @@ const Header = ({
             <Button bg="none" onClick={() => scrollToTop()}>
               HOME
             </Button>
-            <Button bg="none" onClick={() => scrollToGallery()}>
-              GALLERY
-            </Button>
             <Button bg="none" onClick={() => scrollToAbout()}>
               ABOUT
             </Button>
 
             <Button bg="none">SERVICES</Button>
+            <Button bg="none" onClick={() => scrollToGallery()}>
+              GALLERY
+            </Button>
+
             {/* <Button bg="none" onClick={() => scrollToContact()}>
               CONTACT
             </Button> */}

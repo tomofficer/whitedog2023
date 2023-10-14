@@ -226,7 +226,7 @@ const ImageGallery = ({ galleryRef }) => {
           fontWeight={900}
           pr={{ base: 0, sm: 0, md: 0 }}
         >
-          OUR WORK
+          GALLERY
         </Text>
         <Grid
           templateColumns="repeat(2, 1fr)"
