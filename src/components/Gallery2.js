@@ -209,17 +209,16 @@ const ImageGallery = ({ galleryRef }) => {
       {/* <div className="vertical-line-container">
         <div className="vertical-line"></div>
       </div> */}
+      <Box ref={galleryRef}></Box>
 
       <Box
-        pt={{ base: 4, sm: 0, md: 4 }}
+        pt={{ base: 4, sm: 0, md: '100px' }}
         pb={{ base: 4, sm: 0, md: 20 }}
         mt={{ base: 2, sm: 6, md: 20 }}
         px={{ base: 10, sm: 20, md: 36 }}
         bg="white"
         mb="120px"
       >
-        <Box ref={galleryRef} mt={14}></Box>
-
         <Text
           fontFamily={primaryFont}
           fontSize={'50px'}

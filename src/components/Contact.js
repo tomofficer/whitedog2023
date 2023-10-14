@@ -20,7 +20,12 @@ import { primaryFont, secondaryFont } from '../Fonts';
 import '../componentStyling/global.css';
 import Header from './Header';
 
-const Contact = ({ contactRef }) => {
+const Contact = ({
+  scrollToAbout,
+  scrollToServices,
+  scrollToGallery,
+  contactRef,
+}) => {
   //slide handlers
   const [slideInLeft, setSlideInLeft] = useState(false);
   const [slideInRight, setSlideInRight] = useState(false);
@@ -49,7 +54,11 @@ const Contact = ({ contactRef }) => {
 
   return (
     <>
-      <Header />
+      <Header
+        scrollToAbout={scrollToAbout}
+        scrollToServices={scrollToServices}
+        scrollToGallery={scrollToGallery}
+      />
       <Center>
         <Box
           py={{ base: 4, sm: 0, md: 0 }}

@@ -42,7 +42,12 @@ const Home = ({
       <About aboutRef={aboutRef} />
       <Services2 servicesRef={servicesRef} />
       <Gallery2 galleryRef={galleryRef} />
-      <Contact contactRef={contactRef} />
+      <Contact
+        contactRef={contactRef}
+        scrollToAbout={scrollToAbout}
+        scrollToServices={scrollToServices}
+        scrollToGallery={scrollToGallery}
+      />
     </>
   );
 };

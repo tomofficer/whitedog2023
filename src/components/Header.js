@@ -3,13 +3,7 @@ import { Box, Image, HStack, Button, Spacer } from '@chakra-ui/react';
 import '../componentStyling/header.css';
 import { primaryFont } from '../Fonts';
 
-const Header = ({
-  scrollToAbout,
-  scrollToGallery,
-  scrollToContact,
-  scrollToServices,
-  scrollToClients,
-}) => {
+const Header = ({ scrollToAbout, scrollToGallery, scrollToServices }) => {
   //state
   const [showNav, setShowNav] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -70,15 +64,12 @@ const Header = ({
             <Button bg="none" onClick={() => scrollToAbout()}>
               ABOUT
             </Button>
-
-            <Button bg="none">SERVICES</Button>
+            <Button bg="none" onClick={() => scrollToServices()}>
+              SERVICES
+            </Button>
             <Button bg="none" onClick={() => scrollToGallery()}>
               GALLERY
             </Button>
-
-            {/* <Button bg="none" onClick={() => scrollToContact()}>
-              CONTACT
-            </Button> */}
           </Box>
         </HStack>
       </Box>
