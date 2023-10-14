@@ -15,12 +15,14 @@ import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 
-const About2 = () => {
+const About2 = ({ aboutRef }) => {
   //back btn logic
   const navigate = useNavigate();
 
   return (
     <>
+      <Box mt={'-51px'} ref={aboutRef}></Box>
+
       <Box mt={0} className="container">
         <Box className="background-image">
           <Image

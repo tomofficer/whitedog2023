@@ -17,12 +17,14 @@ import '../componentStyling/careers.css';
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 import { GiHammerNails, GiCircularSawblade, GiScrew } from 'react-icons/gi';
 
-const Services2 = () => {
+const Services2 = ({ servicesRef }) => {
   //back btn logic
   const navigate = useNavigate();
 
   return (
     <>
+      <Box mt={'-51px'} ref={servicesRef}></Box>
+
       <Box mt={'250px'} mb="250px" className="container">
         <Box className="background-image">
           <Image
@@ -31,7 +33,7 @@ const Services2 = () => {
           />
         </Box>
 
-        <Box className="overlaycareers" px={24} pb="40px">
+        <Box className="overlaycareers" px={24} pb="40px" pt="20px">
           <HStack>
             <Text
               fontFamily={primaryFont}

@@ -34,6 +34,12 @@ const Careers = () => {
               as={BsFillArrowLeftCircleFill}
               boxSize={12}
               color="white"
+              _hover={{
+                color: 'teal.400',
+
+                transform: 'scale(0.95)',
+                transition: '0.3s',
+              }}
               onClick={() => {
                 navigate(-1);
               }}

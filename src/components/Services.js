@@ -13,7 +13,7 @@ import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import { GiHammerNails, GiCircularSawblade, GiScrew } from 'react-icons/gi';
 
-const Services = ({ servicesRef }) => {
+const Services = () => {
   //slide handlers
   const [slideInLeft, setSlideInLeft] = useState(false);
   const [slideInRight, setSlideInRight] = useState(false);
@@ -43,7 +43,6 @@ const Services = ({ servicesRef }) => {
   return (
     <>
       <Box
-        ref={servicesRef}
         position="relative"
         minHeight="100vh"
         mt={{ base: '', sm: '', md: '250px' }}

@@ -1,7 +1,13 @@
 import { HStack, Box, Image, Spacer, Button, Text } from '@chakra-ui/react';
 import logoTextOnly from '../assets/logoTextOnly.png';
 
-const Header2 = () => {
+const Header2 = ({
+  scrollToAbout,
+  scrollToGallery,
+  scrollToContact,
+  scrollToServices,
+  scrollToClients,
+}) => {
   return (
     <>
       <Box
@@ -35,16 +41,33 @@ const Header2 = () => {
           </Box>
           <Spacer />
           <Box>
-            <Button bg="none" _hover={{ transform: 'scale(1.05)' }}>
-              GALLERY
-            </Button>
-            <Button bg="none" _hover={{ transform: 'scale(1.05)' }}>
+            <Button
+              bg="none"
+              _hover={{ transform: 'scale(1.05)' }}
+              onClick={() => scrollToAbout()}
+            >
               ABOUT
             </Button>
-            <Button bg="none" _hover={{ transform: 'scale(1.05)' }}>
+            <Button
+              bg="none"
+              _hover={{ transform: 'scale(1.05)' }}
+              onClick={() => scrollToServices()}
+            >
               SERVICES
             </Button>
-            <Button bg="none" _hover={{ transform: 'scale(1.05)' }}>
+            <Button
+              bg="none"
+              _hover={{ transform: 'scale(1.05)' }}
+              onClick={() => scrollToGallery()}
+            >
+              GALLERY
+            </Button>
+
+            <Button
+              bg="none"
+              _hover={{ transform: 'scale(1.05)' }}
+              onClick={() => scrollToServices()}
+            >
               CONTACT
             </Button>
           </Box>

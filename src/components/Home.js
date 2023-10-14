@@ -32,11 +32,16 @@ const Home = ({
       />
       <Parallax /> */}
 
-      <Header2 />
+      <Header2
+        scrollToAbout={scrollToAbout}
+        scrollToGallery={scrollToGallery}
+        scrollToContact={scrollToContact}
+        scrollToServices={scrollToServices}
+      />
       <Landing />
       <About aboutRef={aboutRef} />
-      {/* <Services servicesRef={servicesRef} /> */}
-      <Services2 />
+
+      <Services2 servicesRef={servicesRef} />
       <Gallery2 galleryRef={galleryRef} />
 
       <Contact contactRef={contactRef} />

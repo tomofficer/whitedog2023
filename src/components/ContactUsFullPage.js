@@ -34,6 +34,11 @@ const ContactUsFullPage = () => {
               as={BsFillArrowLeftCircleFill}
               boxSize={12}
               color="white"
+              _hover={{
+                color: 'teal.400',
+                transform: 'scale(0.95)',
+                transition: '0.3s',
+              }}
               onClick={() => {
                 navigate(-1);
               }}
@@ -53,7 +58,7 @@ const ContactUsFullPage = () => {
             <Spacer />
             <Box px={40}>
               <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={900}>
-                Have questions? Need to contact us? Reach out anytime. <br />
+                Need to get ahold of us? Reach out anytime. <br />
               </Text>
               <Button
                 fontStyle={secondaryFont}
