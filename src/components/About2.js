@@ -42,8 +42,8 @@ const About2 = () => {
             <Spacer />
             <Box px={40}>
               <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={900}>
-                We specialize in Architectural Millwork, Fine Woodworking and
-                Custom Cabinetry. <br /> Commercial and Residential.
+                Architectural Millwork, Fine Woodworking and Custom Cabinetry.{' '}
+                <br /> Commercial and Residential.
               </Text>
               <a href="/about-us">
                 <Button

@@ -53,15 +53,17 @@ const Contact = ({ contactRef }) => {
       <Center>
         <Box
           py={{ base: 4, sm: 0, md: 0 }}
-          px={{ base: 4, sm: 0, md: 20 }}
-          mt={{ base: 2, sm: 6, md: 32 }}
-          mb={{ base: 2, sm: 6, md: 14 }}
+          px={{ base: 4, sm: 0, md: 0 }}
+          mt={{ base: 2, sm: 6, md: 0 }}
+          mb={{ base: 2, sm: 6, md: 0 }}
         >
           <Box bg="white" py={{ base: 4, sm: 0, md: 0 }}>
             <Grid
               templateColumns="repeat(3, 1fr)"
               gap={20}
-              mt={{ base: 6, sm: 10, md: 24 }}
+              pt={{ base: '', sm: '', md: '80px' }}
+              pb={{ base: '', sm: '', md: '30px' }}
+              mt={{ base: 6, sm: 10, md: 0 }}
             >
               <Flex
                 direction="column"

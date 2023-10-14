@@ -70,7 +70,7 @@ const Footer = () => {
             letterSpacing={'1px'}
             color="white"
           >
-            &copy; Tom Officer Web Dev 2023 • Tomofficerwebdev@gmail.com
+            &copy; Graipfrüt Web Dev 2023 • graipfrut.com@gmail.com
           </Text>
         </Center>
       </Box>

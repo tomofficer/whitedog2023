@@ -21,39 +21,70 @@ const Landing = () => {
         height="100vh"
         width="100%"
         overflow="hidden"
-        borderBottom="10px solid #4DB6AC"
       >
+        {/* Background Image */}
         <Box
-          position="absolute"
+          position="fixed" // Change to fixed for parallax effect
           top="0"
           left="0"
           height="100%"
           width="100%"
           backgroundSize="cover"
           backgroundPosition="center"
-          zIndex="1"
+          zIndex="-1"
         >
           <Image src={topHero} alt="top hero" />
         </Box>
-        <Header2 />
 
-        <Box
-          px="250px"
-          pt="20px"
-          position="absolute"
-          top="40%"
-          left="0"
-          w="100%"
-          height="3in"
-          backgroundColor="rgba(128, 128, 128, 0.5)"
-          zIndex="2"
-        >
-          <HStack justifyContent="center">
-            <Image src={sawLogo} w="250px" />
+        {/* Container for the Parallax Content to achieve the sticky effect */}
+        <Box position="relative" height="100vh">
+          {/* Parallax Content (Logo Overlay) */}
+          <Box
+            id="parallax"
+            px="250px"
+            pt="20px"
+            position="absolute" // Retain the absolute positioning for initial placement
+            top="40%"
+            left="0"
+            w="100%"
+            height="3in"
+            backgroundColor="rgba(128, 128, 128, 0.5)"
+            zIndex="2"
+          >
+            <HStack justifyContent="center">
+              <Image src={sawLogo} w="250px" />
+              <Box pl={'100px'}>
+                <Image src={textLogo} w="400px" />
+              </Box>
+            </HStack>
+          </Box>
+        </Box>
 
-            <Box pl={'100px'}>
-              <Image src={textLogo} w="400px" />
-              {/* <Button
+        <Center>
+          <Box
+            p={4}
+            position="absolute"
+            top="90%"
+            background="transparent"
+            border="none"
+            fontSize="1.5em"
+            color="white"
+            cursor="pointer"
+            zIndex="3"
+          ></Box>
+        </Center>
+
+        {/* Content below the hero section */}
+        <Box height="150vh"></Box>
+      </Box>
+    </>
+  );
+};
+
+export default Landing;
+
+{
+  /* <Button
                 fontStyle={secondaryFont}
                 bg="none"
                 border="2px"
@@ -67,36 +98,18 @@ const Landing = () => {
                 }}
               >
                 View Gallery
-              </Button> */}
-            </Box>
-          </HStack>
-        </Box>
-        <Center>
-          <Box
-            p={4}
-            position="absolute"
-            top="90%"
-            background="transparent"
-            border="none"
-            fontSize="1.5em"
-            color="white"
-            cursor="pointer"
-            zIndex="3"
-          >
-            <Icon
+              </Button> */
+}
+
+{
+  /* <Icon
               as={FaCircleChevronDown}
               boxSize="50px"
-              color="#4DB6AC"
-              _hover={{ color: 'teal', transform: 'scale(0.95)' }}
+              // color="#4DB6AC"
+              color="black"
+              _hover={{ transform: 'scale(1.1)' }}
               onClick={() => {
                 navigate(-1);
               }}
-            />
-          </Box>
-        </Center>
-      </Box>
-    </>
-  );
-};
-
-export default Landing;
+            /> */
+}

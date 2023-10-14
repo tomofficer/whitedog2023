@@ -200,18 +200,20 @@ const ImageGallery = ({ galleryRef }) => {
 
   return (
     <>
-      <div className="vertical-line-container">
+      {/* <div className="vertical-line-container">
         <div className="vertical-line"></div>
-      </div>
+      </div> */}
       <Box
         pt={{ base: 4, sm: 0, md: 4 }}
         pb={{ base: 4, sm: 0, md: 2 }}
-        mt={{ base: 2, sm: 6, md: 28 }}
+        mt={{ base: 2, sm: 6, md: 10 }}
         px={{ base: 10, sm: 20, md: 36 }}
+        bg="white"
+        mb="250px"
       >
         <Box ref={galleryRef} mt={14}></Box>
 
-        <Heading mt={20} fontFamily={primaryFont}>
+        <Heading mt={'25px'} fontFamily={primaryFont}>
           GALLERY
         </Heading>
         <Grid

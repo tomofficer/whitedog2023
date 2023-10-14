@@ -39,103 +39,130 @@ const Services = ({ servicesRef }) => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
     <>
-      <Box ref={servicesRef} mt={0}></Box>
-
-      <div className="vertical-line-container">
-        <div className="vertical-line"></div>
-      </div>
-      <Box py={{ base: 4, sm: 0, md: 4 }} mt={{ base: 2, sm: 6, md: 28 }}>
-        <div className={`slide-in-left ${slideInLeft ? 'visible' : ''}`}>
-          <Heading mt={20} fontFamily={primaryFont}>
-            SERVICES
-          </Heading>
-        </div>
-      </Box>
-      <Box pt={10}>
-        <Center>
-          <HStack spacing={20}>
-            <Center>
-              <VStack>
-                <Box
-                  display="inline-block"
-                  position="relative"
-                  borderRadius="40%"
-                  borderWidth="8px"
-                  borderColor="#000000"
-                  p="25px"
-                >
-                  <Icon
-                    as={GiHammerNails}
-                    boxSize={28}
-                    className="services-icon"
-                  />
-                </Box>
-                <Text fontSize={'2xl'}>Commercial</Text>
-              </VStack>
-            </Center>
-            <Center>
-              <VStack>
-                <Box
-                  display="inline-block"
-                  position="relative"
-                  borderRadius="40%"
-                  borderWidth="8px"
-                  borderColor="#000000"
-                  p="25px"
-                >
-                  <Icon
-                    as={GiCircularSawblade}
-                    boxSize={28}
-                    className="services-icon"
-                  />
-                </Box>
-                <Text fontSize={'2xl'}>Industrial</Text>
-              </VStack>
-            </Center>
-            <Center>
-              <VStack>
-                <Box
-                  display="inline-block"
-                  position="relative"
-                  borderRadius="40%"
-                  borderWidth="8px"
-                  borderColor="#000000"
-                  p="25px"
-                >
-                  <Icon as={GiScrew} boxSize={28} className="services-icon" />
-                </Box>
-                <Text fontSize={'2xl'}>Institutional</Text>
-              </VStack>
-            </Center>
-          </HStack>
-        </Center>
-      </Box>
-      <Center>
+      <Box
+        ref={servicesRef}
+        position="relative"
+        minHeight="100vh"
+        mt={{ base: '', sm: '', md: '250px' }}
+        mb={{
+          base: '',
+          sm: '',
+          md: '110px',
+        }}
+      >
+        {/* Background Image Box */}
         <Box
-          maxW={'2xl'}
-          className={`slide-in-right ${slideInRight ? 'visible' : ''}`}
-        >
-          <Text
-            textAlign={'center'}
-            mt={{ base: 2, sm: 6, md: 14 }}
-            fontFamily={secondaryFont}
-            fontSize={'2xl'}
-            fontWeight={900}
-          >
-            Custom architectural millwork for both commercial and residential.{' '}
-            <br />
-            Custom cabinetry designed both for home and office. <br />
-            Custom designed corian countertops for kitchen, bath and office.
-            <br />
-          </Text>
-        </Box>
-      </Center>
+          position="absolute"
+          top={0}
+          right={0}
+          bottom={0}
+          left={0}
+          background={`url('https://ik.imagekit.io/zmra7ttrd/White%20Dog%20Woodworking%20Website/benjamin-thomas-idEEZ-wQkfA-unsplash.jpg?updatedAt=1693888762658') center/cover no-repeat`}
+          zIndex="-1"
+        />
 
-      {/* <div className="vertical-line-container">
-        <div className="vertical-line"></div>
-      </div> */}
+        {/* Content */}
+        <Box
+          color="white"
+          py={{ base: 4, sm: 0, md: 4 }}
+          mt={{ base: 2, sm: 6, md: 10 }}
+          zIndex="2"
+        >
+          <div className={`slide-in-left ${slideInLeft ? 'visible' : ''}`}>
+            <Heading mt={20} fontFamily={primaryFont}>
+              SERVICES
+            </Heading>
+          </div>
+
+          <Box pt={10}>
+            <Center>
+              <HStack spacing={20}>
+                <Center>
+                  <VStack>
+                    <Box
+                      display="inline-block"
+                      position="relative"
+                      borderRadius="40%"
+                      borderWidth="8px"
+                      borderColor="white"
+                      p="25px"
+                    >
+                      <Icon
+                        as={GiHammerNails}
+                        boxSize={28}
+                        className="services-icon"
+                      />
+                    </Box>
+                    <Text fontSize={'2xl'}>Commercial</Text>
+                  </VStack>
+                </Center>
+
+                <Center>
+                  <VStack>
+                    <Box
+                      display="inline-block"
+                      position="relative"
+                      borderRadius="40%"
+                      borderWidth="8px"
+                      borderColor="#000000"
+                      p="25px"
+                    >
+                      <Icon
+                        as={GiCircularSawblade}
+                        boxSize={28}
+                        className="services-icon"
+                      />
+                    </Box>
+                    <Text fontSize={'2xl'}>Industrial</Text>
+                  </VStack>
+                </Center>
+
+                <Center>
+                  <VStack>
+                    <Box
+                      display="inline-block"
+                      position="relative"
+                      borderRadius="40%"
+                      borderWidth="8px"
+                      borderColor="#000000"
+                      p="25px"
+                    >
+                      <Icon
+                        as={GiScrew}
+                        boxSize={28}
+                        className="services-icon"
+                      />
+                    </Box>
+                    <Text fontSize={'2xl'}>Institutional</Text>
+                  </VStack>
+                </Center>
+              </HStack>
+            </Center>
+          </Box>
+
+          <Center>
+            <Box
+              maxW={'2xl'}
+              className={`slide-in-right ${slideInRight ? 'visible' : ''}`}
+            >
+              <Text
+                textAlign={'center'}
+                mt={{ base: 2, sm: 6, md: 14 }}
+                fontFamily={secondaryFont}
+                fontSize={'2xl'}
+                fontWeight={900}
+              >
+                Custom architectural millwork. <br />
+                Custom cabinetry. <br />
+                Custom corian countertops. <br />
+              </Text>
+            </Box>
+          </Center>
+        </Box>
+      </Box>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { HStack, Box, Image, Spacer, Button } from '@chakra-ui/react';
+import { HStack, Box, Image, Spacer, Button, Text } from '@chakra-ui/react';
 import logoTextOnly from '../assets/logoTextOnly.png';
 
 const Header2 = () => {
@@ -12,8 +12,9 @@ const Header2 = () => {
         left={0}
         right={0}
         zIndex={4}
-        bg=""
+        // bg="white"
         // backdropFilter="blur(8px)"
+        backgroundColor="rgba(128, 128, 128, 0.2)"
         rounded="68px"
         boxShadow="xl" // Optionally add a shadow for more depth
       >
@@ -33,12 +34,19 @@ const Header2 = () => {
             />
           </Box>
           <Spacer />
-          <Box pt={0}>
-            <Button bg="none">HOME</Button>
-            <Button bg="none">GALLERY</Button>
-            <Button bg="none">ABOUT</Button>
-            <Button bg="none">SERVICES</Button>
-            <Button bg="none">CONTACT</Button>
+          <Box>
+            <Button bg="none" _hover={{ backdropFilter: 'blur(10px)' }}>
+              GALLERY
+            </Button>
+            <Button bg="none" _hover={{ backdropFilter: 'blur(10px)' }}>
+              ABOUT
+            </Button>
+            <Button bg="none" _hover={{ backdropFilter: 'blur(10px)' }}>
+              SERVICES
+            </Button>
+            <Button bg="none" _hover={{ backdropFilter: 'blur(10px)' }}>
+              CONTACT
+            </Button>
           </Box>
         </HStack>
       </Box>
