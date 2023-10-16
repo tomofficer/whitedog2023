@@ -2,10 +2,15 @@ import { Box, Image, IconButton } from '@chakra-ui/react';
 // import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import { FaCircleChevronLeft, FaCircleChevronRight } from 'react-icons/fa6';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-function CarouselComponent({ images }) {
+function CarouselComponent({ images, currentSlide }) {
   const [currentImage, setCurrentImage] = useState(0);
+
+  //thumbnail update handler
+  useEffect(() => {
+    setCurrentImage(currentSlide);
+  }, [currentSlide]);
 
   const nextImage = () => {
     setCurrentImage(prevImage => (prevImage + 1) % images.length);
@@ -27,7 +32,6 @@ function CarouselComponent({ images }) {
         top="50%"
         bg="none"
         color="white"
-        size="500px"
         _hover={{ color: 'teal.400', bg: 'none' }}
         transform="translateY(-50%)"
         aria-label="Previous Image"

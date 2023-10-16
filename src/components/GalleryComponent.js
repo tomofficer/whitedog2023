@@ -10,17 +10,20 @@ import {
   useDisclosure,
   HStack,
   Text,
+  Flex,
+  Spacer,
+  Stack,
 } from '@chakra-ui/react';
 import { primaryFont, secondaryFont } from '../Fonts';
 import textLogo from '../assets/logoTextOnly.png';
 import CarouselComponent from './CarouselComponent'; // assuming they're in the same directory
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 function GalleryComponent({ galleries, fullGalleryRef }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedGallery, setSelectedGallery] = useState([]);
   const [selectedGalleryIndex, setSelectedGalleryIndex] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleImageClick = (subGallery, idx) => {
     setSelectedGallery(subGallery);
@@ -61,8 +64,32 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
           </ModalHeader>
 
           <ModalCloseButton color="white" />
-          <ModalBody>
-            <CarouselComponent images={selectedGallery} />
+          <ModalBody display="flex" alignItems="center">
+            <Flex direction="row" width="100%" height="100%">
+              <Box flex="30">
+                <CarouselComponent
+                  images={selectedGallery}
+                  currentSlide={currentSlide}
+                />
+              </Box>
+              <Spacer width="20px" />
+              <Stack spacing={4} maxW="120px" overflowY="auto">
+                {selectedGallery.map((image, idx) => (
+                  <Box key={idx}>
+                    <Image
+                      src={image}
+                      width="100px"
+                      height="100px"
+                      onClick={() => {
+                        setCurrentSlide(idx);
+                      }}
+                      cursor="pointer"
+                      borderRadius="5px"
+                    />
+                  </Box>
+                ))}
+              </Stack>
+            </Flex>
           </ModalBody>
         </ModalContent>
       </Modal>
