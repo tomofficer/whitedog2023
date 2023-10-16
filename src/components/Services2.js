@@ -14,7 +14,12 @@ import {
 import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
-import { GiHammerNails, GiCircularSawblade, GiScrew } from 'react-icons/gi';
+import {
+  GiHammerNails,
+  GiCircularSawblade,
+  GiScrew,
+  GiToolbox,
+} from 'react-icons/gi';
 import servicesSectionBg from '../assets/servicesSectionBg.jpg';
 import { FaCircleChevronDown } from 'react-icons/fa6';
 
@@ -72,7 +77,7 @@ const Services2 = ({ servicesRef, scrollToAbout }) => {
                           />
                         </Box>
                         <Text fontSize={'20px'} className="text-on-hover">
-                          Commercial
+                          Commercial Millwork
                         </Text>
                       </VStack>
                     </Center>
@@ -102,7 +107,7 @@ const Services2 = ({ servicesRef, scrollToAbout }) => {
                           />
                         </Box>
                         <Text fontSize={'20px'} className="text-on-hover">
-                          Residential
+                          Residential Millwork
                         </Text>
                       </VStack>
                     </Center>
@@ -132,7 +137,37 @@ const Services2 = ({ servicesRef, scrollToAbout }) => {
                           />
                         </Box>
                         <Text fontSize={'20px'} className="text-on-hover">
-                          Institutional
+                          Reception Desks
+                        </Text>
+                      </VStack>
+                    </Center>
+                    <Center>
+                      <VStack
+                        spacing={4} // spacing between child elements for visual clarity
+                        cursor="pointer" // indicate that it's hoverable
+                        transition="color 0.35s, border-color 0.35s" // smooth transitions
+                        _hover={{
+                          color: 'teal.300',
+                          '.text-on-hover': { color: 'teal.300' },
+                        }} // targeting text on hover with a classname
+                      >
+                        <Box
+                          display="inline-block"
+                          position="relative"
+                          borderRadius="40%"
+                          borderWidth="8px"
+                          borderColor="currentColor" // Inherit the color from the parent VStack
+                          p="10px"
+                        >
+                          <Icon
+                            as={GiToolbox}
+                            boxSize={20}
+                            className="services-icon"
+                            color="currentColor" // Inherit the color from the parent VStack
+                          />
+                        </Box>
+                        <Text fontSize={'20px'} className="text-on-hover">
+                          Wall Paneling
                         </Text>
                       </VStack>
                     </Center>
