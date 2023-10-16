@@ -1,6 +1,6 @@
 import { Box, Image, IconButton } from '@chakra-ui/react';
 // import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
-import { FaCircleChevronDown, FaCircleChevronUp } from 'react-icons/fa6';
+import { FaCircleChevronLeft, FaCircleChevronRight } from 'react-icons/fa6';
 
 import React, { useState } from 'react';
 
@@ -25,18 +25,24 @@ function CarouselComponent({ images }) {
         position="absolute"
         left="5px"
         top="50%"
+        bg="none"
+        color="white"
+        _hover={{ color: 'teal.400', bg: 'none' }}
         transform="translateY(-50%)"
         aria-label="Previous Image"
-        icon={<FaCircleChevronDown />}
+        icon={<FaCircleChevronLeft />}
         onClick={prevImage}
       />
       <IconButton
         position="absolute"
         right="5px"
         top="50%"
+        bg="none"
+        color="white"
+        _hover={{ color: 'teal.400', bg: 'none' }}
         transform="translateY(-50%)"
         aria-label="Next Image"
-        icon={<FaCircleChevronUp />}
+        icon={<FaCircleChevronRight />}
         onClick={nextImage}
       />
     </Box>

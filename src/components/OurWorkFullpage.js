@@ -26,6 +26,7 @@ const OurWorkFullPage = () => {
   //gallery data
   const galleries = [
     {
+      title: '21 Leonard St',
       defaultImage:
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/aaron-huber-G7sE2S4Lab4-unsplash_pYXqHhePm.jpg?updatedAt=1690600592957',
       subGallery: [
@@ -38,6 +39,7 @@ const OurWorkFullPage = () => {
       ],
     },
     {
+      title: 'Halford House',
       defaultImage:
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/aaron-huber-G7sE2S4Lab4-unsplash_pYXqHhePm.jpg?updatedAt=1690600592957',
       subGallery: [
