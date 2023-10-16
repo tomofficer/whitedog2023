@@ -27,6 +27,7 @@ function CarouselComponent({ images }) {
         top="50%"
         bg="none"
         color="white"
+        size="500px"
         _hover={{ color: 'teal.400', bg: 'none' }}
         transform="translateY(-50%)"
         aria-label="Previous Image"

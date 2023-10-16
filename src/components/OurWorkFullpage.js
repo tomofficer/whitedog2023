@@ -19,7 +19,7 @@ import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 import bg from '../assets/ourWorkBg.jpg';
 import GalleryComponent from './GalleryComponent';
 
-const OurWorkFullPage = () => {
+const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
   //back btn logic
   const navigate = useNavigate();
 
@@ -104,6 +104,7 @@ const OurWorkFullPage = () => {
                 _hover={{
                   color: 'teal.300',
                 }}
+                onClick={() => scrollToFullGallery()}
               >
                 Browse Full Gallery
               </Button>
@@ -122,7 +123,7 @@ const OurWorkFullPage = () => {
           </VStack>
         </Box>
       </Box>
-      <GalleryComponent galleries={galleries} />
+      <GalleryComponent galleries={galleries} fullGalleryRef={fullGalleryRef} />
     </>
   );
 };

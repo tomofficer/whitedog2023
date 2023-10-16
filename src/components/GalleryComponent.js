@@ -8,12 +8,16 @@ import {
   ModalCloseButton,
   ModalBody,
   useDisclosure,
+  HStack,
+  Text,
 } from '@chakra-ui/react';
+import { primaryFont, secondaryFont } from '../Fonts';
+import textLogo from '../assets/logoTextOnly.png';
 import CarouselComponent from './CarouselComponent'; // assuming they're in the same directory
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-function GalleryComponent({ galleries }) {
+function GalleryComponent({ galleries, fullGalleryRef }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedGallery, setSelectedGallery] = useState([]);
   const [selectedGalleryIndex, setSelectedGalleryIndex] = useState(null);
@@ -26,6 +30,14 @@ function GalleryComponent({ galleries }) {
 
   return (
     <Box>
+      <Box ref={fullGalleryRef}></Box>
+
+      <HStack justifyContent="center">
+        <Image src={textLogo} w="auto" px="150px" />
+      </HStack>
+      <Text fontFamily={primaryFont} fontSize={'30px'}>
+        A GALLERY OF OUR WORK
+      </Text>
       {galleries.map((gallery, idx) => (
         <Image
           key={idx}
@@ -48,7 +60,7 @@ function GalleryComponent({ galleries }) {
               : 'Gallery'}
           </ModalHeader>
 
-          <ModalCloseButton />
+          <ModalCloseButton color="white" />
           <ModalBody>
             <CarouselComponent images={selectedGallery} />
           </ModalBody>

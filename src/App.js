@@ -23,7 +23,7 @@ function App() {
   const scrollToGallery = useRef();
   const scrollToContact = useRef();
   const scrollToServices = useRef();
-  const scrollToClients = useRef();
+  const scrollToFullGallery = useRef();
 
   //scroll handlers
   const scrollToAboutHandle = () => {
@@ -32,6 +32,10 @@ function App() {
 
   const scrollToGalleryHandle = () => {
     scrollToGallery.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToFullGalleryHandle = () => {
+    scrollToFullGallery.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToContactHandle = () => {
@@ -81,7 +85,15 @@ function App() {
                 <ContactUsFullPage scrollToContact={scrollToContactHandle} />
               }
             />
-            <Route path="/our-work" element={<OurWorkFullPage />} />
+            <Route
+              path="/our-work"
+              element={
+                <OurWorkFullPage
+                  scrollToFullGallery={scrollToFullGalleryHandle}
+                  fullGalleryRef={scrollToFullGallery}
+                />
+              }
+            />
           </Routes>
           {/* <Parallax />
           <About aboutRef={scrollToAbout} />
