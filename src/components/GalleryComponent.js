@@ -11,13 +11,14 @@ import {
   HStack,
   Text,
   Flex,
-  Spacer,
-  Stack,
+  VStack,
+  IconButton,
 } from '@chakra-ui/react';
 import { primaryFont, secondaryFont } from '../Fonts';
 import textLogo from '../assets/logoTextOnly.png';
 import CarouselComponent from './CarouselComponent'; // assuming they're in the same directory
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { FaCircleChevronLeft, FaCircleChevronRight } from 'react-icons/fa6';
 
 function GalleryComponent({ galleries, fullGalleryRef }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -30,6 +31,39 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
     setSelectedGalleryIndex(idx);
     onOpen();
   };
+
+  const scrollThumbnailsUp = () => {
+    thumbnailContainerRef.current.scrollTop -= 510; // 100 * 5 + some margin space
+  };
+
+  const scrollThumbnailsDown = () => {
+    thumbnailContainerRef.current.scrollTop += 510; // 100 * 5 + some margin space
+  };
+
+  const thumbnailContainerRef = useRef(null);
+
+  function useWindowSize() {
+    const [windowSize, setWindowSize] = useState({
+      width: typeof window !== 'undefined' ? window.innerWidth : 0,
+      height: typeof window !== 'undefined' ? window.innerHeight : 0,
+    });
+
+    useEffect(() => {
+      function handleResize() {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    return windowSize;
+  }
+
+  const { height } = useWindowSize();
 
   return (
     <Box>
@@ -62,33 +96,78 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
               ? galleries[selectedGalleryIndex].title
               : 'Gallery'}
           </ModalHeader>
-
           <ModalCloseButton color="white" />
-          <ModalBody display="flex" alignItems="center">
-            <Flex direction="row" width="100%" height="100%">
-              <Box flex="30">
+          <ModalBody overflow="hidden">
+            <Flex
+              direction={['column', 'row']}
+              alignItems="center"
+              justifyContent="center"
+              height="100%"
+            >
+              {/* Main Image */}
+              <Box
+                flex="1"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                overflow="hidden"
+              >
                 <CarouselComponent
                   images={selectedGallery}
                   currentSlide={currentSlide}
                 />
               </Box>
-              <Spacer width="20px" />
-              <Stack spacing={4} maxW="120px" overflowY="auto">
-                {selectedGallery.map((image, idx) => (
-                  <Box key={idx}>
-                    <Image
-                      src={image}
-                      width="100px"
-                      height="100px"
-                      onClick={() => {
-                        setCurrentSlide(idx);
-                      }}
-                      cursor="pointer"
-                      borderRadius="5px"
-                    />
-                  </Box>
-                ))}
-              </Stack>
+
+              {/* Thumbnails */}
+              <VStack
+                align="center"
+                spacing={2}
+                ml={[0, 4]}
+                mt={[4, '105px']}
+                position="relative"
+                height="100%"
+              >
+                {/* <IconButton
+                  icon={<FaCircleChevronLeft rotate={90} />}
+                  onClick={scrollThumbnailsUp}
+                  bg="none"
+                  color="white"
+                  _hover={{ color: 'teal.400', bg: 'none' }}
+                  aria-label="Scroll Thumbnails Up"
+                /> */}
+                <Box
+                  ref={thumbnailContainerRef}
+                  overflowY="auto"
+                  h={height <= 900 ? '605px' : '800px'}
+                  width="120px"
+                  mt={height <= 900 ? '12px' : '0px'}
+                >
+                  <VStack spacing={2}>
+                    {selectedGallery.map((image, idx) => (
+                      <Box key={idx} my={1}>
+                        <Image
+                          src={image}
+                          width="100px"
+                          height="100px"
+                          onClick={() => {
+                            setCurrentSlide(idx);
+                          }}
+                          cursor="pointer"
+                          borderRadius="5px"
+                        />
+                      </Box>
+                    ))}
+                  </VStack>
+                </Box>
+                {/* <IconButton
+                  icon={<FaCircleChevronRight rotate={90} />}
+                  onClick={scrollThumbnailsDown}
+                  bg="none"
+                  color="white"
+                  _hover={{ color: 'teal.400', bg: 'none' }}
+                  aria-label="Scroll Thumbnails Down"
+                /> */}
+              </VStack>
             </Flex>
           </ModalBody>
         </ModalContent>
