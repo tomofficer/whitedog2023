@@ -16,13 +16,13 @@ import '../componentStyling/careers.css';
 import aboutUsBg from '../assets/aboutUsSectionBg.jpg';
 import { FaCircleChevronDown } from 'react-icons/fa6';
 
-const About2 = ({ aboutRef, scrollToServices }) => {
+const About2 = ({ aboutRef, scrollToContact }) => {
   //back btn logic
   const navigate = useNavigate();
 
   return (
     <>
-      <Box mt={'80px'} className="container">
+      <Box mt={'105px'} mb="100px" className="container">
         <Box ref={aboutRef}></Box>
 
         <Box className="background-image">
@@ -78,7 +78,7 @@ const About2 = ({ aboutRef, scrollToServices }) => {
           position="relative"
           top="88%"
           zIndex={10}
-          onClick={() => scrollToServices()}
+          onClick={() => scrollToContact()}
         />
       </Box>
     </>

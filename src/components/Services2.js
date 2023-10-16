@@ -18,13 +18,13 @@ import { GiHammerNails, GiCircularSawblade, GiScrew } from 'react-icons/gi';
 import servicesSectionBg from '../assets/servicesSectionBg.jpg';
 import { FaCircleChevronDown } from 'react-icons/fa6';
 
-const Services2 = ({ servicesRef, scrollToGallery }) => {
+const Services2 = ({ servicesRef, scrollToAbout }) => {
   //back btn logic
   const navigate = useNavigate();
 
   return (
     <>
-      <Box mt={'250px'} mb="250px" className="container">
+      <Box mt={'275px'} mb="250px" className="container">
         <Box className="background-image">
           <Box ref={servicesRef}></Box>
 
@@ -172,7 +172,7 @@ const Services2 = ({ servicesRef, scrollToGallery }) => {
           position="relative"
           top="88%"
           zIndex={10}
-          onClick={() => scrollToGallery()}
+          onClick={() => scrollToAbout()}
         />
       </Box>
     </>

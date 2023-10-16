@@ -53,9 +53,9 @@ const Header2 = ({
             <Button
               bg="none"
               _hover={{ transform: 'scale(1.05)' }}
-              onClick={() => scrollToAbout()}
+              onClick={() => scrollToGallery()}
             >
-              ABOUT
+              GALLERY
             </Button>
             <Button
               bg="none"
@@ -67,9 +67,9 @@ const Header2 = ({
             <Button
               bg="none"
               _hover={{ transform: 'scale(1.05)' }}
-              onClick={() => scrollToGallery()}
+              onClick={() => scrollToAbout()}
             >
-              GALLERY
+              ABOUT
             </Button>
 
             <Button

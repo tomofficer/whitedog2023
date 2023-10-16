@@ -75,7 +75,12 @@ function App() {
             />
             <Route path="/careers" element={<Careers />} />
             <Route path="/about-us" element={<AboutUsFullPage />} />
-            <Route path="/contact-us" element={<ContactUsFullPage />} />
+            <Route
+              path="/contact-us"
+              element={
+                <ContactUsFullPage scrollToContact={scrollToContactHandle} />
+              }
+            />
             <Route path="/our-work" element={<OurWorkFullPage />} />
           </Routes>
           {/* <Parallax />

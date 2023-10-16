@@ -204,13 +204,8 @@ const ImageGallery = ({ galleryRef }) => {
 
   return (
     <>
-      {/* <div className="vertical-line-container">
-        <div className="vertical-line"></div>
-      </div> */}
-      <Box ref={galleryRef}></Box>
-
       <Box
-        pt={{ base: 4, sm: 0, md: '20px' }}
+        pt={{ base: 4, sm: 0, md: '0px' }}
         pb={{ base: 4, sm: 0, md: 20 }}
         mt={{ base: 2, sm: 6, md: 20 }}
         px={{ base: 10, sm: 20, md: 36 }}
@@ -218,6 +213,8 @@ const ImageGallery = ({ galleryRef }) => {
         mb="120px"
         zIndex={1}
       >
+        <Box ref={galleryRef}></Box>
+
         <HStack justifyContent="center">
           <Image src={textLogo} w="auto" px="150px" />
         </HStack>

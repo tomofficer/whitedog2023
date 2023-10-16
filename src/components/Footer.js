@@ -29,12 +29,28 @@ const Footer = () => {
             <Spacer />
 
             <a href="/our-work" style={{ cursor: 'pointer' }}>
-              <Text _hover={{ color: 'teal.300' }}>Our Work</Text>
+              <Text
+                _hover={{
+                  color: 'teal.300',
+                  transform: 'scale(1.05)',
+                  transition: '0.3s',
+                }}
+              >
+                Our Work
+              </Text>
             </a>
             <Spacer />
 
             <a href="/about-us" style={{ cursor: 'pointer' }}>
-              <Text _hover={{ color: 'teal.300' }}>About Us</Text>
+              <Text
+                _hover={{
+                  color: 'teal.300',
+                  transform: 'scale(1.05)',
+                  transition: '0.3s',
+                }}
+              >
+                About Us
+              </Text>
             </a>
             <Spacer />
 
@@ -53,12 +69,28 @@ const Footer = () => {
 
             <Spacer />
             <a href="/careers" style={{ cursor: 'pointer' }}>
-              <Text _hover={{ color: 'teal.300' }}>Careers</Text>
+              <Text
+                _hover={{
+                  color: 'teal.300',
+                  transform: 'scale(1.05)',
+                  transition: '0.3s',
+                }}
+              >
+                Careers
+              </Text>
             </a>
             <Spacer />
 
             <a href="/contact-us" style={{ cursor: 'pointer' }}>
-              <Text _hover={{ color: 'teal.300' }}>Contact Us</Text>
+              <Text
+                _hover={{
+                  color: 'teal.300',
+                  transform: 'scale(1.05)',
+                  transition: '0.3s',
+                }}
+              >
+                Contact Us
+              </Text>
             </a>
             <Spacer />
           </HStack>

@@ -32,7 +32,6 @@ const Home = ({
         scrollToServices={scrollToServices}
       />
       <Parallax /> */}
-
       <Header2
         scrollToAbout={scrollToAbout}
         scrollToGallery={scrollToGallery}
@@ -40,9 +39,9 @@ const Home = ({
         scrollToServices={scrollToServices}
       />
       <Landing />
-      <About2 aboutRef={aboutRef} scrollToServices={scrollToServices} />
-      <Services2 servicesRef={servicesRef} scrollToGallery={scrollToGallery} />
       <Gallery2 galleryRef={galleryRef} />
+      <Services2 servicesRef={servicesRef} scrollToAbout={scrollToAbout} />
+      <About2 aboutRef={aboutRef} scrollToContact={scrollToContact} />
       <Contact
         contactRef={contactRef}
         scrollToAbout={scrollToAbout}

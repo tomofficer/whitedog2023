@@ -62,14 +62,14 @@ const Header = ({ scrollToAbout, scrollToGallery, scrollToServices }) => {
             <Button bg="none" onClick={() => scrollToTop()}>
               HOME
             </Button>
-            <Button bg="none" onClick={() => scrollToAbout()}>
-              ABOUT
+            <Button bg="none" onClick={() => scrollToGallery()}>
+              GALLERY
             </Button>
             <Button bg="none" onClick={() => scrollToServices()}>
               SERVICES
             </Button>
-            <Button bg="none" onClick={() => scrollToGallery()}>
-              GALLERY
+            <Button bg="none" onClick={() => scrollToAbout()}>
+              ABOUT
             </Button>
           </Box>
         </HStack>
