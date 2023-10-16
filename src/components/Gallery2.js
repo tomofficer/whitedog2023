@@ -14,8 +14,9 @@ import {
 import { primaryFont, secondaryFont } from '../Fonts';
 import '../componentStyling/global.css';
 import { FaCircleChevronDown } from 'react-icons/fa6';
-import sawLogo from '../assets/sawLogo.png';
 import textLogo from '../assets/logoTextOnly.png';
+import leonard1 from '../assets/21LeonardSt/leonard1.jpg';
+import leonard2 from '../assets/21LeonardSt/leonard2.jpg';
 
 const ImageGallery = ({ galleryRef, scrollToServices }) => {
   //image data
@@ -23,15 +24,11 @@ const ImageGallery = ({ galleryRef, scrollToServices }) => {
     {
       title: '21 Leonard St',
       location: '',
-      image:
-        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitedog1_-DJZlIxPp.jpg?updatedAt=1690484185418',
+      image: `${leonard1}`,
       relatedImages: [
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/patrick-robert-doyle-OvXht_wi5Ew-unsplash_dEhch8ueo.jpg?updatedAt=1690600655926',
         'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/davide-cantelli-e3Uy4k7ooYk-unsplash_qaQTgUjXW.jpg?updatedAt=1690600645524',
-        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/inaki-del-olmo-NIJuEQw0RKg-unsplash_-6ZbpxdoU.jpg?updatedAt=1690600636071',
-        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/aaron-huber-G7sE2S4Lab4-unsplash_pYXqHhePm.jpg?updatedAt=1690600592957',
-        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/lauren-mancke-rm5DbquteoY-unsplash_IqgME0dtk.jpg?updatedAt=1690600557169ated_image_url_5',
-        'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/zac-gudakov-5QLCohwVndQ-unsplash_e_Z9iX5bz.jpg?updatedAt=1690600750853',
+        `${leonard2}`,
       ],
     },
     {
@@ -270,6 +267,7 @@ const ImageGallery = ({ galleryRef, scrollToServices }) => {
         />
       </Box>
       <Modal
+        className="modalContent"
         isOpen={isOpen}
         onRequestClose={closeModal}
         style={{
@@ -339,6 +337,7 @@ const ImageGallery = ({ galleryRef, scrollToServices }) => {
                           {index + 1} / {slidesCount}
                         </Text>
                         <Image
+                          className="modalImage"
                           src={image}
                           alt="carousel image"
                           boxSize="full"

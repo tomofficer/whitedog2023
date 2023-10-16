@@ -84,6 +84,27 @@ cursor: pointer;
   animation: slideInFromRight 0.5s;
 }
 
+/* Make the modal content flexible */
+.modalContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* take the full height of the modal */
+}
+
+/* Style the image */
+.modalImage {
+  max-width: 100%;
+  /* restrict the width to the modal's width */
+  max-height: 100%;
+  /* restrict the height to the modal's height */
+  width: auto;
+  /* adjust the width based on the original image's aspect ratio */
+  height: auto;
+  /* adjust the height based on the original image's aspect ratio */
+}
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -101,3 +122,6 @@ cursor: pointer;
     transform: translateX(0);
   }
 }
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
