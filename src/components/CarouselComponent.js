@@ -4,7 +4,7 @@ import { FaCircleChevronLeft, FaCircleChevronRight } from 'react-icons/fa6';
 
 import React, { useState, useEffect } from 'react';
 
-function CarouselComponent({ images, currentSlide }) {
+function CarouselComponent({ images, currentSlide, onSlideChange }) {
   const [currentImage, setCurrentImage] = useState(0);
 
   //thumbnail update handler
@@ -13,13 +13,15 @@ function CarouselComponent({ images, currentSlide }) {
   }, [currentSlide]);
 
   const nextImage = () => {
-    setCurrentImage(prevImage => (prevImage + 1) % images.length);
+    const newImage = (currentImage + 1) % images.length;
+    setCurrentImage(newImage);
+    onSlideChange(newImage);
   };
 
   const prevImage = () => {
-    setCurrentImage(
-      prevImage => (prevImage - 1 + images.length) % images.length
-    );
+    const newImage = (currentImage - 1 + images.length) % images.length;
+    setCurrentImage(newImage);
+    onSlideChange(newImage);
   };
 
   return (

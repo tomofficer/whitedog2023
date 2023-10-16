@@ -115,6 +115,9 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
                 <CarouselComponent
                   images={selectedGallery}
                   currentSlide={currentSlide}
+                  onSlideChange={newSlideIndex =>
+                    setCurrentSlide(newSlideIndex)
+                  }
                 />
               </Box>
 
@@ -154,6 +157,9 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
                           }}
                           cursor="pointer"
                           borderRadius="5px"
+                          border={
+                            idx === currentSlide ? '2px solid white' : 'none'
+                          } // This is where the conditional rendering takes place
                         />
                       </Box>
                     ))}
