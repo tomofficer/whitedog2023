@@ -15,6 +15,7 @@ import {
   Center,
   Icon,
 } from '@chakra-ui/react';
+import '../componentStyling/services.css';
 import CarouselComponent from './CarouselComponent';
 import { useState, useRef, useEffect } from 'react';
 import {
@@ -188,6 +189,7 @@ function ServicesGallery() {
                   onClick={() => handleImageClick(gallery.subGallery, idx)}
                 >
                   <Box
+                    animation="pulse 2.5s infinite"
                     display="inline-block"
                     position="relative"
                     borderRadius="40%"

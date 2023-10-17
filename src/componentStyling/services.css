@@ -26,3 +26,21 @@
   z-index: -1;
   /* Place the circle behind the icon */
 }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    /* You can adjust the scale factor as needed */
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
