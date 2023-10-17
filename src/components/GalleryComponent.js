@@ -60,14 +60,14 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
     'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitelogo_A1KeRKfjy.png?updatedAt=1690484186754';
 
   return (
-    <Box>
+    <Box mb="100px">
       <Box ref={fullGalleryRef}></Box>
 
       <HStack justifyContent="center">
         <Image src={textLogo} w="auto" px="350px" />
       </HStack>
       <Text fontFamily={primaryFont} fontSize={'30px'}>
-        A GALLERY OF OUR WORK
+        ARCHITECTURAL MILLWORK & CUSTOM CABINETRY
       </Text>
       <Grid
         templateColumns="repeat(2, 1fr)"

@@ -59,6 +59,43 @@ import warner5 from '../assets/warnerTheatre/warner5.png';
 import warner6 from '../assets/warnerTheatre/warner6.png';
 import warner7 from '../assets/warnerTheatre/warner7.png';
 import warner8 from '../assets/warnerTheatre/warner8.png';
+import reception1 from '../assets/receptionDesks/reception1.JPG';
+import reception2 from '../assets/receptionDesks/reception2.JPG';
+import reception3 from '../assets/receptionDesks/reception3.JPG';
+import reception4 from '../assets/receptionDesks/reception4.JPG';
+import reception5 from '../assets/receptionDesks/reception5.JPG';
+import reception6 from '../assets/receptionDesks/reception6.JPG';
+import residential1 from '../assets/residentialMillwork/residential1.JPG';
+import residential2 from '../assets/residentialMillwork/residential2.JPG';
+import residential3 from '../assets/residentialMillwork/residential3.JPG';
+import residential4 from '../assets/residentialMillwork/residential4.jpg';
+import residential5 from '../assets/residentialMillwork/residential5.jpg';
+import residential6 from '../assets/residentialMillwork/residential6.jpg';
+import residential7 from '../assets/residentialMillwork/residential7.JPG';
+import residential8 from '../assets/residentialMillwork/residential8.JPG';
+import residential9 from '../assets/residentialMillwork/residential9.JPG';
+import residential10 from '../assets/residentialMillwork/residential10.JPG';
+import residential11 from '../assets/residentialMillwork/residential11.JPG';
+import residential12 from '../assets/residentialMillwork/residential12.JPG';
+import residential13 from '../assets/residentialMillwork/residential13.JPG';
+import residential14 from '../assets/residentialMillwork/residential14.JPG';
+import residential15 from '../assets/residentialMillwork/residential15.JPG';
+import commercial1 from '../assets/commercialMillwork/commercial1.JPG';
+import commercial2 from '../assets/commercialMillwork/commercial2.JPG';
+import commercial3 from '../assets/commercialMillwork/commercial3.JPG';
+import commercial4 from '../assets/commercialMillwork/commercial4.JPG';
+import commercial5 from '../assets/commercialMillwork/commercial5.JPG';
+import commercial6 from '../assets/commercialMillwork/commercial6.JPG';
+import commercial7 from '../assets/commercialMillwork/commercial7.JPG';
+import cabinetry1 from '../assets/customCabinetry/cabinetry1.JPG';
+import cabinetry2 from '../assets/customCabinetry/cabinetry2.JPG';
+import cabinetry3 from '../assets/customCabinetry/cabinetry3.JPG';
+import cabinetry4 from '../assets/customCabinetry/cabinetry4.JPG';
+import cabinetry5 from '../assets/customCabinetry/cabinetry5.JPG';
+import cabinetry6 from '../assets/customCabinetry/cabinetry6.JPG';
+import cabinetry7 from '../assets/customCabinetry/cabinetry7.JPG';
+import cabinetry8 from '../assets/customCabinetry/cabinetry8.JPG';
+import cabinetry9 from '../assets/customCabinetry/cabinetry9.JPG';
 
 const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
   //back btn logic
@@ -67,9 +104,79 @@ const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
   //gallery data
   const galleries = [
     {
-      title: '21 Leonard St',
-      defaultImage: `${leonard1}`,
-      subGallery: [`${leonard1}`, `${leonard2}`, `${leonard3}`, `${leonard4}`],
+      title: 'Residential Millwork',
+      defaultImage: `${residential1}`,
+      subGallery: [
+        `${residential1}`,
+        `${residential2}`,
+        `${residential3}`,
+        `${residential4}`,
+        `${residential5}`,
+        `${residential6}`,
+        `${residential7}`,
+        `${residential8}`,
+        `${residential9}`,
+        `${residential10}`,
+        `${residential11}`,
+        `${residential12}`,
+        `${residential13}`,
+        `${residential14}`,
+        `${residential15}`,
+      ],
+    },
+    {
+      title: 'Custom Cabinetry',
+      defaultImage: `${cabinetry1}`,
+      subGallery: [
+        `${cabinetry1}`,
+        `${cabinetry2}`,
+        `${cabinetry3}`,
+        `${cabinetry4}`,
+        `${cabinetry5}`,
+        `${cabinetry6}`,
+        `${cabinetry7}`,
+        `${cabinetry8}`,
+        `${cabinetry9}`,
+      ],
+    },
+    {
+      title: 'Commercial Millwork',
+      defaultImage: `${commercial1}`,
+      subGallery: [
+        `${commercial1}`,
+        `${commercial2}`,
+        `${commercial3}`,
+        `${commercial4}`,
+        `${commercial5}`,
+        `${commercial6}`,
+        `${commercial7}`,
+      ],
+    },
+    {
+      title: 'Reception Desks',
+      defaultImage: `${reception1}`,
+      subGallery: [
+        `${reception1}`,
+        `${reception2}`,
+        `${reception3}`,
+        `${reception4}`,
+        `${reception5}`,
+        `${reception6}`,
+      ],
+    },
+
+    {
+      title: 'Phillip Morris',
+      defaultImage: `${morris1}`,
+      subGallery: [
+        `${morris1}`,
+        `${morris2}`,
+        `${morris3}`,
+        `${morris4}`,
+        `${morris5}`,
+        `${morris6}`,
+        `${morris7}`,
+      ],
     },
     {
       title: 'Halford House',
@@ -85,19 +192,7 @@ const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
         `${halford8}`,
       ],
     },
-    {
-      title: 'Phillip Morris',
-      defaultImage: `${morris1}`,
-      subGallery: [
-        `${morris1}`,
-        `${morris2}`,
-        `${morris3}`,
-        `${morris4}`,
-        `${morris5}`,
-        `${morris6}`,
-        `${morris7}`,
-      ],
-    },
+
     {
       title: 'Torrington Savings Bank',
       defaultImage: `${tsb1}`,
@@ -138,11 +233,17 @@ const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
         `${warner8}`,
       ],
     },
+
+    {
+      title: '21 Leonard St',
+      defaultImage: `${leonard1}`,
+      subGallery: [`${leonard1}`, `${leonard2}`, `${leonard3}`, `${leonard4}`],
+    },
   ];
 
   return (
     <>
-      <Box mt={0} className="container fade-in2">
+      <Box className="container fade-in2">
         <Box className="background-image">
           <Image src={bg} alt="about" />
         </Box>
@@ -197,17 +298,6 @@ const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
               </Button>
             </Box>
           </HStack>
-        </Box>
-        <Box>
-          <VStack>
-            <Text>Commercial</Text>
-            <Grid>
-              <Image src="" alt="1" />
-              <Image src="" alt="1" />
-              <Image src="" alt="1" />
-              <Image src="" alt="1" />
-            </Grid>
-          </VStack>
         </Box>
       </Box>
       <GalleryComponent galleries={galleries} fullGalleryRef={fullGalleryRef} />

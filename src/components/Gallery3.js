@@ -48,10 +48,30 @@ import warner8 from '../assets/warnerTheatre/warner8.png';
 const Gallery3 = ({ galleryRef, scrollToServices }) => {
   const galleries = [
     {
-      title: '21 Leonard St',
-      defaultImage: `${leonard1}`,
-      subGallery: [`${leonard1}`, `${leonard2}`, `${leonard3}`, `${leonard4}`],
+      title: 'Phillip Morris',
+      defaultImage: `${morris1}`,
+      subGallery: [
+        `${morris1}`,
+        `${morris2}`,
+        `${morris3}`,
+        `${morris4}`,
+        `${morris5}`,
+        `${morris6}`,
+        `${morris7}`,
+      ],
     },
+    {
+      title: 'Walker Auditorium',
+      defaultImage: `${walker1}`,
+      subGallery: [
+        `${walker1}`,
+        `${walker2}`,
+        `${walker3}`,
+        `${walker4}`,
+        `${walker5}`,
+      ],
+    },
+
     {
       title: 'Halford House',
       defaultImage: `${halford1}`,
@@ -64,19 +84,6 @@ const Gallery3 = ({ galleryRef, scrollToServices }) => {
         `${halford6}`,
         `${halford7}`,
         `${halford8}`,
-      ],
-    },
-    {
-      title: 'Phillip Morris',
-      defaultImage: `${morris1}`,
-      subGallery: [
-        `${morris1}`,
-        `${morris2}`,
-        `${morris3}`,
-        `${morris4}`,
-        `${morris5}`,
-        `${morris6}`,
-        `${morris7}`,
       ],
     },
     {
@@ -95,17 +102,6 @@ const Gallery3 = ({ galleryRef, scrollToServices }) => {
       ],
     },
     {
-      title: 'Walker Auditorium',
-      defaultImage: `${walker1}`,
-      subGallery: [
-        `${walker1}`,
-        `${walker2}`,
-        `${walker3}`,
-        `${walker4}`,
-        `${walker5}`,
-      ],
-    },
-    {
       title: 'Warner Theatre',
       defaultImage: `${warner1}`,
       subGallery: [
@@ -118,6 +114,11 @@ const Gallery3 = ({ galleryRef, scrollToServices }) => {
         `${warner7}`,
         `${warner8}`,
       ],
+    },
+    {
+      title: '21 Leonard St',
+      defaultImage: `${leonard1}`,
+      subGallery: [`${leonard1}`, `${leonard2}`, `${leonard3}`, `${leonard4}`],
     },
   ];
 
@@ -148,7 +149,7 @@ const Gallery3 = ({ galleryRef, scrollToServices }) => {
               View More
             </Button>
             <Icon
-              mb="80px"
+              mb="60px"
               as={FaCircleChevronDown}
               boxSize="70px"
               color="black"
