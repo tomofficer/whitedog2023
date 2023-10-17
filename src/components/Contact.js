@@ -63,6 +63,7 @@ const Contact = ({
         />
         <Center>
           <Box
+            w="100%"
             py={{ base: 4, sm: 0, md: 0 }}
             px={{ base: 4, sm: 0, md: 0 }}
             mt={{ base: 2, sm: 6, md: 0 }}

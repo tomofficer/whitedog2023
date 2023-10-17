@@ -30,10 +30,11 @@ function CarouselComponent({ images, currentSlide, onSlideChange }) {
 
       <IconButton
         position="absolute"
-        left="5px"
+        left="20px"
         top="50%"
         bg="none"
         color="white"
+        fontSize="30px"
         _hover={{ color: 'teal.400', bg: 'none' }}
         transform="translateY(-50%)"
         aria-label="Previous Image"
@@ -42,10 +43,11 @@ function CarouselComponent({ images, currentSlide, onSlideChange }) {
       />
       <IconButton
         position="absolute"
-        right="5px"
+        right="20px"
         top="50%"
         bg="none"
         color="white"
+        fontSize="30px"
         _hover={{ color: 'teal.400', bg: 'none' }}
         transform="translateY(-50%)"
         aria-label="Next Image"

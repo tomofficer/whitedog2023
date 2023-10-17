@@ -70,6 +70,8 @@ const ContactUsFullPage = () => {
             <Box px={40}>
               <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={900}>
                 Need to get ahold of us? Reach out anytime. <br />
+                andy@whitedogwoodworking.com <br />
+                1-860-482-3776
               </Text>
               <Button
                 fontStyle={secondaryFont}
