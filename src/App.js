@@ -46,21 +46,10 @@ function App() {
     scrollToServices.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToClientsHandle = () => {
-    scrollToContact.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <ChakraProvider theme={theme}>
       <Router>
         <Box textAlign="center" fontSize="xl">
-          {/* <Header
-            scrollToAbout={scrollToAboutHandle}
-            scrollToGallery={scrollToGalleryHandle}
-            scrollToContact={scrollToContactHandle}
-            scrollToServices={scrollToServicesHandle}
-            scrollToClients={scrollToClientsHandle}
-          /> */}
           <Routes>
             <Route
               path="/"

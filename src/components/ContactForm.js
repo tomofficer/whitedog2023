@@ -11,7 +11,7 @@ const ContactForm = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <VStack fontFamily={secondaryFont} fontWeight={900}>
+        <VStack fontFamily={secondaryFont} fontWeight={900} color="black">
           <div className="input-container">
             <label htmlFor="name">Name</label>
             <input

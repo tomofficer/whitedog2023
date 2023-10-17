@@ -132,10 +132,6 @@ const ImageGallery = ({ galleryRef, scrollToServices }) => {
     },
   ];
 
-  const getLength = (index, data) => {
-    data.map(() => {});
-  };
-
   const companyLogo =
     'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitelogo_A1KeRKfjy.png?updatedAt=1690484186754';
 
@@ -210,7 +206,7 @@ const ImageGallery = ({ galleryRef, scrollToServices }) => {
         mb="120px"
         zIndex={1}
       >
-        <Box ref={galleryRef}></Box>
+        {/* <Box ref={galleryRef}></Box> */}
 
         <HStack justifyContent="center">
           <Image src={textLogo} w="auto" px="150px" />

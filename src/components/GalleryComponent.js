@@ -18,7 +18,6 @@ import { primaryFont, secondaryFont } from '../Fonts';
 import textLogo from '../assets/logoTextOnly.png';
 import CarouselComponent from './CarouselComponent'; // assuming they're in the same directory
 import { useState, useRef, useEffect } from 'react';
-import { FaCircleChevronLeft, FaCircleChevronRight } from 'react-icons/fa6';
 
 function GalleryComponent({ galleries, fullGalleryRef }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -30,14 +29,6 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
     setSelectedGallery(subGallery);
     setSelectedGalleryIndex(idx);
     onOpen();
-  };
-
-  const scrollThumbnailsUp = () => {
-    thumbnailContainerRef.current.scrollTop -= 510; // 100 * 5 + some margin space
-  };
-
-  const scrollThumbnailsDown = () => {
-    thumbnailContainerRef.current.scrollTop += 510; // 100 * 5 + some margin space
   };
 
   const thumbnailContainerRef = useRef(null);
@@ -150,14 +141,6 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
                 position="relative"
                 height="100%"
               >
-                {/* <IconButton
-                  icon={<FaCircleChevronLeft rotate={90} />}
-                  onClick={scrollThumbnailsUp}
-                  bg="none"
-                  color="white"
-                  _hover={{ color: 'teal.400', bg: 'none' }}
-                  aria-label="Scroll Thumbnails Up"
-                /> */}
                 <Box
                   ref={thumbnailContainerRef}
                   overflowY="auto"
@@ -185,14 +168,6 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
                     ))}
                   </VStack>
                 </Box>
-                {/* <IconButton
-                  icon={<FaCircleChevronRight rotate={90} />}
-                  onClick={scrollThumbnailsDown}
-                  bg="none"
-                  color="white"
-                  _hover={{ color: 'teal.400', bg: 'none' }}
-                  aria-label="Scroll Thumbnails Down"
-                /> */}
               </VStack>
             </Flex>
           </ModalBody>

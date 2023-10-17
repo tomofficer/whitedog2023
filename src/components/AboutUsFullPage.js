@@ -59,7 +59,7 @@ const AboutUsFullPage = () => {
                 We specialize in Fine Woodworking, Custom Cabinetry and
                 Architectural Millwork. <br />
                 Located at 23 Field St in Torrington, Connecticut. <br />
-                Family owned and operated since 2008.
+                Family owned and operated since 2006.
               </Text>
               <Button
                 as="a"
