@@ -239,12 +239,7 @@ const ImageGallery = ({ galleryRef, scrollToServices }) => {
                   onClick={() => openModal(data, index)}
                 />
                 <div className="overlay" style={{ borderRadius: '15px' }}>
-                  <img
-                    src={companyLogo}
-                    alt="White Dog Woodworking Logo"
-                    // maxW={{ base: '100px', sm: '200px', md: '4xl' }}
-                  />
-
+                  <img src={companyLogo} alt="White Dog Woodworking Logo" />
                   <p className="image-title">{data.title}</p>
                 </div>
               </div>

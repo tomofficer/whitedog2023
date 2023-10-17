@@ -65,6 +65,9 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
 
   const { height } = useWindowSize();
 
+  const companyLogo =
+    'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitelogo_A1KeRKfjy.png?updatedAt=1690484186754';
+
   return (
     <Box>
       <Box ref={fullGalleryRef}></Box>
@@ -82,13 +85,21 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
         px={36}
       >
         {galleries.map((gallery, idx) => (
-          <Image
-            key={idx}
-            src={gallery.defaultImage}
-            onClick={() => handleImageClick(gallery.subGallery, idx)}
-            borderRadius={'68px'}
-            _hover={{ cursor: 'pointer' }}
-          />
+          <>
+            <div className="image-container">
+              <Image
+                key={idx}
+                src={gallery.defaultImage}
+                onClick={() => handleImageClick(gallery.subGallery, idx)}
+                borderRadius={'68px'}
+                _hover={{ cursor: 'pointer' }}
+              />
+              <div className="overlay" style={{ borderRadius: '68px' }}>
+                <img src={companyLogo} alt="White Dog Woodworking Logo" />
+                <p className="image-title">{gallery.title}</p>
+              </div>
+            </div>
+          </>
         ))}
       </Grid>
 
