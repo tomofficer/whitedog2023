@@ -110,7 +110,7 @@ const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
                 }}
                 onClick={() => scrollToFullGallery()}
               >
-                Browse Full Gallery
+                View Full Gallery
               </Button>
             </Box>
           </HStack>

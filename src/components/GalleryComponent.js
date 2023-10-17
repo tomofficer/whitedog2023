@@ -12,7 +12,7 @@ import {
   Text,
   Flex,
   VStack,
-  IconButton,
+  Grid,
 } from '@chakra-ui/react';
 import { primaryFont, secondaryFont } from '../Fonts';
 import textLogo from '../assets/logoTextOnly.png';
@@ -75,13 +75,22 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
       <Text fontFamily={primaryFont} fontSize={'30px'}>
         A GALLERY OF OUR WORK
       </Text>
-      {galleries.map((gallery, idx) => (
-        <Image
-          key={idx}
-          src={gallery.defaultImage}
-          onClick={() => handleImageClick(gallery.subGallery, idx)}
-        />
-      ))}
+      <Grid
+        templateColumns="repeat(2, 1fr)"
+        gap={20}
+        my={{ base: 6, sm: 10, md: 16 }}
+        px={36}
+      >
+        {galleries.map((gallery, idx) => (
+          <Image
+            key={idx}
+            src={gallery.defaultImage}
+            onClick={() => handleImageClick(gallery.subGallery, idx)}
+            borderRadius={'68px'}
+            _hover={{ cursor: 'pointer' }}
+          />
+        ))}
+      </Grid>
 
       <Modal isOpen={isOpen} onClose={onClose} size="full">
         <ModalOverlay backdropFilter="blur(4px)" />

@@ -55,7 +55,7 @@ const Contact = ({
 
   return (
     <>
-      <Box className="fade-in2">
+      <Box className="fade-in2" overflow="hidden">
         <Header
           scrollToAbout={scrollToAbout}
           scrollToServices={scrollToServices}
