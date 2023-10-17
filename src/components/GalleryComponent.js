@@ -73,7 +73,7 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
       <Box ref={fullGalleryRef}></Box>
 
       <HStack justifyContent="center">
-        <Image src={textLogo} w="auto" px="150px" />
+        <Image src={textLogo} w="auto" px="350px" />
       </HStack>
       <Text fontFamily={primaryFont} fontSize={'30px'}>
         A GALLERY OF OUR WORK

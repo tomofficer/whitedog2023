@@ -6,7 +6,7 @@ import '../componentStyling/global.css';
 const ContactForm = () => {
   const [state, handleSubmit] = useForm('xqkveaqa');
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <p>Thanks! We'll get back to you soon!</p>;
   }
   return (
     <>

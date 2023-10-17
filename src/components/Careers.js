@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-
+import { useState } from 'react';
+import Modal from 'react-modal';
 import { primaryFont, secondaryFont } from '../Fonts';
 import {
   HStack,
@@ -15,10 +16,22 @@ import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 import bg from '../assets/careersBg.jpg';
+import ContactForm from './ContactForm';
 
 const Careers = () => {
   //back btn logic
   const navigate = useNavigate();
+
+  //state
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <>
@@ -58,7 +71,8 @@ const Careers = () => {
             <Box px={40}>
               <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={900}>
                 Are you interested in joining our team? <br />
-                Please reach out to us with your resume and contact info.
+                Enter your contact info below or email your resume to <br />
+                andy@whitedogwoodworking.com
               </Text>
               <Button
                 fontStyle={secondaryFont}
@@ -72,6 +86,7 @@ const Careers = () => {
                 _hover={{
                   color: 'teal.300',
                 }}
+                onClick={openModal}
               >
                 Contact Us
               </Button>
@@ -79,6 +94,28 @@ const Careers = () => {
           </HStack>
         </Box>
       </Box>
+
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Contact Form Modal"
+        style={{
+          overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.5)', // This gives a dim background
+          },
+          content: {
+            color: 'lightsteelblue', // This is a placeholder styling, adjust as necessary
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+          },
+        }}
+      >
+        <ContactForm />
+      </Modal>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-
+import { useState } from 'react';
+import Modal from 'react-modal';
 import { primaryFont, secondaryFont, tertiaryFont } from '../Fonts';
 import {
   HStack,
@@ -15,10 +16,22 @@ import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 import bg from '../assets/contactUsBg.jpg';
+import ContactForm from './ContactForm';
 
 const ContactUsFullPage = () => {
   //back btn logic
   const navigate = useNavigate();
+
+  //state
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <>
@@ -70,6 +83,7 @@ const ContactUsFullPage = () => {
                 _hover={{
                   color: 'teal.300',
                 }}
+                onClick={openModal}
               >
                 Get In Touch
               </Button>
@@ -77,6 +91,27 @@ const ContactUsFullPage = () => {
           </HStack>
         </Box>
       </Box>
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Contact Form Modal"
+        style={{
+          overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.5)', // This gives a dim background
+          },
+          content: {
+            color: 'lightsteelblue', // This is a placeholder styling, adjust as necessary
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+          },
+        }}
+      >
+        <ContactForm />
+      </Modal>
     </>
   );
 };
