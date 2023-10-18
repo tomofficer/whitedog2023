@@ -85,41 +85,10 @@ const Landing = () => {
         </Center>
 
         {/* Content below the hero section */}
-        <Box height="150vh"></Box>
+        {/* <Box height="150vh"></Box> */}
       </Box>
     </>
   );
 };
 
 export default Landing;
-
-{
-  /* <Button
-                fontStyle={secondaryFont}
-                bg="none"
-                border="2px"
-                color="black"
-                fontSize={'md'}
-                fontWeight={0}
-                px={10}
-                mt={6}
-                _hover={{
-                  color: 'teal.300',
-                }}
-              >
-                View Gallery
-              </Button> */
-}
-
-{
-  /* <Icon
-              as={FaCircleChevronDown}
-              boxSize="50px"
-              // color="#4DB6AC"
-              color="black"
-              _hover={{ transform: 'scale(1.1)' }}
-              onClick={() => {
-                navigate(-1);
-              }}
-            /> */
-}
