@@ -20,7 +20,13 @@ import CarouselComponent from './CarouselComponent'; // assuming they're in the 
 import { useState, useRef, useEffect } from 'react';
 
 function GalleryComponent({ galleries, fullGalleryRef }) {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose: originalOnClose } = useDisclosure();
+
+  const onClose = () => {
+    setCurrentSlide(0); // Reset the current slide to 0 (or any desired index) when closing the modal
+    originalOnClose(); // Call the original onClose function to close the modal
+  };
+
   const [selectedGallery, setSelectedGallery] = useState([]);
   const [selectedGalleryIndex, setSelectedGalleryIndex] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
