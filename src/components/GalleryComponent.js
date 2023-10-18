@@ -18,6 +18,7 @@ import { primaryFont, secondaryFont } from '../Fonts';
 import textLogo from '../assets/logoTextOnly.png';
 import CarouselComponent from './CarouselComponent'; // assuming they're in the same directory
 import { useState, useRef, useEffect } from 'react';
+import { useBreakpointValue } from '@chakra-ui/react';
 
 function GalleryComponent({ galleries, fullGalleryRef }) {
   const { isOpen, onOpen, onClose: originalOnClose } = useDisclosure();
@@ -65,14 +66,45 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
   const companyLogo =
     'https://ik.imagekit.io/v66nb6oaq/White%20Dog%20Woodworking/whitelogo_A1KeRKfjy.png?updatedAt=1690484186754';
 
+  const logoWidth = useBreakpointValue({
+    base: '400px',
+    sm: '500px',
+    md: '600px',
+    lg: '700px',
+    xl: 'auto',
+  });
+  const textSize = useBreakpointValue({
+    base: '20px',
+    sm: '22px',
+    md: '24px',
+    lg: '26px',
+    xl: '30px',
+  });
+
+  const logoPadding = useBreakpointValue({
+    base: '50px',
+    sm: '0px',
+    md: '0px',
+    lg: '0px',
+    xl: '350px',
+  });
+
+  const textPadding = useBreakpointValue({
+    base: '50px',
+    sm: '50px',
+    md: '50px',
+    lg: '0px',
+    xl: '0px',
+  });
+
   return (
     <Box mb="100px">
       <Box ref={fullGalleryRef}></Box>
 
       <HStack justifyContent="center">
-        <Image src={textLogo} w="auto" px="350px" />
+        <Image src={textLogo} w={logoWidth} px={logoPadding} />
       </HStack>
-      <Text fontFamily={primaryFont} fontSize={'30px'}>
+      <Text fontFamily={primaryFont} fontSize={textSize} px={textPadding}>
         ARCHITECTURAL MILLWORK & CUSTOM CABINETRY
       </Text>
       <Grid

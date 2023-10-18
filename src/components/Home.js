@@ -26,7 +26,6 @@ const Home = ({
         scrollToServices={scrollToServices}
       />
       <Landing />
-      {/* <Gallery2 galleryRef={galleryRef} scrollToServices={scrollToServices} /> */}
       <Gallery3 galleryRef={galleryRef} scrollToServices={scrollToServices} />
       <Services2 servicesRef={servicesRef} scrollToAbout={scrollToAbout} />
       <About2 aboutRef={aboutRef} scrollToContact={scrollToContact} />
