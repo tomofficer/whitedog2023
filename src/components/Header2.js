@@ -1,4 +1,18 @@
-import { HStack, Box, Image, Spacer, Button, Text } from '@chakra-ui/react';
+import {
+  HStack,
+  Box,
+  Image,
+  Spacer,
+  Button,
+  useDisclosure,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerBody,
+  IconButton,
+  VStack,
+} from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons';
 import logoTextOnly from '../assets/logoTextOnly.png';
 import { useState, useEffect } from 'react';
 
@@ -9,10 +23,9 @@ const Header2 = ({
   scrollToContact,
 }) => {
   const [loaded, setLoaded] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
-  //fade in hook
   useEffect(() => {
-    // After the component is added to the DOM, set the loaded state to true
     setLoaded(true);
   }, []);
 
@@ -27,11 +40,9 @@ const Header2 = ({
         left={0}
         right={0}
         zIndex={4}
-        // bg="white"
-        // backdropFilter="blur(8px)"
         backgroundColor="rgba(128, 128, 128, 0.2)"
         rounded="68px"
-        boxShadow="xl" // Optionally add a shadow for more depth
+        boxShadow="xl"
       >
         <HStack
           pl={{ base: 4, sm: 10, md: 20 }}
@@ -41,46 +52,99 @@ const Header2 = ({
           <Box>
             <Image
               src={logoTextOnly}
-              w={{
-                base: '150px',
-                sm: '250px',
-                md: '200px',
-              }}
+              w={{ base: '150px', sm: '250px', md: '200px' }}
             />
           </Box>
           <Spacer />
-          <Box>
+          <Box display={{ base: 'none', sm: 'flex', md: 'flex' }}>
+            {/* Desktop Buttons */}
             <Button
               bg="none"
               _hover={{ transform: 'scale(1.05)' }}
-              onClick={() => scrollToGallery()}
+              onClick={scrollToGallery}
             >
               GALLERY
             </Button>
             <Button
               bg="none"
               _hover={{ transform: 'scale(1.05)' }}
-              onClick={() => scrollToServices()}
+              onClick={scrollToServices}
             >
               SERVICES
             </Button>
             <Button
               bg="none"
               _hover={{ transform: 'scale(1.05)' }}
-              onClick={() => scrollToAbout()}
+              onClick={scrollToAbout}
             >
               ABOUT
             </Button>
-
             <Button
               bg="none"
               _hover={{ transform: 'scale(1.05)' }}
-              onClick={() => scrollToContact()}
+              onClick={scrollToContact}
             >
               CONTACT
             </Button>
           </Box>
+          <IconButton
+            display={{ base: 'flex', sm: 'none', md: 'none' }}
+            aria-label="Open menu"
+            onClick={onOpen}
+            icon={<HamburgerIcon />}
+          />
         </HStack>
+
+        {/* Drawer for Mobile */}
+        <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerBody>
+              <VStack align="start" spacing={4}>
+                <Button
+                  bg="none"
+                  _hover={{ transform: 'scale(1.05)' }}
+                  onClick={() => {
+                    scrollToGallery();
+                    onClose();
+                  }}
+                >
+                  GALLERY
+                </Button>
+                <Button
+                  bg="none"
+                  _hover={{ transform: 'scale(1.05)' }}
+                  onClick={() => {
+                    scrollToServices();
+                    onClose();
+                  }}
+                >
+                  SERVICES
+                </Button>
+                <Button
+                  bg="none"
+                  _hover={{ transform: 'scale(1.05)' }}
+                  onClick={() => {
+                    scrollToAbout();
+                    onClose();
+                  }}
+                >
+                  ABOUT
+                </Button>
+                <Button
+                  bg="none"
+                  _hover={{ transform: 'scale(1.05)' }}
+                  onClick={() => {
+                    scrollToContact();
+                    onClose();
+                  }}
+                >
+                  CONTACT
+                </Button>
+              </VStack>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
       </Box>
     </>
   );
