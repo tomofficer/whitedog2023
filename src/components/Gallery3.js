@@ -124,7 +124,7 @@ const Gallery3 = ({ galleryRef, scrollToServices }) => {
 
   return (
     <>
-      <Box bg="white" ref={galleryRef}>
+      <Box bg="white" ref={galleryRef} w="100vw" overflowX="hidden">
         <GalleryComponent galleries={galleries} galleryRef={galleryRef} />
         <Center>
           <VStack>

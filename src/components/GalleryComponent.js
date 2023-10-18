@@ -76,10 +76,15 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
         ARCHITECTURAL MILLWORK & CUSTOM CABINETRY
       </Text>
       <Grid
-        templateColumns="repeat(2, 1fr)"
+        templateColumns={{
+          base: '1fr',
+          sm: '1fr',
+          md: '1fr',
+          lg: 'repeat(2, 1fr)',
+        }}
         gap={20}
         my={{ base: 6, sm: 10, md: 16 }}
-        px={36}
+        px={{ base: '40px', md: '130px', lg: '200px' }}
       >
         {galleries.map((gallery, idx) => (
           <>
@@ -90,7 +95,12 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
                 onClick={() => handleImageClick(gallery.subGallery, idx)}
                 borderRadius={'68px'}
                 _hover={{ cursor: 'pointer' }}
+                objectFit="cover"
+                objectPosition="center center"
+                width={['300px', '500px', '500px']}
+                height={['300px', '500px', '500px']}
               />
+
               <div className="overlay" style={{ borderRadius: '68px' }}>
                 <img src={companyLogo} alt="White Dog Woodworking Logo" />
                 <p className="image-title">{gallery.title}</p>
