@@ -56,7 +56,7 @@ const Header2 = ({
             />
           </Box>
           <Spacer />
-          <Box display={{ base: 'none', sm: 'flex', md: 'flex' }}>
+          <Box display={{ base: 'none', sm: 'none', md: 'flex', lg: 'flex' }}>
             {/* Desktop Buttons */}
             <Button
               bg="none"
@@ -88,7 +88,7 @@ const Header2 = ({
             </Button>
           </Box>
           <IconButton
-            display={{ base: 'flex', sm: 'none', md: 'none' }}
+            display={{ base: 'flex', sm: 'flex', md: 'none', lg: 'none' }}
             aria-label="Open menu"
             onClick={onOpen}
             icon={<HamburgerIcon />}
