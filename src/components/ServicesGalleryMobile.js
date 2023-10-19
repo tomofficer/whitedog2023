@@ -11,7 +11,7 @@ import {
   Text,
   Flex,
   VStack,
-  HStack,
+  Grid,
   Center,
   Icon,
 } from '@chakra-ui/react';
@@ -60,7 +60,7 @@ import cabinetry7 from '../assets/customCabinetry/cabinetry7.JPG';
 import cabinetry8 from '../assets/customCabinetry/cabinetry8.JPG';
 import cabinetry9 from '../assets/customCabinetry/cabinetry9.JPG';
 
-function ServicesGallery() {
+function ServicesGalleryMobile() {
   //gallery data
   const galleries = [
     {
@@ -166,47 +166,45 @@ function ServicesGallery() {
 
   return (
     <Box>
-      <HStack spacing={16}>
+      <Grid templateColumns="repeat(2, 1fr)" gap={4}>
         {galleries.map((gallery, idx) => (
           <>
             <Box px={0} color="white">
               <Center>
                 <VStack
-                  spacing={4} // spacing between child elements for visual clarity
+                  spacing={0} // spacing between child elements for visual clarity
                   cursor="pointer" // indicate that it's hoverable
                   transition="color 0.35s, border-color 0.35s" // smooth transitions
-                  _hover={{
-                    color: 'teal.300',
-                    '.text-on-hover': { color: 'teal.300' },
-                  }} // targeting text on hover with a classname
                   onClick={() => handleImageClick(gallery.subGallery, idx)}
                 >
-                  <Box
-                    animation="pulse 2.5s infinite"
-                    display="inline-block"
-                    position="relative"
-                    borderRadius="40%"
-                    borderWidth="8px"
-                    borderColor="currentColor" // Inherit the color from the parent VStack
-                    p="10px"
-                  >
-                    <Icon
-                      as={gallery.defaultImage}
-                      boxSize={20}
-                      className="services-icon"
-                      color="currentColor"
-                    />
-                  </Box>
+                  <Box mx="10px" my="10px">
+                    <Box
+                      // animation="pulse 2.5s infinite"
+                      display="inline-block"
+                      position="relative"
+                      borderRadius="40%"
+                      borderWidth="8px"
+                      borderColor="currentColor" // Inherit the color from the parent VStack
+                      p="15px"
+                    >
+                      <Icon
+                        as={gallery.defaultImage}
+                        boxSize="80px"
+                        className="services-icon"
+                        color="currentColor"
+                      />
+                    </Box>
 
-                  <Text fontSize={'20px'} className="text-on-hover">
-                    {gallery.title}
-                  </Text>
+                    <Text fontSize={'15px'} className="text-on-hover" mt="10px">
+                      {gallery.title}
+                    </Text>
+                  </Box>
                 </VStack>
               </Center>
             </Box>
           </>
         ))}
-      </HStack>
+      </Grid>
 
       <Modal isOpen={isOpen} onClose={onClose} size="full">
         <ModalOverlay backdropFilter="blur(4px)" />
@@ -291,4 +289,4 @@ function ServicesGallery() {
   );
 }
 
-export default ServicesGallery;
+export default ServicesGalleryMobile;

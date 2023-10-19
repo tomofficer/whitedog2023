@@ -1,33 +1,13 @@
-import { useNavigate } from 'react-router-dom';
-
 import { primaryFont, secondaryFont } from '../Fonts';
-import {
-  HStack,
-  Text,
-  Image,
-  Box,
-  Spacer,
-  Icon,
-  VStack,
-  Center,
-} from '@chakra-ui/react';
+import { HStack, Text, Image, Box, Spacer, Icon } from '@chakra-ui/react';
 import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
-import {
-  GiHammerNails,
-  GiCircularSawblade,
-  GiScrew,
-  GiToolbox,
-} from 'react-icons/gi';
 import servicesSectionBg from '../assets/servicesSectionBg.jpg';
 import { FaCircleChevronDown } from 'react-icons/fa6';
 import ServicesGallery from './ServicesGallery';
 
 const Services2 = ({ servicesRef, scrollToAbout }) => {
-  //back btn logic
-  const navigate = useNavigate();
-
   return (
     <>
       <Box mt={'275px'} mb="250px" className="container">

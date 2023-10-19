@@ -6,6 +6,7 @@ import Services2 from './Services2';
 import About2 from './About2';
 import Gallery3 from './Gallery3';
 import About2Mobile from './About2Mobile';
+import Services2Mobile from './Services2Mobile';
 
 const Home = ({
   aboutRef,
@@ -48,7 +49,12 @@ const Home = ({
       />
       <Landing />
       <Gallery3 galleryRef={galleryRef} scrollToServices={scrollToServices} />
-      <Services2 servicesRef={servicesRef} scrollToAbout={scrollToAbout} />
+
+      {windowWidth < breakpoint ? (
+        <Services2Mobile />
+      ) : (
+        <Services2 servicesRef={servicesRef} scrollToAbout={scrollToAbout} />
+      )}
 
       {windowWidth < breakpoint ? (
         <About2Mobile aboutRef={aboutRef} scrollToContact={scrollToContact} />
