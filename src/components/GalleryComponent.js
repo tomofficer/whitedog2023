@@ -13,6 +13,7 @@ import {
   Flex,
   VStack,
   Grid,
+  useMediaQuery,
 } from '@chakra-ui/react';
 import { primaryFont, secondaryFont } from '../Fonts';
 import textLogo from '../assets/logoTextOnly.png';
@@ -97,8 +98,12 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
     xl: '0px',
   });
 
+  //custom breakpoints for big screens
+  const [isLargerThan13Inches] = useMediaQuery('(min-width: 1500px)');
+  const galleryPadding = isLargerThan13Inches ? '200px' : '0px';
+
   return (
-    <Box mb="100px">
+    <Box mb="100px" mx={galleryPadding}>
       <Box ref={fullGalleryRef}></Box>
 
       <HStack justifyContent="center">
