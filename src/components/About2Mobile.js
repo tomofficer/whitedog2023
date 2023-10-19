@@ -1,44 +1,50 @@
-import { useNavigate } from 'react-router-dom';
+// About2Mobile.js
 
 import { primaryFont, secondaryFont } from '../Fonts';
-import {
-  HStack,
-  Text,
-  Image,
-  Box,
-  Spacer,
-  Icon,
-  Button,
-} from '@chakra-ui/react';
+import { VStack, Text, Image, Box, Icon, Button } from '@chakra-ui/react';
 import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
 import aboutUsBg from '../assets/aboutUsSectionBg.jpg';
 import { FaCircleChevronDown } from 'react-icons/fa6';
+import { useBreakpointValue } from '@chakra-ui/react';
 
-const About2 = ({ aboutRef, scrollToContact }) => {
+const About2Mobile = ({ aboutRef, scrollToContact }) => {
+  //dynamic display for extra small screen
+  const iconDisplay = useBreakpointValue({
+    base: '20px',
+    sm: '50px',
+    md: '50px',
+    lg: '50px',
+    xl: '50px',
+  });
+
   return (
     <>
       <Box mt={'105px'} mb="100px" className="container">
         <Box ref={aboutRef}></Box>
 
-        <Box className="background-image" minHeight="100vh">
-          <Image src={aboutUsBg} alt="about" />
+        <Box className="background-image">
+          <Image src={aboutUsBg} alt="about" objectFit="cover" h="100vh" />
         </Box>
 
         <Box className="overlaycareers" px={24}>
-          <HStack>
+          <VStack spacing={6}>
             <Text
               fontFamily={primaryFont}
-              fontSize={'6xl'}
+              fontSize={'4xl'} // Adjusted for mobile
               fontWeight={600}
-              pr={{ base: 0, sm: 0, md: 0 }}
             >
               About Us
             </Text>
-            <Spacer />
-            <Box px={40}>
-              <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={900}>
+
+            <Box>
+              <Text
+                fontSize={'md'}
+                fontFamily={secondaryFont}
+                fontWeight={900}
+                textAlign="center"
+              >
                 Architectural Millwork, Fine Woodworking and Custom Cabinetry.{' '}
                 <br /> Commercial and Residential.
               </Text>
@@ -48,9 +54,9 @@ const About2 = ({ aboutRef, scrollToContact }) => {
                   bg="none"
                   border="2px"
                   color="white"
-                  fontSize={'md'}
+                  fontSize={'sm'} // Adjusted for mobile
                   fontWeight={0}
-                  px={10}
+                  px={6} // Adjusted for mobile
                   mt={6}
                   _hover={{
                     color: 'teal.300',
@@ -60,11 +66,12 @@ const About2 = ({ aboutRef, scrollToContact }) => {
                 </Button>
               </a>
             </Box>
-          </HStack>
+          </VStack>
         </Box>
+
         <Icon
           as={FaCircleChevronDown}
-          boxSize="70px"
+          boxSize="50px" // Adjusted for mobile
           color="black"
           _hover={{
             transform: 'scale(0.9)',
@@ -75,10 +82,11 @@ const About2 = ({ aboutRef, scrollToContact }) => {
           top="88%"
           zIndex={10}
           onClick={() => scrollToContact()}
+          display={{ base: 'none', sm: 'inline' }}
         />
       </Box>
     </>
   );
 };
 
-export default About2;
+export default About2Mobile;
