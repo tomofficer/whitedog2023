@@ -17,6 +17,7 @@ import ContactUsFullPage from './components/ContactUsFullPage';
 import OurWorkFullPage from './components/OurWorkFullpage';
 import AboutUsFullPageMobile from './components/AboutUsFullPageMobile';
 import CareersMobile from './components/CareersMobile';
+import ContactUsFullPageMobile from './components/ContactUsFullPageMobile';
 
 function App() {
   //useRef
@@ -109,9 +110,14 @@ function App() {
             <Route
               path="/contact-us"
               element={
-                <ContactUsFullPage scrollToContact={scrollToContactHandle} />
+                windowWidth < breakpoint ? (
+                  <ContactUsFullPageMobile />
+                ) : (
+                  <ContactUsFullPage scrollToContact={scrollToContactHandle} />
+                )
               }
             />
+
             <Route
               path="/our-work"
               element={

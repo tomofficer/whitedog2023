@@ -3,9 +3,9 @@ import { VStack, Text, Image, Box } from '@chakra-ui/react';
 import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
-import bg from '../assets/aboutUsBg.jpg';
+import bg from '../assets/contactUsBg.jpg';
 
-const CareersMobile = () => {
+const ContactUsFullPageMobile = () => {
   return (
     <>
       <Box className="container">
@@ -20,7 +20,7 @@ const CareersMobile = () => {
               fontSize={'4xl'} // Adjusted for mobile
               fontWeight={600}
             >
-              Careers
+              Contact Us
             </Text>
 
             <Box>
@@ -30,10 +30,8 @@ const CareersMobile = () => {
                 fontWeight={900}
                 textAlign="center"
               >
-                Are you interested in joining our team? <br />
-                Email your resume to <br />
+                Need to get ahold of us? Reach out anytime. <br />
                 andy@whitedogwoodworking.com <br />
-                Or give us a call at : <br />
                 1-860-482-3776
               </Text>
             </Box>
@@ -44,4 +42,4 @@ const CareersMobile = () => {
   );
 };
 
-export default CareersMobile;
+export default ContactUsFullPageMobile;
