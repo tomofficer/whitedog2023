@@ -1,5 +1,13 @@
 import { primaryFont, secondaryFont } from '../Fonts';
-import { HStack, Text, Image, Box, Spacer, Icon } from '@chakra-ui/react';
+import {
+  HStack,
+  Text,
+  Image,
+  Box,
+  Spacer,
+  Icon,
+  useMediaQuery,
+} from '@chakra-ui/react';
 import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
@@ -8,6 +16,9 @@ import { FaCircleChevronDown } from 'react-icons/fa6';
 import ServicesGallery from './ServicesGallery';
 
 const Services2 = ({ servicesRef, scrollToAbout }) => {
+  //media query for scroll icon
+  const [isLargerThan1400] = useMediaQuery('(min-width: 1400px)');
+
   return (
     <>
       <Box mt={'275px'} mb="250px" className="container">
@@ -32,20 +43,22 @@ const Services2 = ({ servicesRef, scrollToAbout }) => {
             <ServicesGallery />
           </HStack>
         </Box>
-        <Icon
-          as={FaCircleChevronDown}
-          boxSize="70px"
-          color="black"
-          _hover={{
-            transform: 'scale(0.9)',
-            transition: '0.3s',
-            color: 'teal.400',
-          }}
-          position="relative"
-          top="88%"
-          zIndex={10}
-          onClick={() => scrollToAbout()}
-        />
+        {isLargerThan1400 && (
+          <Icon
+            as={FaCircleChevronDown}
+            boxSize="70px"
+            color="black"
+            _hover={{
+              transform: 'scale(0.9)',
+              transition: '0.3s',
+              color: 'teal.400',
+            }}
+            position="relative"
+            top="88%"
+            zIndex={10}
+            onClick={() => scrollToAbout()}
+          />
+        )}
       </Box>
     </>
   );

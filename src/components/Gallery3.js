@@ -1,5 +1,12 @@
 import React from 'react';
-import { Center, Icon, Box, Button, VStack } from '@chakra-ui/react';
+import {
+  Center,
+  Icon,
+  Box,
+  Button,
+  VStack,
+  useMediaQuery,
+} from '@chakra-ui/react';
 import GalleryComponent from './GalleryComponent';
 import { FaCircleChevronDown } from 'react-icons/fa6';
 import { secondaryFont } from '../Fonts';
@@ -122,6 +129,9 @@ const Gallery3 = ({ galleryRef, scrollToServices }) => {
     },
   ];
 
+  //media query for scroll icon
+  const [isLargerThan1400] = useMediaQuery('(min-width: 1400px)');
+
   return (
     <>
       <Box bg="white" ref={galleryRef} w="100vw" overflowX="hidden">
@@ -148,19 +158,21 @@ const Gallery3 = ({ galleryRef, scrollToServices }) => {
             >
               View More
             </Button>
-            <Icon
-              mb="60px"
-              as={FaCircleChevronDown}
-              boxSize="70px"
-              color="black"
-              _hover={{
-                transform: 'scale(0.9)',
-                transition: '0.3s',
-                color: 'teal.400',
-              }}
-              mt="10px"
-              onClick={() => scrollToServices()}
-            />
+            {isLargerThan1400 && (
+              <Icon
+                mb="60px"
+                as={FaCircleChevronDown}
+                boxSize="70px"
+                color="black"
+                _hover={{
+                  transform: 'scale(0.9)',
+                  transition: '0.3s',
+                  color: 'teal.400',
+                }}
+                mt="10px"
+                onClick={() => scrollToServices()}
+              />
+            )}
           </VStack>
         </Center>
       </Box>
