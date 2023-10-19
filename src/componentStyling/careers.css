@@ -39,7 +39,6 @@
   /* Grey with 50% opacity */
   z-index: 2;
   /* In front of the background image */
-
   display: flex;
   flex-direction: row;
   /* Using Flexbox for */
@@ -55,6 +54,28 @@
   color: white;
   /* White text */
 }
+
+.overlayAboutUsMobile {
+  /* ... other styles ... */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  /* For testing, set a definite height */
+  background-color: rgba(128, 128, 128, 0.5);
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  /* Padding so content doesn't touch the edges */
+}
+
+
+
+
 
 .back-button {
   position: absolute;

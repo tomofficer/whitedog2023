@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { ChakraProvider, Box, theme } from '@chakra-ui/react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
@@ -16,6 +16,7 @@ import Home from './components/Home';
 import AboutUsFullPage from './components/AboutUsFullPage';
 import ContactUsFullPage from './components/ContactUsFullPage';
 import OurWorkFullPage from './components/OurWorkFullpage';
+import AboutUsFullPageMobile from './components/AboutUsFullPageMobile';
 
 function App() {
   //useRef
@@ -46,6 +47,27 @@ function App() {
     scrollToServices.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Initialize a state variable to track the screen width
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // Add an event listener to update the windowWidth when the window is resized
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // Define a breakpoint value for switching between mobile and desktop views
+  const breakpoint = 1000; // Adjust this value as needed
+
   return (
     <ChakraProvider theme={theme}>
       <Router>
@@ -67,7 +89,19 @@ function App() {
               }
             />
             <Route path="/careers" element={<Careers />} />
-            <Route path="/about-us" element={<AboutUsFullPage />} />
+            {/* <Route path="/about-us" element={<AboutUsFullPage />} /> */}
+
+            <Route
+              path="/about-us"
+              element={
+                windowWidth < breakpoint ? (
+                  <AboutUsFullPageMobile />
+                ) : (
+                  <AboutUsFullPage />
+                )
+              }
+            />
+
             <Route
               path="/contact-us"
               element={
