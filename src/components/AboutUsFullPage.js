@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-
 import { primaryFont, secondaryFont } from '../Fonts';
 import {
   HStack,

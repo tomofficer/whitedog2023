@@ -1,14 +1,14 @@
 import React from 'react';
-import { Center, Text, Box, HStack, Spacer, Image } from '@chakra-ui/react';
+import { Center, Text, Box, VStack, Spacer, Image } from '@chakra-ui/react';
 import { secondaryFont } from '../Fonts';
 import logoTextOnlyInverted from '../assets/logoTextOnlyInverted.png';
 
-const Footer = () => {
+const FooterMobile = () => {
   return (
     <>
       <Box className="fade-in2" pt={6} pb={4} bg="black">
         <Box mb={10} px={0}>
-          <HStack
+          <VStack
             color="white"
             fontFamily={secondaryFont}
             fontSize={'18px'}
@@ -16,6 +16,15 @@ const Footer = () => {
             fontWeight={'800'}
             spacing={'10px'}
           >
+            <Spacer />
+            <a href="/">
+              <Image
+                _hover={{ transform: 'scale(0.97)', transition: '0.3s' }}
+                src={logoTextOnlyInverted}
+                w="300px"
+              />
+            </a>
+
             <Spacer />
 
             <a href="/our-work" style={{ cursor: 'pointer' }}>
@@ -44,20 +53,6 @@ const Footer = () => {
             </a>
             <Spacer />
 
-            <a href="/">
-              <Image
-                _hover={{ transform: 'scale(0.97)', transition: '0.3s' }}
-                mx={10}
-                src={logoTextOnlyInverted}
-                w={{
-                  base: '150px',
-                  sm: '250px',
-                  md: '400',
-                }}
-              />
-            </a>
-
-            <Spacer />
             <a href="/careers" style={{ cursor: 'pointer' }}>
               <Text
                 _hover={{
@@ -83,7 +78,7 @@ const Footer = () => {
               </Text>
             </a>
             <Spacer />
-          </HStack>
+          </VStack>
         </Box>
 
         <Center>
@@ -95,7 +90,7 @@ const Footer = () => {
             letterSpacing={'1px'}
             color="white"
           >
-            &copy; Graipfrüt Web Dev 2023 • graipfrut.com@gmail.com
+            &copy; Graipfrüt 2023 <br /> graipfrut.com@gmail.com
           </Text>
         </Center>
       </Box>
@@ -103,4 +98,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterMobile;

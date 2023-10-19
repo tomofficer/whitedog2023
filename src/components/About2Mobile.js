@@ -1,5 +1,3 @@
-// About2Mobile.js
-
 import { primaryFont, secondaryFont } from '../Fonts';
 import { VStack, Text, Image, Box, Icon, Button } from '@chakra-ui/react';
 import '../componentStyling/global.css';

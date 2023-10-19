@@ -18,6 +18,7 @@ import OurWorkFullPage from './components/OurWorkFullpage';
 import AboutUsFullPageMobile from './components/AboutUsFullPageMobile';
 import CareersMobile from './components/CareersMobile';
 import ContactUsFullPageMobile from './components/ContactUsFullPageMobile';
+import FooterMobile from './components/FooterMobile';
 
 function App() {
   //useRef
@@ -128,13 +129,7 @@ function App() {
               }
             />
           </Routes>
-          {/* <Parallax />
-          <About aboutRef={scrollToAbout} />
-          <Gallery2 galleryRef={scrollToGallery} />
-          <Services servicesRef={scrollToServices} />
-          <Clients servicesRef={scrollToClients} />
-          <Contact contactRef={scrollToContact} /> */}
-          <Footer />
+          {windowWidth < breakpoint ? <FooterMobile /> : <Footer />}
         </Box>
       </Router>
     </ChakraProvider>
@@ -142,18 +137,3 @@ function App() {
 }
 
 export default App;
-
-//todo : IMPORTANT
-//todo : fix about scrolling
-//todo : fix parallax at bottom of home page
-//todo : upload actual images to gallery
-//todo : finish 'our work' pg, onClick browse full gallery -> scroll down to a new section w full gallery, separated into folders on google drive
-//todo : add 'browse full gallery' btn to gallery section on home pg
-//todo : update / adjust logo in header - space font out further from logo
-//todo : test on different browsers
-//todo : animate gallery thumbnails to slide in from left/right as you scroll down the page
-//todo : make mobile responsive
-//todo : OPTIONAL
-//todo : possible url rewrite when clicking to different sections?
-//todo : let the header appear whenever you scroll back up (when its not showing)
-//todo : add tile grid to open carousel of all images

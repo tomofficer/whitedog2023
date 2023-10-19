@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Modal from 'react-modal';
-import { primaryFont, secondaryFont, tertiaryFont } from '../Fonts';
+import { primaryFont, secondaryFont } from '../Fonts';
 import {
   HStack,
   Text,
