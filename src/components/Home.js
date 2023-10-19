@@ -7,6 +7,7 @@ import About2 from './About2';
 import Gallery3 from './Gallery3';
 import About2Mobile from './About2Mobile';
 import Services2Mobile from './Services2Mobile';
+import ContactMobile from './ContactMobile';
 
 const Home = ({
   aboutRef,
@@ -61,12 +62,17 @@ const Home = ({
       ) : (
         <About2 aboutRef={aboutRef} scrollToContact={scrollToContact} />
       )}
-      <Contact
-        contactRef={contactRef}
-        scrollToAbout={scrollToAbout}
-        scrollToServices={scrollToServices}
-        scrollToGallery={scrollToGallery}
-      />
+
+      {windowWidth < breakpoint ? (
+        <ContactMobile />
+      ) : (
+        <Contact
+          contactRef={contactRef}
+          scrollToAbout={scrollToAbout}
+          scrollToServices={scrollToServices}
+          scrollToGallery={scrollToGallery}
+        />
+      )}
     </>
   );
 };
