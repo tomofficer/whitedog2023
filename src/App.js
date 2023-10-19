@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { ChakraProvider, Box, theme } from '@chakra-ui/react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-
 import Header from './components/Header';
 import Parallax from './components/Parallax';
 import About from './components/About';
@@ -17,6 +16,7 @@ import AboutUsFullPage from './components/AboutUsFullPage';
 import ContactUsFullPage from './components/ContactUsFullPage';
 import OurWorkFullPage from './components/OurWorkFullpage';
 import AboutUsFullPageMobile from './components/AboutUsFullPageMobile';
+import CareersMobile from './components/CareersMobile';
 
 function App() {
   //useRef
@@ -88,9 +88,13 @@ function App() {
                 />
               }
             />
-            <Route path="/careers" element={<Careers />} />
-            {/* <Route path="/about-us" element={<AboutUsFullPage />} /> */}
 
+            <Route
+              path="/careers"
+              element={
+                windowWidth < breakpoint ? <CareersMobile /> : <Careers />
+              }
+            />
             <Route
               path="/about-us"
               element={
