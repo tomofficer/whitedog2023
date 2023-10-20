@@ -22,7 +22,7 @@ const About2 = ({ aboutRef, scrollToContact }) => {
   const [isLargerThan1400] = useMediaQuery('(min-width: 1400px)');
   return (
     <>
-      <Box mt={'105px'} mb="100px" className="container">
+      <Box mt={'105px'} mb="250px" className="container">
         <Box ref={aboutRef}></Box>
 
         <Box className="background-image" minHeight="100vh">

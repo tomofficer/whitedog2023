@@ -10,6 +10,7 @@ import {
   Icon,
   Center,
   HStack,
+  useMediaQuery,
 } from '@chakra-ui/react';
 import ContactForm from './ContactForm';
 import {
@@ -53,10 +54,18 @@ const Contact = ({
     };
   }, []);
 
+  const [isLargeScreen] = useMediaQuery('(min-width: 1500px)');
+
+  const imageMargin = isLargeScreen ? '300px' : '90px';
+  const imageMarginTop = isLargeScreen ? '100px' : '70px';
+  const imagePadding = isLargeScreen ? '0px' : '0px';
+  const imagePaddingBtm = isLargeScreen ? '0px' : '0px';
+
   return (
     <>
-      <Box className="fade-in2" overflow="hidden">
+      <Box className="fade-in2" overflow="hidden" bg="white" mt="100px">
         <Header
+          mt={imageMarginTop}
           scrollToAbout={scrollToAbout}
           scrollToServices={scrollToServices}
           scrollToGallery={scrollToGallery}
@@ -64,18 +73,24 @@ const Contact = ({
         <Center>
           <Box
             w="100%"
-            py={{ base: 4, sm: 0, md: 0 }}
+            // py={{ base: 4, sm: 0, md: 0 }}
+            mt={imagePadding}
             px={{ base: 4, sm: 0, md: 0 }}
-            mt={{ base: 2, sm: 6, md: 0 }}
-            mb={{ base: 2, sm: 6, md: 0 }}
+            pb={imagePaddingBtm}
           >
             <Box bg="white" py={{ base: 4, sm: 0, md: 0 }}>
               <Grid
-                templateColumns="repeat(3, 1fr)"
+                templateColumns={{
+                  base: '',
+                  md: 'repeat(3, 1fr)',
+                  xl: 'repeat(3, minmax(0, max-content))',
+                }}
+                justifyContent="center"
+                alignItems="center"
                 gap={20}
-                pt={{ base: '', sm: '', md: '80px' }}
+                pt={imageMarginTop}
                 pb={{ base: '', sm: '', md: '30px' }}
-                mt={{ base: 6, sm: 10, md: 0 }}
+                // mt={{ base: 6, sm: 10, md: 0 }}
               >
                 <Flex
                   direction="column"
@@ -120,7 +135,7 @@ const Contact = ({
                   </VStack>
                 </Flex>
 
-                <Image mx={10} maxW="350px" src={sawLogo} />
+                <Image maxW="350px" src={sawLogo} mx={imageMargin} />
                 <Box
                   className={`slide-in-right ${slideInRight ? 'visible' : ''}`}
                 >
