@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import { primaryFont, secondaryFont, tertiaryFont } from '../Fonts';
+import { primaryFont, secondaryFont } from '../Fonts';
 import {
   HStack,
   Text,
@@ -8,8 +8,6 @@ import {
   Box,
   Spacer,
   Icon,
-  VStack,
-  Grid,
   Button,
 } from '@chakra-ui/react';
 import '../componentStyling/global.css';
