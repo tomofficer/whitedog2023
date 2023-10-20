@@ -127,7 +127,7 @@ function ServicesGallery() {
   ];
 
   //state
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose: originalOnClose } = useDisclosure();
   const [selectedGallery, setSelectedGallery] = useState([]);
   const [selectedGalleryIndex, setSelectedGalleryIndex] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -137,6 +137,13 @@ function ServicesGallery() {
     setSelectedGallery(subGallery);
     setSelectedGalleryIndex(idx);
     onOpen();
+  };
+
+  const onClose = () => {
+    setCurrentSlide(0); // reset the current slide to the first image
+    setSelectedGallery([]); // reset the selected gallery
+    setSelectedGalleryIndex(null); // reset the selected gallery index
+    originalOnClose(); // close the modal
   };
 
   const thumbnailContainerRef = useRef(null);

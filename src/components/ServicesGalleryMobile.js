@@ -127,7 +127,8 @@ function ServicesGalleryMobile() {
   ];
 
   //state
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose: originalOnClose } = useDisclosure();
+
   const [selectedGallery, setSelectedGallery] = useState([]);
   const [selectedGalleryIndex, setSelectedGalleryIndex] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -139,7 +140,12 @@ function ServicesGalleryMobile() {
     onOpen();
   };
 
-  const thumbnailContainerRef = useRef(null);
+  const onClose = () => {
+    setCurrentSlide(0); // reset the current slide to the first image
+    setSelectedGallery([]); // reset the selected gallery
+    setSelectedGalleryIndex(null); // reset the selected gallery index
+    originalOnClose(); // close the modal
+  };
 
   function useWindowSize() {
     const [windowSize, setWindowSize] = useState({
@@ -161,8 +167,6 @@ function ServicesGalleryMobile() {
 
     return windowSize;
   }
-
-  const { height } = useWindowSize();
 
   return (
     <Box>
