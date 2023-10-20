@@ -54,9 +54,9 @@ const ContactMobile = () => {
                         <br />
                         Cell: 860-201-3345
                       </Text>
-                      <Text fontSize="20px" mt="10px">
+                      <Text fontSize="17px" mt="10px">
                         Email : <br />
-                        andy@whitedogwoodworking.com
+                        andy.officer@whitedogwoodworking.com
                       </Text>
                     </Box>
                     <Center>

@@ -117,7 +117,7 @@ const Contact = ({
                         Cell: 860-201-3345
                       </Text>
                       <Text mb={{ base: 0, sm: 0, md: 8 }}>
-                        andy@whitedogwoodworking.com
+                        andy.officer@whitedogwoodworking.com
                       </Text>
                       <HStack>
                         <a

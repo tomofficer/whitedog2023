@@ -31,7 +31,7 @@ const ContactUsFullPageMobile = () => {
                 textAlign="center"
               >
                 Need to get ahold of us? Reach out anytime. <br />
-                andy@whitedogwoodworking.com <br />
+                andy.officer@whitedogwoodworking.com <br />
                 1-860-482-3776
               </Text>
             </Box>
