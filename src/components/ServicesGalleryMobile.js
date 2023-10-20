@@ -169,7 +169,7 @@ function ServicesGalleryMobile() {
       <Grid templateColumns="repeat(2, 1fr)" gap={4}>
         {galleries.map((gallery, idx) => (
           <>
-            <Box px={0} color="white">
+            <Box color="white">
               <Center>
                 <VStack
                   spacing={0} // spacing between child elements for visual clarity

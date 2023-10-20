@@ -9,7 +9,7 @@ import ServicesGalleryMobile from './ServicesGalleryMobile';
 const Services2Mobile = () => {
   return (
     <>
-      <Box className="container">
+      <Box className="container" mt="250px">
         <Box className="background-image">
           <Image src={bg} alt="about" objectFit="cover" h="100vh" />
         </Box>

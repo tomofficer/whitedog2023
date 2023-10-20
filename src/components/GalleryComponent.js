@@ -103,7 +103,7 @@ function GalleryComponent({ galleries, fullGalleryRef }) {
   const galleryPadding = isLargerThan13Inches ? '200px' : '0px';
 
   return (
-    <Box mb="100px" mx={galleryPadding}>
+    <Box mb="50px" mt="50px" mx={galleryPadding}>
       <Box ref={fullGalleryRef}></Box>
 
       <HStack justifyContent="center">

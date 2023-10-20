@@ -148,7 +148,7 @@ const Gallery3 = ({ galleryRef, scrollToServices }) => {
               fontSize={'md'}
               fontWeight={800}
               px={10}
-              my="30px"
+              mb="60px"
               _hover={{
                 color: 'white',
                 bg: 'teal.400',

@@ -24,10 +24,10 @@ const ContactMobile = () => {
         <Center>
           <Box
             w="100%"
-            py={{ base: 4, sm: 0, md: 0 }}
+            py={{ base: 0, sm: 0, md: 0 }}
             mx={{ base: '20px', sm: 0, md: 0 }}
           >
-            <Box bg="white" py={{ base: 4, sm: 0, md: 0 }} pt="100px">
+            <Box bg="white" pt="30px">
               <Grid
                 templateColumns="repeat(1, 1fr)"
                 gap={20}
@@ -36,7 +36,7 @@ const ContactMobile = () => {
                 mt={{ base: 6, sm: 10, md: 0 }}
               >
                 <Center>
-                  <VStack mt="60px">
+                  <VStack mt="0px">
                     <Image maxW="350px" src={textOnlyLogo} />
 
                     <Image maxW="350px" src={sawLogo} />

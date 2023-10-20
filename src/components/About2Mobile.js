@@ -9,7 +9,7 @@ import { FaCircleChevronDown } from 'react-icons/fa6';
 const About2Mobile = ({ aboutRef, scrollToContact }) => {
   return (
     <>
-      <Box mt={'105px'} mb="100px" className="container">
+      <Box mt="250px" mb="250px" className="container">
         <Box ref={aboutRef}></Box>
 
         <Box className="background-image">
