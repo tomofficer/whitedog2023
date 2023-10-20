@@ -209,24 +209,32 @@ function ServicesGalleryMobile() {
       <Modal isOpen={isOpen} onClose={onClose} size="full">
         <ModalOverlay backdropFilter="blur(4px)" />
         <ModalContent
-          width={['90vw', '80vw']}
-          height={['90vh', '80vh']}
+          width="90vw"
+          height="90vh"
           margin="auto"
           bg="rgba(0, 0, 0, 0.2)"
         >
-          <ModalHeader color="white">
-            {selectedGalleryIndex !== null && galleries[selectedGalleryIndex]
-              ? galleries[selectedGalleryIndex].title
-              : 'Gallery'}
-          </ModalHeader>
-          <ModalCloseButton color="white" />
-          <ModalBody overflow="hidden">
+          <ModalCloseButton color="white" mt="10px" />
+          <ModalBody overflow="hidden" p={0}>
+            {' '}
+            {/* Remove any default padding */}
             <Flex
-              direction={['column', 'row']}
+              direction="column"
               alignItems="center"
               justifyContent="center"
               height="100%"
+              m={0} // Remove any default margins
             >
+              {/* Title right above the image */}
+              <Text color="white" fontSize="xl" mt="20px">
+                {' '}
+                {/* Adjusted margin */}
+                {selectedGalleryIndex !== null &&
+                galleries[selectedGalleryIndex]
+                  ? galleries[selectedGalleryIndex].title
+                  : 'Gallery'}
+              </Text>
+
               {/* Main Image */}
               <Box
                 flex="1"
@@ -234,6 +242,8 @@ function ServicesGalleryMobile() {
                 justifyContent="center"
                 alignItems="center"
                 overflow="hidden"
+                m={0} // Remove any default margins
+                p={0} // Remove any default padding
               >
                 <CarouselComponent
                   images={selectedGallery}
@@ -243,44 +253,6 @@ function ServicesGalleryMobile() {
                   }
                 />
               </Box>
-
-              {/* Thumbnails */}
-              <VStack
-                align="center"
-                spacing={2}
-                ml={[0, 4]}
-                mt={[4, '105px']}
-                position="relative"
-                height="100%"
-              >
-                <Box
-                  ref={thumbnailContainerRef}
-                  overflowY="auto"
-                  h={height <= 900 ? '605px' : '800px'}
-                  width="120px"
-                  mt={height <= 900 ? '12px' : '0px'}
-                >
-                  <VStack spacing={2}>
-                    {selectedGallery.map((image, idx) => (
-                      <Box key={idx} my={1}>
-                        <Image
-                          src={image}
-                          width="100px"
-                          height="100px"
-                          onClick={() => {
-                            setCurrentSlide(idx);
-                          }}
-                          cursor="pointer"
-                          borderRadius="5px"
-                          border={
-                            idx === currentSlide ? '2px solid white' : 'none'
-                          } // This is where the conditional rendering takes place
-                        />
-                      </Box>
-                    ))}
-                  </VStack>
-                </Box>
-              </VStack>
             </Flex>
           </ModalBody>
         </ModalContent>
