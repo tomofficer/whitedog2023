@@ -1,23 +1,11 @@
-import { useNavigate } from 'react-router-dom';
+import { primaryFont, secondaryFont } from '../Fonts';
+import { VStack, Text, Image, Box, Icon, Button } from '@chakra-ui/react';
+import GalleryComponent from './GalleryComponent';
 
-import { primaryFont, secondaryFont, tertiaryFont } from '../Fonts';
-import {
-  HStack,
-  Text,
-  Image,
-  Box,
-  Spacer,
-  Icon,
-  VStack,
-  Grid,
-  Button,
-} from '@chakra-ui/react';
 import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
-import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 import bg from '../assets/ourWorkBg.jpg';
-import GalleryComponent from './GalleryComponent';
 import leonard1 from '../assets/21LeonardSt/leonard1.jpg';
 import leonard2 from '../assets/21LeonardSt/leonard2.jpg';
 import leonard3 from '../assets/21LeonardSt/leonard3.jpg';
@@ -97,10 +85,7 @@ import cabinetry7 from '../assets/customCabinetry/cabinetry7.JPG';
 import cabinetry8 from '../assets/customCabinetry/cabinetry8.JPG';
 import cabinetry9 from '../assets/customCabinetry/cabinetry9.JPG';
 
-const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
-  //back btn logic
-  const navigate = useNavigate();
-
+const OurWorkFullPageMobile = ({ fullGalleryRef, scrollToFullGallery }) => {
   //gallery data
   const galleries = [
     {
@@ -240,54 +225,43 @@ const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
       subGallery: [`${leonard1}`, `${leonard2}`, `${leonard3}`, `${leonard4}`],
     },
   ];
-
   return (
     <>
-      <Box className="container fade-in2">
+      <Box className="container">
         <Box className="background-image">
-          <Image src={bg} alt="about" />
+          <Image src={bg} alt="about" objectFit="cover" h="100vh" />
         </Box>
-        <Box>
-          <Box className="back-button" p={4}>
-            <Icon
-              as={BsFillArrowLeftCircleFill}
-              boxSize={12}
-              color="white"
-              _hover={{
-                color: 'teal.400',
-                transform: 'scale(0.95)',
-                transition: '0.3s',
-              }}
-              onClick={() => {
-                navigate(-1);
-              }}
-            />
-          </Box>
-        </Box>
-        <Box className="overlaycareers" px={24}>
-          <HStack>
+
+        <Box className="overlayAboutUsMobile" px={24} color="white">
+          <VStack spacing={6}>
             <Text
               fontFamily={primaryFont}
-              fontSize={'6xl'}
+              fontSize={'4xl'} // Adjusted for mobile
               fontWeight={600}
-              pr={20}
             >
               Our Work
             </Text>
-            <Spacer />
-            <Box px={40}>
-              <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={900}>
+
+            <Box>
+              <Text
+                fontSize={'md'}
+                fontFamily={secondaryFont}
+                fontWeight={900}
+                textAlign="center"
+              >
                 Fine Woodworking, Architectural Millwork <br />
                 and Custom Cabinetry since 2006.
+                <br />
               </Text>
+
               <Button
                 fontStyle={secondaryFont}
                 bg="none"
                 border="2px"
                 color="white"
-                fontSize={'md'}
+                fontSize={'sm'} // Adjusted for mobile
                 fontWeight={0}
-                px={10}
+                px={6} // Adjusted for mobile
                 mt={6}
                 _hover={{
                   color: 'teal.300',
@@ -297,7 +271,7 @@ const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
                 View Full Gallery
               </Button>
             </Box>
-          </HStack>
+          </VStack>
         </Box>
       </Box>
       <GalleryComponent galleries={galleries} fullGalleryRef={fullGalleryRef} />
@@ -305,4 +279,4 @@ const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
   );
 };
 
-export default OurWorkFullPage;
+export default OurWorkFullPageMobile;

@@ -19,6 +19,7 @@ import AboutUsFullPageMobile from './components/AboutUsFullPageMobile';
 import CareersMobile from './components/CareersMobile';
 import ContactUsFullPageMobile from './components/ContactUsFullPageMobile';
 import FooterMobile from './components/FooterMobile';
+import OurWorkFullPageMobile from './components/OurWorkFullPageMobile';
 
 function App() {
   //useRef
@@ -122,10 +123,17 @@ function App() {
             <Route
               path="/our-work"
               element={
-                <OurWorkFullPage
-                  scrollToFullGallery={scrollToFullGalleryHandle}
-                  fullGalleryRef={scrollToFullGallery}
-                />
+                windowWidth < breakpoint ? (
+                  <OurWorkFullPageMobile
+                    scrollToFullGallery={scrollToFullGalleryHandle}
+                    fullGalleryRef={scrollToFullGallery}
+                  />
+                ) : (
+                  <OurWorkFullPage
+                    scrollToFullGallery={scrollToFullGalleryHandle}
+                    fullGalleryRef={scrollToFullGallery}
+                  />
+                )
               }
             />
           </Routes>
