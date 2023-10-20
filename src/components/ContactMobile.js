@@ -10,8 +10,7 @@ import {
   Center,
 } from '@chakra-ui/react';
 import ContactForm from './ContactForm';
-import { FaInstagram } from 'react-icons/fa6';
-import { primaryFont, secondaryFont } from '../Fonts';
+import { primaryFont, secondaryFont, tertiaryFont } from '../Fonts';
 import '../componentStyling/global.css';
 import sawLogo from '../assets/sawLogo.png';
 import textOnlyLogo from '../assets/logoTextOnly.png';
@@ -44,18 +43,19 @@ const ContactMobile = () => {
                 </Center>
                 <Flex direction="column">
                   <VStack textAlign={'center'}>
-                    <Box fontFamily={secondaryFont} fontWeight={900}>
-                      <Text fontSize="25px">
+                    <Box fontFamily={tertiaryFont}>
+                      <Text fontSize="22px">
                         59 Field Street, Suite 140
                         <br />
                         Torrington, CT 06790
                       </Text>
-                      <Text mt="10px" fontSize="25px">
+                      <Text mt="10px" fontSize="22px">
                         Tel: 860-482-3776
                         <br />
                         Cell: 860-201-3345
                       </Text>
-                      <Text fontSize="25px" mt="10px">
+                      <Text fontSize="20px" mt="10px">
+                        Email : <br />
                         andy@whitedogwoodworking.com
                       </Text>
                     </Box>
@@ -80,9 +80,9 @@ const ContactMobile = () => {
                           <Image src={ig} maxW="60px" />
                         </a>
                         <Text
-                          fontFamily={secondaryFont}
-                          fontWeight="900"
-                          fontSize="25px"
+                          fontFamily={tertiaryFont}
+                          // fontWeight="900"
+                          fontSize="18px"
                           mt="5px"
                         >
                           Follow us on Instagram!
