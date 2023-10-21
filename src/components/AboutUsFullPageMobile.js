@@ -35,7 +35,7 @@ const AboutUsFullPageMobile = () => {
                 Located at 59 Field St in Torrington, Connecticut. <br />
                 Family owned and operated since 2006.
               </Text>
-              <a href="/about-us">
+              <a href="https://www.registercitizen.com/news/article/White-Dog-Woodworking-mixes-old-fashioned-skill-16073669.php">
                 <Button
                   fontStyle={secondaryFont}
                   bg="none"
