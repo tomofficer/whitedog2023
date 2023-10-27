@@ -153,10 +153,10 @@ const Gallery3 = ({ galleryRef, scrollToServices }) => {
                 color: 'white',
                 bg: 'teal.400',
                 border: 'none',
-                transform: 'scale(1.05)',
+                transform: 'scale(1.02)',
               }}
             >
-              View More
+              View Full Gallery
             </Button>
             {isLargerThan1400 && (
               <Icon

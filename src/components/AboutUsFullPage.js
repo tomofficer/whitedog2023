@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { primaryFont, secondaryFont, tertiaryFont } from '../Fonts';
+import { primaryFont, secondaryFont } from '../Fonts';
 import {
   HStack,
   Text,
@@ -12,11 +12,8 @@ import {
   VStack,
   Center,
   Heading,
-  useMediaQuery,
   chakra,
 } from '@chakra-ui/react';
-import { FaCircleChevronDown } from 'react-icons/fa6';
-import '../componentStyling/about.css';
 import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
@@ -27,7 +24,6 @@ import bg from '../assets/aboutUsBg.jpg';
 import shop1 from '../assets/shop1.jpeg';
 import wdw1 from '../assets/wdw1.jpeg';
 import sawLogo from '../assets/sawLogo.png';
-import bottom from '../assets/bottom.jpg';
 
 const AboutUsFullPage = ({ aboutUsFullRef, scrollToAboutFull }) => {
   //back btn logic
@@ -64,9 +60,6 @@ const AboutUsFullPage = ({ aboutUsFullRef, scrollToAboutFull }) => {
     lg: '0px',
     xl: '350px',
   });
-
-  //media query for scroll icon
-  const [isLargerThan1400] = useMediaQuery('(min-width: 1400px)');
 
   return (
     <>

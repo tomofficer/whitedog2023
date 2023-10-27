@@ -95,7 +95,7 @@ const Footer = () => {
             letterSpacing={'1px'}
             color="white"
           >
-            &copy; Graipfrüt Web Dev 2023 • graipfrut.com@gmail.com
+            &copy; Graipfrut 2023 • graipfrut.com@gmail.com
           </Text>
         </Center>
       </Box>

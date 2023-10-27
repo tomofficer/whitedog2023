@@ -47,7 +47,7 @@ const Services2 = ({ servicesRef, scrollToAbout }) => {
           <Icon
             as={FaCircleChevronDown}
             boxSize="70px"
-            color="black"
+            color="gray.300"
             _hover={{
               transform: 'scale(0.9)',
               transition: '0.3s',

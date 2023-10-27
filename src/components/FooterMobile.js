@@ -90,7 +90,7 @@ const FooterMobile = () => {
             letterSpacing={'1px'}
             color="white"
           >
-            &copy; Graipfrüt 2023 <br /> graipfrut.com@gmail.com
+            &copy; Graipfrut 2023 <br /> graipfrut.com@gmail.com
           </Text>
         </Center>
       </Box>

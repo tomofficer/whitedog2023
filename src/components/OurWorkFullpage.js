@@ -250,7 +250,7 @@ const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
             <Icon
               as={BsFillArrowLeftCircleFill}
               boxSize={12}
-              color="white"
+              color="gray.300"
               _hover={{
                 color: 'teal.400',
                 transform: 'scale(0.95)',
