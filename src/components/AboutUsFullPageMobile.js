@@ -63,10 +63,15 @@ const AboutUsFullPageMobile = ({ aboutUsFullRef, scrollToAboutFull }) => {
 
   // State variable to track whether to show more VStacks
   const [showMore, setShowMore] = useState(false);
+  const [showMoreReferences, setShowMoreReferences] = useState(false);
 
   // Function to toggle the "View More" button
   const toggleShowMore = () => {
     setShowMore(!showMore);
+  };
+
+  const toggleShowMoreReferences = () => {
+    setShowMoreReferences(!showMoreReferences);
   };
 
   return (
@@ -376,71 +381,123 @@ const AboutUsFullPageMobile = ({ aboutUsFullRef, scrollToAboutFull }) => {
           fontWeight="900"
           textAlign="center"
         >
-          <VStack mb="50px" spacing="0px">
-            <Text w="400px">
-              Jim Culliton
-              <br />
-              Allegrone Construction
-            </Text>
-            <Text w="300px" fontSize="18px">
-              jwculliton@allegrone.com
-              <br />
-              (413) 281-2374
-            </Text>
-          </VStack>
-          <VStack mb="50px" spacing="0px">
-            <Text w="400px">
-              Dave Discala
-              <br />
-              AV Tuchy Builders
-            </Text>
-            <Text w="300px" fontSize="18px">
-              ddiscala@avtuchybuilders.com
-              <br />
-              (203) 856-9558
-            </Text>
-          </VStack>
-          <VStack mb="50px" spacing="0px">
-            <Text w="400px">
-              Justin Giampaolo
-              <br />
-              Burlington Construction
-            </Text>
-            <Text w="300px" fontSize="18px">
-              justingiampaolo@
-              <br />
-              burlingtonconstruction.com
-              <br />
-              (203) 943-8210
-            </Text>
-          </VStack>
-          <VStack mb="50px" spacing="0px">
-            <Text w="400px">
-              Steve Bucherri
-              <br />
-              Newfield Construction
-            </Text>
-            <Text w="300px" fontSize="18px">
-              stevebuccheri@
-              <br />
-              newfieldconstruction.com
-              <br />
-              (860) 944-6740
-            </Text>
-          </VStack>
-          <VStack mb="50px" spacing="0px">
-            <Text w="400px">
-              Bryan Boyce
-              <br />
-              Pavarini Northeast Construction
-            </Text>
-            <Text w="300px" fontSize="18px">
-              bboyce@pavarini.com
-              <br />
-              (203) 943-0636
-            </Text>
-          </VStack>
+          {showMoreReferences ? (
+            <>
+              <VStack mb="50px" spacing="0px">
+                <Text w="400px">
+                  Jim Culliton
+                  <br />
+                  Allegrone Construction
+                </Text>
+                <Text w="300px" fontSize="18px">
+                  jwculliton@allegrone.com
+                  <br />
+                  (413) 281-2374
+                </Text>
+              </VStack>
+              <VStack mb="50px" spacing="0px">
+                <Text w="400px">
+                  Dave Discala
+                  <br />
+                  AV Tuchy Builders
+                </Text>
+                <Text w="300px" fontSize="18px">
+                  ddiscala@avtuchybuilders.com
+                  <br />
+                  (203) 856-9558
+                </Text>
+              </VStack>
+              <VStack mb="50px" spacing="0px">
+                <Text w="400px">
+                  Justin Giampaolo
+                  <br />
+                  Burlington Construction
+                </Text>
+                <Text w="300px" fontSize="18px">
+                  justingiampaolo@
+                  <br />
+                  burlingtonconstruction.com
+                  <br />
+                  (203) 943-8210
+                </Text>
+              </VStack>
+              <VStack mb="50px" spacing="0px">
+                <Text w="400px">
+                  Steve Bucherri
+                  <br />
+                  Newfield Construction
+                </Text>
+                <Text w="300px" fontSize="18px">
+                  stevebuccheri@
+                  <br />
+                  newfieldconstruction.com
+                  <br />
+                  (860) 944-6740
+                </Text>
+              </VStack>
+              <VStack mb="50px" spacing="0px">
+                <Text w="400px">
+                  Bryan Boyce
+                  <br />
+                  Pavarini Northeast Construction
+                </Text>
+                <Text w="300px" fontSize="18px">
+                  bboyce@pavarini.com
+                  <br />
+                  (203) 943-0636
+                </Text>
+              </VStack>
+            </>
+          ) : (
+            <>
+              <VStack mb="50px" spacing="0px">
+                <Text w="400px">
+                  Jim Culliton
+                  <br />
+                  Allegrone Construction
+                </Text>
+                <Text w="300px" fontSize="18px">
+                  jwculliton@allegrone.com
+                  <br />
+                  (413) 281-2374
+                </Text>
+              </VStack>
+              <VStack mb="20px" spacing="0px">
+                <Text w="400px">
+                  Dave Discala
+                  <br />
+                  AV Tuchy Builders
+                </Text>
+                <Text w="300px" fontSize="18px">
+                  ddiscala@avtuchybuilders.com
+                  <br />
+                  (203) 856-9558
+                </Text>
+              </VStack>
+            </>
+          )}
         </VStack>
+        <Button
+          fontFamily={primaryFont}
+          fontSize="20px"
+          border="none"
+          color="black"
+          bg="white"
+          fontWeight={0}
+          px={6} // Adjusted for mobile
+          mb="80px"
+          onClick={toggleShowMoreReferences} // Toggle visibility of remaining VStacks
+        >
+          {showMoreReferences ? (
+            <>
+              Show Less <Icon mt="5px" ml="10px" as={FaAngleUp} />
+            </>
+          ) : (
+            <>
+              Show More <Icon mt="5px" ml="10px" as={FaAngleDown} />
+            </>
+          )}
+        </Button>
         <Text fontFamily={primaryFont} fontSize={'20px'} mt="0px" px="20px">
           We also have a formal prequalification packet for the larger GC's,
           which includes our safety record, OSHA logs, financial statements and
