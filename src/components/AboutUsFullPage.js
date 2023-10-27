@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { primaryFont, secondaryFont } from '../Fonts';
 import {
   HStack,
@@ -60,6 +61,35 @@ const AboutUsFullPage = ({ aboutUsFullRef, scrollToAboutFull }) => {
     lg: '0px',
     xl: '350px',
   });
+
+  const heroPadding = useBreakpointValue({
+    base: '100px',
+    sm: '0px',
+    md: '0px',
+    lg: '0px',
+    xl: '350px',
+  });
+
+  // Initialize a state variable to track the screen width
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // Add an event listener to update the windowWidth when the window is resized
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // Define a breakpoint value for switching between mobile and desktop views
+  const breakpoint = 1500; // Adjust this value as needed
 
   return (
     <>
@@ -135,7 +165,7 @@ const AboutUsFullPage = ({ aboutUsFullRef, scrollToAboutFull }) => {
           <Image src={sawLogo} maxW="300px" mt="30px" />
         </VStack>
 
-        <Box px="100px" mt="80px">
+        <Box px={windowWidth < breakpoint ? '100px' : '300px'} mt="80px">
           <Text mb="80px" fontFamily={primaryFont} fontSize="25px">
             Qualification Statement for Architectural Millwork
           </Text>
