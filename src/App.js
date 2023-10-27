@@ -24,6 +24,7 @@ import OurWorkFullPageMobile from './components/OurWorkFullPageMobile';
 function App() {
   //useRef
   const scrollToAbout = useRef();
+  const scrollToAboutFull = useRef();
   const scrollToGallery = useRef();
   const scrollToContact = useRef();
   const scrollToServices = useRef();
@@ -32,6 +33,10 @@ function App() {
   //scroll handlers
   const scrollToAboutHandle = () => {
     scrollToAbout.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToAboutFullHandle = () => {
+    scrollToAboutFull.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToGalleryHandle = () => {
@@ -104,7 +109,10 @@ function App() {
                 windowWidth < breakpoint ? (
                   <AboutUsFullPageMobile />
                 ) : (
-                  <AboutUsFullPage />
+                  <AboutUsFullPage
+                    scrollToAboutFull={scrollToAboutFullHandle}
+                    aboutUsFullRef={scrollToAboutFull}
+                  />
                 )
               }
             />

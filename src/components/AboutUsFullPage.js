@@ -12,7 +12,11 @@ import {
   VStack,
   Center,
   Heading,
+  useMediaQuery,
+  chakra,
 } from '@chakra-ui/react';
+import { FaCircleChevronDown } from 'react-icons/fa6';
+import '../componentStyling/about.css';
 import '../componentStyling/global.css';
 import '../componentStyling/services.css';
 import '../componentStyling/careers.css';
@@ -23,8 +27,9 @@ import bg from '../assets/aboutUsBg.jpg';
 import shop1 from '../assets/shop1.jpeg';
 import wdw1 from '../assets/wdw1.jpeg';
 import sawLogo from '../assets/sawLogo.png';
+import bottom from '../assets/bottom.jpg';
 
-const AboutUsFullPage = () => {
+const AboutUsFullPage = ({ aboutUsFullRef, scrollToAboutFull }) => {
   //back btn logic
   const navigate = useNavigate();
 
@@ -60,6 +65,9 @@ const AboutUsFullPage = () => {
     xl: '350px',
   });
 
+  //media query for scroll icon
+  const [isLargerThan1400] = useMediaQuery('(min-width: 1400px)');
+
   return (
     <>
       <Box mt={0} className="container fade-in2">
@@ -71,7 +79,7 @@ const AboutUsFullPage = () => {
             <Icon
               as={BsFillArrowLeftCircleFill}
               boxSize={12}
-              color="white"
+              color="gray.300"
               _hover={{
                 color: 'teal.400',
                 transform: 'scale(0.95)',
@@ -95,16 +103,13 @@ const AboutUsFullPage = () => {
             </Text>
             <Spacer />
             <Box px={40}>
-              <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={900}>
-                We specialize in Fine Woodworking, Custom Cabinetry and
-                Architectural Millwork. <br />
+              <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight="900">
+                Fine Woodworking, Custom Cabinetry and Architectural Millwork.{' '}
+                <br />
                 Located at 59 Field St in Torrington, Connecticut. <br />
-                Family owned and operated since 2006.
+                {/* Family owned and operated since 2006. */}
               </Text>
               <Button
-                as="a"
-                href="https://www.registercitizen.com/news/article/White-Dog-Woodworking-mixes-old-fashioned-skill-16073669.php"
-                target="_blank"
                 fontStyle={secondaryFont}
                 bg="none"
                 border="2px"
@@ -116,6 +121,7 @@ const AboutUsFullPage = () => {
                 _hover={{
                   color: 'teal.300',
                 }}
+                onClick={() => scrollToAboutFull()}
               >
                 Learn More
               </Button>
@@ -124,7 +130,7 @@ const AboutUsFullPage = () => {
         </Box>
       </Box>
       {/* BOTTOM SECTION ADDED AFTER FIRST DEPLOYMENT */}
-      <Box></Box>
+      <Box ref={aboutUsFullRef}></Box>
       <Box mb="100px">
         <HStack justifyContent="center">
           <Image src={textLogo} w={logoWidth} px={logoPadding} />
@@ -137,7 +143,7 @@ const AboutUsFullPage = () => {
         </VStack>
 
         <Box px="100px" mt="80px">
-          <Text mb="50px" fontFamily={primaryFont} fontSize="25px">
+          <Text mb="80px" fontFamily={primaryFont} fontSize="25px">
             Qualification Statement for Architectural Millwork
           </Text>
           <HStack>
@@ -166,9 +172,9 @@ const AboutUsFullPage = () => {
             </VStack>
             <Image src={shop1} alt="shop pic" maxW="600px" />
           </HStack>
-          <Image src="" />
-          <Box mt="130px">
-            <Text fontFamily={primaryFont} fontSize={'22px'} mb="50px">
+
+          <Box mt="120px">
+            <Text fontFamily={primaryFont} fontSize={'22px'} mb="60px">
               Among our list of larger completed projects as of August 2023 are
               the following:
             </Text>
@@ -194,7 +200,7 @@ const AboutUsFullPage = () => {
                 </Text>
                 <Text w="300px">
                   Mostly Commerical Projects, including Assisted Living,
-                  Municipal, Educational and Commercial - up to $350,000
+                  Municipal and Educational - up to $350,000
                 </Text>
               </HStack>
               <HStack mb="50px" spacing="80px">
@@ -213,8 +219,8 @@ const AboutUsFullPage = () => {
                   Torrington, CT
                 </Text>
                 <Text w="300px">
-                  Residential and Commercial Projects, including Municipal,
-                  Commercial and Educational. Various sizes - up to $350,000
+                  Residential and Commercial Projects, including Municipal and
+                  Educational. Various sizes - up to $350,000
                 </Text>
               </HStack>
               <HStack mb="50px" spacing="80px">
@@ -232,8 +238,8 @@ const AboutUsFullPage = () => {
                   Middletown, CT
                 </Text>
                 <Text w="300px">
-                  Various Commercial Projects, including Historical, Educational
-                  and Commercial - up to $150,000
+                  Various Commercial Projects, including Historical and
+                  Educational - up to $150,000
                 </Text>
               </HStack>
               <HStack mb="50px" spacing="80px">
@@ -242,8 +248,8 @@ const AboutUsFullPage = () => {
                   Hartford, CT
                 </Text>
                 <Text w="300px">
-                  Various Commercial Projects, Including Municipal, Commercial
-                  and Educational - up to $250,000
+                  Various Commercial Projects, Including Municipal and
+                  Educational - up to $250,000
                 </Text>
               </HStack>
               <HStack mb="50px" spacing="80px">
@@ -299,6 +305,23 @@ const AboutUsFullPage = () => {
             <Center px="250px" mt="80px">
               <Image src={wdw1} />
             </Center>
+
+            <Text
+              fontFamily={primaryFont}
+              fontSize={'20px'}
+              mt="50px"
+              px="200px"
+            >
+              Check out our article in{' '}
+              <a
+                href="https://www.registercitizen.com/news/article/White-Dog-Woodworking-mixes-old-fashioned-skill-16073669.php#photo-20822874"
+                target="_blank"
+              >
+                <chakra.span color="blue.500" mt="50px">
+                  The Register Citizen!
+                </chakra.span>
+              </a>
+            </Text>
 
             <Heading fontFamily={primaryFont} fontSize="35px" mt="120px">
               REFERENCES
@@ -379,6 +402,8 @@ const AboutUsFullPage = () => {
                 GC's, which includes our safety record, OSHA logs, financial
                 statements and bonding capacity.
               </Text>
+              {/* <Image src={bottom} alt="warner theatre" px="200px" /> */}
+
               <VStack mt="60px" textAlign="center" fontWeight="700">
                 <Text>For More Information:</Text>
                 <Text>tom.officer@whitedogwoodworking.com</Text>
