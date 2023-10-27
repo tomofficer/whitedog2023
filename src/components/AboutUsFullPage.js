@@ -395,7 +395,6 @@ const AboutUsFullPage = ({ aboutUsFullRef, scrollToAboutFull }) => {
                 GC's, which includes our safety record, OSHA logs, financial
                 statements and bonding capacity.
               </Text>
-              {/* <Image src={bottom} alt="warner theatre" px="200px" /> */}
 
               <VStack mt="60px" textAlign="center" fontWeight="700">
                 <Text>For More Information:</Text>

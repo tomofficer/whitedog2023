@@ -11,6 +11,8 @@ import {
   HStack,
   Center,
   Icon,
+  chakra,
+  Heading,
 } from '@chakra-ui/react';
 import '../componentStyling/global.css';
 import '../componentStyling/services.css';
@@ -19,6 +21,7 @@ import bg from '../assets/aboutUsBg.jpg';
 import textLogo from '../assets/logoTextOnly.png';
 import sawLogo from '../assets/sawLogo.png';
 import shop1 from '../assets/shop1.jpeg';
+import wdw1 from '../assets/wdw1.jpeg';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa6';
 
 const AboutUsFullPageMobile = ({ aboutUsFullRef, scrollToAboutFull }) => {
@@ -92,8 +95,8 @@ const AboutUsFullPageMobile = ({ aboutUsFullRef, scrollToAboutFull }) => {
               >
                 We specialize in Fine Woodworking, Custom Cabinetry and
                 Architectural Millwork. <br />
-                Located at 59 Field St in Torrington, Connecticut. <br />
-                Family owned and operated since 2006.
+                {/* Located at 59 Field St in Torrington, Connecticut. <br /> */}
+                {/* Family owned and operated since 2006. */}
               </Text>
 
               <Button
@@ -203,9 +206,118 @@ const AboutUsFullPageMobile = ({ aboutUsFullRef, scrollToAboutFull }) => {
                     Educational. Various sizes - up to $350,000
                   </Text>
                 </VStack>
+                <VStack mb="50px" spacing="10px">
+                  <Text w="300px">
+                    Keiter Builders <br />
+                    Florence, MA
+                  </Text>
+                  <Text w="300px" fontSize="18px">
+                    Various Commercial and Educational Projects - up to $50,000
+                  </Text>
+                </VStack>
+                <VStack mb="50px" spacing="10px">
+                  <Text w="300px">
+                    Kronenberger & Sons <br />
+                    Middletown, CT
+                  </Text>
+                  <Text w="300px" fontSize="18px">
+                    Various Commercial Projects, including Historical and
+                    Educational - up to $150,000
+                  </Text>
+                </VStack>
+                <VStack mb="50px" spacing="10px">
+                  <Text w="300px">
+                    Newfield Construction <br />
+                    Hartford, CT
+                  </Text>
+                  <Text w="300px" fontSize="18px">
+                    Various Commercial Projects, Including Municipal and
+                    Educational - up to $250,000
+                  </Text>
+                </VStack>
+                <VStack mb="50px" spacing="10px">
+                  <Text w="300px">
+                    The Nutmeg Companies <br />
+                    New London, CT
+                  </Text>
+                  <Text w="300px" fontSize="18px">
+                    Various Municipal and Government Projects - up to $500,000
+                  </Text>
+                </VStack>
+                <VStack mb="50px" spacing="10px">
+                  <Text w="300px">
+                    PAC Group <br />
+                    Torrington, CT
+                  </Text>
+                  <Text w="300px" fontSize="18px">
+                    Various Commercial Projects including Medical and
+                    Educational - up to $150,000
+                  </Text>
+                </VStack>
+                <VStack mb="50px" spacing="10px">
+                  <Text w="300px">
+                    Pavarini Northeast Construction <br />
+                    Stamford, CT
+                  </Text>
+                  <Text w="300px" fontSize="18px">
+                    Various Commercial Projects, all Office fit ups - up to
+                    $650,000
+                  </Text>
+                </VStack>
+                <VStack mb="50px" spacing="10px">
+                  <Text w="300px">
+                    Pustola And Associates
+                    <br />
+                    Naugatuck, CT
+                  </Text>
+                  <Text w="300px" fontSize="18px">
+                    Various Commercial Projects including Medical - up to
+                    $350,000
+                  </Text>
+                </VStack>
+                <VStack mb="50px" spacing="10px">
+                  <Text w="300px">
+                    United Construction
+                    <br />
+                    Torrington, CT
+                  </Text>
+                  <Text w="300px" fontSize="18px">
+                    Educational and Residential Projects - up to $550,000
+                  </Text>
+                </VStack>
               </>
             ) : (
               <>
+                <VStack mb="50px" spacing="10px">
+                  <Text w="300px">
+                    Alander Construction <br />
+                    Great Barrington, MA
+                  </Text>
+                  <Text w="300px" fontSize="18px">
+                    Various High End Residential Projects - average project size
+                    of $200,000
+                  </Text>
+                </VStack>
+                <VStack mb="50px" spacing="10px">
+                  <Text w="300px">
+                    Allegrone Construction <br />
+                    Lenox, MA
+                  </Text>
+                  <Text w="300px" fontSize="18px">
+                    Mostly Commerical Projects, including Assisted Living,
+                    Municipal and Educational - up to $350,000
+                  </Text>
+                </VStack>
+                <VStack mb="50px" spacing="10px">
+                  <Text w="300px">
+                    AV Tuchy Builders <br />
+                    Norwalk, CT
+                  </Text>
+                  <Text w="300px" fontSize="18px">
+                    Various High End Commercial Projects - average project size
+                    of $200,000
+                  </Text>
+                </VStack>
                 <VStack mb="50px" spacing="10px">
                   <Text w="300px">
                     Burlington Construction <br />
@@ -226,21 +338,127 @@ const AboutUsFullPageMobile = ({ aboutUsFullRef, scrollToAboutFull }) => {
               bg="white"
               fontWeight={0}
               px={6} // Adjusted for mobile
-              mt={6}
+              mt="0px"
               onClick={toggleShowMore} // Toggle visibility of remaining VStacks
             >
               {showMore ? (
                 <>
-                  View Less <Icon mt="5px" ml="10px" as={FaAngleUp} />
+                  Show Less <Icon mt="5px" ml="10px" as={FaAngleUp} />
                 </>
               ) : (
                 <>
-                  View More <Icon mt="5px" ml="10px" as={FaAngleDown} />
+                  Show More <Icon mt="5px" ml="10px" as={FaAngleDown} />
                 </>
               )}
             </Button>
           </VStack>
         </Box>
+        <Center px="0px" mt="80px">
+          <Image src={wdw1} />
+        </Center>
+        <Text fontFamily={primaryFont} fontSize={'20px'} mt="30px" px="0px">
+          Check out our article in{' '}
+          <a
+            href="https://www.registercitizen.com/news/article/White-Dog-Woodworking-mixes-old-fashioned-skill-16073669.php#photo-20822874"
+            target="_blank"
+          >
+            <chakra.span color="blue.500" mt="50px">
+              <br /> The Register Citizen!
+            </chakra.span>
+          </a>
+        </Text>
+        <Heading fontFamily={primaryFont} fontSize="35px" mt="60px">
+          REFERENCES
+        </Heading>
+        <VStack
+          mt="30px"
+          fontFamily={secondaryFont}
+          fontWeight="900"
+          textAlign="center"
+        >
+          <VStack mb="50px" spacing="0px">
+            <Text w="400px">
+              Jim Culliton
+              <br />
+              Allegrone Construction
+            </Text>
+            <Text w="300px" fontSize="18px">
+              jwculliton@allegrone.com
+              <br />
+              (413) 281-2374
+            </Text>
+          </VStack>
+          <VStack mb="50px" spacing="0px">
+            <Text w="400px">
+              Dave Discala
+              <br />
+              AV Tuchy Builders
+            </Text>
+            <Text w="300px" fontSize="18px">
+              ddiscala@avtuchybuilders.com
+              <br />
+              (203) 856-9558
+            </Text>
+          </VStack>
+          <VStack mb="50px" spacing="0px">
+            <Text w="400px">
+              Justin Giampaolo
+              <br />
+              Burlington Construction
+            </Text>
+            <Text w="300px" fontSize="18px">
+              justingiampaolo@
+              <br />
+              burlingtonconstruction.com
+              <br />
+              (203) 943-8210
+            </Text>
+          </VStack>
+          <VStack mb="50px" spacing="0px">
+            <Text w="400px">
+              Steve Bucherri
+              <br />
+              Newfield Construction
+            </Text>
+            <Text w="300px" fontSize="18px">
+              stevebuccheri@
+              <br />
+              newfieldconstruction.com
+              <br />
+              (860) 944-6740
+            </Text>
+          </VStack>
+          <VStack mb="50px" spacing="0px">
+            <Text w="400px">
+              Bryan Boyce
+              <br />
+              Pavarini Northeast Construction
+            </Text>
+            <Text w="300px" fontSize="18px">
+              bboyce@pavarini.com
+              <br />
+              (203) 943-0636
+            </Text>
+          </VStack>
+        </VStack>
+        <Text fontFamily={primaryFont} fontSize={'20px'} mt="0px" px="20px">
+          We also have a formal prequalification packet for the larger GC's,
+          which includes our safety record, OSHA logs, financial statements and
+          bonding capacity.
+        </Text>
+        <VStack
+          mt="60px"
+          textAlign="center"
+          fontWeight="700"
+          fontFamily={secondaryFont}
+        >
+          <Text>For More Information:</Text>
+          <Text>tom.officer@whitedogwoodworking.com</Text>
+          <Text>(860) 482-3776</Text>
+        </VStack>
+        <Center>
+          <Image src={sawLogo} mt="60px" px="80px" />
+        </Center>
       </Box>
     </>
   );
