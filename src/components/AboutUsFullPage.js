@@ -325,7 +325,7 @@ const AboutUsFullPage = ({ aboutUsFullRef, scrollToAboutFull }) => {
                 </Text>
               </HStack>
             </VStack>
-            <Center px="250px" mt="80px">
+            <Center px={windowWidth < breakpoint ? '300px' : '350px'} mt="80px">
               <Image src={wdw1} />
             </Center>
 
