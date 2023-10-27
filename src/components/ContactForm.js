@@ -1,6 +1,6 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { VStack, Button } from '@chakra-ui/react';
-import { secondaryFont } from '../Fonts';
+import { primaryFont, secondaryFont, tertiaryFont } from '../Fonts';
 import '../componentStyling/global.css';
 
 const ContactForm = () => {
@@ -59,6 +59,8 @@ const ContactForm = () => {
             color="white"
             px={16}
             mt={6}
+            fontSize="16px"
+            fontFamily={tertiaryFont}
             _hover={{
               bg: 'teal.400',
               transform: 'scale(1.05)',

@@ -292,7 +292,7 @@ const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
                 }}
                 onClick={() => scrollToFullGallery()}
               >
-                View Full Gallery
+                View Our Work
               </Button>
             </Box>
           </HStack>
