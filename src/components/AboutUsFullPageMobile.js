@@ -49,6 +49,14 @@ const AboutUsFullPageMobile = ({ aboutUsFullRef, scrollToAboutFull }) => {
     xl: '350px',
   });
 
+  const sawLogoPadding = useBreakpointValue({
+    base: '80px',
+    sm: '0px',
+    md: '0px',
+    lg: '0px',
+    xl: '350px',
+  });
+
   const textPadding = useBreakpointValue({
     base: '50px',
     sm: '50px',
@@ -134,12 +142,13 @@ const AboutUsFullPageMobile = ({ aboutUsFullRef, scrollToAboutFull }) => {
           ARCHITECTURAL MILLWORK & CUSTOM CABINETRY
         </Text>
         <Center>
-          <Image src={sawLogo} mt="30px" px={logoPadding} />
+          <Image src={sawLogo} mt="30px" px={sawLogoPadding} />
         </Center>
         <Box px="50px" mt="80px">
           <Text mb="50px" fontFamily={primaryFont} fontSize="25px">
             Qualification Statement for Architectural Millwork
           </Text>
+
           <VStack fontFamily={secondaryFont} color="black" fontWeight="900">
             <Text pb="20px">
               White Dog Woodworking, LLC is an architectural millwork firm
@@ -149,7 +158,9 @@ const AboutUsFullPageMobile = ({ aboutUsFullRef, scrollToAboutFull }) => {
               Andy Officer. The plant is located in a 22,000 square foot
               facility in Torrington, CT.
             </Text>
-            <Image src={shop1} alt="shop pic" maxW="600px" pb="20px" />
+            <Center>
+              <Image src={shop1} alt="shop pic" maxW="400px" pb="20px" />
+            </Center>
 
             <Text pb="20px">
               Mr. Officer has been in the architectural millwork field for over
@@ -358,7 +369,7 @@ const AboutUsFullPageMobile = ({ aboutUsFullRef, scrollToAboutFull }) => {
             </Button>
           </VStack>
         </Box>
-        <Center px="0px" mt="80px">
+        <Center mt="80px">
           <Image src={wdw1} />
         </Center>
         <Text fontFamily={primaryFont} fontSize={'20px'} mt="30px" px="0px">
