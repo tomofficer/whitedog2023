@@ -107,7 +107,10 @@ function App() {
               path="/about-us"
               element={
                 windowWidth < breakpoint ? (
-                  <AboutUsFullPageMobile />
+                  <AboutUsFullPageMobile
+                    scrollToAboutFull={scrollToAboutFullHandle}
+                    aboutUsFullRef={scrollToAboutFull}
+                  />
                 ) : (
                   <AboutUsFullPage
                     scrollToAboutFull={scrollToAboutFullHandle}
