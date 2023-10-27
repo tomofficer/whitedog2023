@@ -116,7 +116,7 @@ const AboutUsFullPage = ({ aboutUsFullRef, scrollToAboutFull }) => {
                 }}
                 onClick={() => scrollToAboutFull()}
               >
-                Learn More
+                Read More
               </Button>
             </Box>
           </HStack>

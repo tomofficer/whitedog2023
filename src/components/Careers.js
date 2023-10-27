@@ -72,7 +72,7 @@ const Careers = () => {
               <Text fontSize={'lg'} fontFamily={secondaryFont} fontWeight={900}>
                 Are you interested in joining our team? <br />
                 Enter your contact info below or email your resume to <br />
-                andy@whitedogwoodworking.com
+                andy.officer@whitedogwoodworking.com
               </Text>
               <Button
                 fontStyle={secondaryFont}

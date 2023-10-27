@@ -32,7 +32,7 @@ const CareersMobile = () => {
               >
                 Are you interested in joining our team? <br />
                 Email your resume to <br />
-                andy@whitedogwoodworking.com <br />
+                andy.officer@whitedogwoodworking.com <br />
                 Or give us a call at : <br />
                 1-860-482-3776
               </Text>
