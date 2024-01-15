@@ -49,14 +49,14 @@ import walker2 from '../assets/walkerAuditorium/walker2.jpg';
 import walker3 from '../assets/walkerAuditorium/walker3.jpg';
 import walker4 from '../assets/walkerAuditorium/walker4.jpg';
 import walker5 from '../assets/walkerAuditorium/walker5.jpg';
-import warner1 from '../assets/warnerTheatre/warner1.png';
-import warner2 from '../assets/warnerTheatre/warner2.png';
-import warner3 from '../assets/warnerTheatre/warner3.png';
-import warner4 from '../assets/warnerTheatre/warner4.png';
-import warner5 from '../assets/warnerTheatre/warner5.png';
-import warner6 from '../assets/warnerTheatre/warner6.png';
-import warner7 from '../assets/warnerTheatre/warner7.png';
-import warner8 from '../assets/warnerTheatre/warner8.png';
+import walker6 from '../assets/warnerTheatre/warner1.png';
+import walker7 from '../assets/warnerTheatre/warner2.png';
+import walker8 from '../assets/warnerTheatre/warner3.png';
+import walker9 from '../assets/warnerTheatre/warner4.png';
+import walker10 from '../assets/warnerTheatre/warner5.png';
+import walker11 from '../assets/warnerTheatre/warner6.png';
+import walker12 from '../assets/warnerTheatre/warner7.png';
+import walker13 from '../assets/warnerTheatre/warner8.png';
 import reception1 from '../assets/receptionDesks/reception1.JPG';
 import reception2 from '../assets/receptionDesks/reception2.JPG';
 import reception3 from '../assets/receptionDesks/reception3.JPG';
@@ -215,22 +215,30 @@ const OurWorkFullPage = ({ fullGalleryRef, scrollToFullGallery }) => {
         `${walker3}`,
         `${walker4}`,
         `${walker5}`,
+        `${walker6}`,
+        `${walker7}`,
+        `${walker8}`,
+        `${walker9}`,
+        `${walker10}`,
+        `${walker11}`,
+        `${walker12}`,
+        `${walker13}`,
       ],
     },
-    {
-      title: 'Warner Theatre',
-      defaultImage: `${warner1}`,
-      subGallery: [
-        `${warner1}`,
-        `${warner2}`,
-        `${warner3}`,
-        `${warner4}`,
-        `${warner5}`,
-        `${warner6}`,
-        `${warner7}`,
-        `${warner8}`,
-      ],
-    },
+    // {
+    //   title: 'Warner Theatre',
+    //   defaultImage: `${warner1}`,
+    //   subGallery: [
+    //     `${warner1}`,
+    //     `${warner2}`,
+    //     `${warner3}`,
+    //     `${warner4}`,
+    //     `${warner5}`,
+    //     `${warner6}`,
+    //     `${warner7}`,
+    //     `${warner8}`,
+    //   ],
+    // },
 
     {
       title: '21 Leonard St',
