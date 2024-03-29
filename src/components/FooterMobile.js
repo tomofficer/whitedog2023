@@ -80,7 +80,6 @@ const FooterMobile = () => {
             <Spacer />
           </VStack>
         </Box>
-
         <Center>
           <Text
             fontFamily={secondaryFont}
@@ -90,7 +89,11 @@ const FooterMobile = () => {
             letterSpacing={'1px'}
             color="white"
           >
-            &copy; Graipfrut 2023 <br /> graipfrut.com@gmail.com
+            <VStack>
+              <Text>&copy; Tom Officer Web Dev 2023</Text>
+              <Text>Tomofficerwebdev@gmail.com</Text>
+            </VStack>
+            -
           </Text>
         </Center>
       </Box>

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <Box className="fade-in2" pt={6} pb={4} bg="black">
-        <Box mb={10} px={0}>
+        <Box mb={8} px={0}>
           <HStack
             color="white"
             fontFamily={secondaryFont}
@@ -95,7 +95,9 @@ const Footer = () => {
             letterSpacing={'1px'}
             color="white"
           >
-            &copy; Graipfrut 2023 • graipfrut.com@gmail.com
+            <Text>
+              &copy; Tom Officer Web Dev 2023 • tomofficerwebdev@gmail.com
+            </Text>
           </Text>
         </Center>
       </Box>
